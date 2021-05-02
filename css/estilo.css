@@ -1,0 +1,243 @@
+html{
+	overflow-x: hidden;
+}
+
+body{
+	background-color: #eee;
+}
+
+
+.endGame{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.endGame .winner{
+	text-align: center;
+	font-size: 64px;
+	font-weight: bold;
+}
+
+
+.inputsParticipantes h3{
+	text-align: center;
+}
+
+.inputsParticipantes input{
+	display: block;
+	width: 100%;
+	font-size: 32px;
+	margin: 0.7em 0;
+}
+
+.inputsParticipantes .comecar{
+	border: 2px solid black;
+	font-size: 24px;
+	margin: 0.5em;
+	float: right;
+}
+
+.divPai{
+	height: 100px;
+}
+
+.msgVencedorDivUl ul{
+	list-style-type: none;
+}
+.msgVencedorDivUl ul li{
+	font-size: 24px;
+	text-align: left;
+	padding: 0.2em;
+	border-bottom: 1px solid black;
+	cursor: pointer;
+}
+
+.msgVencedorDivUl input{
+	position:  absolute;
+	right: 30px;
+	width: 50px;
+	text-align: center;
+}
+
+.msgVencedorDivUl button{
+	font-size: 16px;
+	text-align: right;
+	margin-left: 16px;
+}
+
+.dificuldade{
+	width: 100%;
+	text-align: center; 
+	font-size: 54px;
+	margin-bottom: 0.5em;
+	padding: 16px;
+}
+
+.easy{
+	background-color: #6fff6a;
+}
+
+.medium{
+	background-color: #f5ff03;
+}
+
+.hard{
+	background-color: #f85656;
+}
+
+.diogo{
+	background-color: red;
+}
+			
+.divDicas{
+	background: #ccc;
+	height: 100px;
+	border: solid 3px black;
+	padding: 0.2em;
+	width: 539px;
+}
+
+@media screen and (max-width: 1200px){
+	.divDicas{
+		width: 450px
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.divDicas{
+		width: 330px
+	}
+	
+	.dica{
+		font-size: 16px !important;
+	}
+}
+
+@media screen and (max-width: 800px){
+	 .dicasPersonagens{
+		 flex-direction: column;
+	}  
+	.divDicas{
+		width: 100%;
+	}
+	.dica{
+		font-size: 16px !important;
+	}
+	
+	.msgVencedor{
+		width: 100%;
+	}
+}
+
+
+.number{
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.dica{
+	visibility: hidden;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.none{
+	display: none;
+}
+			
+.dica .btn{
+	visibility: visible;
+}
+			
+		
+.nomePersonagem{
+	visibility: hidden;
+}
+			
+.visible{
+	visibility: visible !important;
+}
+			
+.dicasPersonagens{
+	display: flex;
+	margin: 1em 0 1em 0;
+}
+			
+.metade1, .metade2{
+	margin: 0 0.5em;
+}
+			
+.metade1 .btn, .metade2 .btn{
+	margin-top: -11.7em;
+	width: 100%;
+	text-align: right;
+	background: transparent;
+
+}
+
+			
+.verPersonagem{
+	font-size: 24px;
+	border: solid 2px black;
+	margin-top: -1em;
+	margin-left: 0.4em;
+}
+
+.atual{
+	display: block;
+}
+
+.naoAtual, .jaFoi{
+	display: none;
+}
+
+.proximo{
+	font-size: 24px;
+	float: right;
+	border: solid 2px black;
+	margin-top: -1em;
+	margin-right: 0.4em;
+}
+
+.jogador{
+	font-size: 24px;
+}
+
+.msgVencedor{
+	padding: 2em;
+	text-align: center;
+	width: 80%;
+	position: absolute;
+	top: 10%;
+	left: 12%;
+	height: 95vh;
+	background-color: #ccc;
+	display: none;
+	z-index: 1000;
+	opacity: 1;
+}
+
+.msgVencedor h1{
+	font-size: 28px;
+}
+
+.msgVencedor .jogador{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.buttonDivMsg{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	background: #eee;
+	border: 2px solid black;
+	font-size: 20px;
+}
+
+.opacity .caixaPerguntas{
+	opacity: 0.3;
+}

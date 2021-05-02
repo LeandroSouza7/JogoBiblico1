@@ -1,0 +1,2937 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+        
+        <meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+	  />
+
+		<link href="css/estilo.css" rel="stylesheet">
+<!--		<link rel="shortcut icon" type="image/jpg" href="img/small-profile.jpeg"/>-->
+	</head>
+	<body>
+		<div class="endGame none">
+			<h1 class="winner animate__animated animate__backInDown"></h1>
+		</div>
+		<div class="inputsParticipantes container">
+			<h3>Quais são os nomes dos participantes ?</h3>
+			<input type="text" class="inputPlayers">
+			<input type="text" class="inputPlayers">
+			<input type="text" class="inputPlayers">
+			<input type="text" class="inputPlayers">
+			<input type="text" class="inputPlayers">
+			<input type="text" class="inputPlayers">
+			<input type="text" class="inputPlayers">
+			<input type="text" class="inputPlayers">
+			<input type="text" class="inputPlayers">
+			<input type="text" class="inputPlayers">
+			<input type="text" class="inputPlayers">
+			<input type="text" class="inputPlayers">
+			<button class="comecar btn">Começar</button>
+		</div>
+		
+<!--
+		<button class="btn iconTempo container">Cliques</button>
+		<div class="cronometro none">
+			<div class="fecharTempo">X</div>
+			<div class="iniciar">Iniciar</div>
+			<div class="pausar">Pausar</div>
+			<div class="parar">Zerar</div>
+			<p class="tempo">Godula</p>
+		</div>
+-->
+		
+		<div class="msgVencedor">
+			<h1>Quem foi o vencedor da rodada ?</h1>
+			<div class="msgVencedorDivUl">
+				<ul class="msgVencedorUl">
+				</ul>
+			</div>
+			<button class="buttonDivMsg btn">Próximo</button>
+		</div>
+		<div class="none div_principal">
+			<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">001</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Zacarias</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Fui contemporâneo de Jesus</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Na Bíblia, há um livro com meu nome, porém, o livro é de outra pessoa</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Minha esposa era parente de Jesus</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Por minha relutância, fiquei mudo</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Fiz uma profecia a respeito do meu filho e a respeito de Jesus</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Minha esposa se chamava Elisabete</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Minha esposa era estéril, mas graças a um milagre, ela teve um filho</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Eu, junto com minha esposa, morávamos nas colinas de Judeia</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Eu pertencia a turma de Abias</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Minha esposa era parente de Arão</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+				<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">002</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Áquila</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Nasci em Ponto, na parte setentrorial da Ásia Menor.</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Eu e minha esposa éramos bastante hospitaleios</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Fui banido de Roma e, por causa disso, passei a morar em Corinto</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Eu tinha a mesma profissão que o Apóstolo Paulo</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Eu, junto com minha esposa, fomos com Paulo para Éfeso</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Minha casa era usado para as reuniões</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Ajudei o eloquente Apolo a ter conhecimento exato da verdade</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Arrisquei minnha vida por Paulo</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Tive uma amizade muito íntima com Paulo</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Fui comteporâneo de Timóteo</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+						
+				<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">003</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Asa</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Fui o terceiro rei de Israel depois que o Reino foi dividido</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Tive um zelo enorme pela adoração pura</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Por causa do meu zelo, Israel teve um longo período de paz</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Com ajuda de jeová, venci um exército de mais de 1 milhão de soldados </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">No fim de minha vida, tive uma doeça nos pés</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Apesar da minha falta de sabedoria e perspicácia em alguns momentos, fui considerado um rei justo</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">No reinado do meu filho, ele mostrou apreço pela adoração pura</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Por causa de minha tolice, enfrentei guerras contínuas</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Tratei injustamente Hanai, um vidente que queria me ajudar a confiar em Jeová</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Apesar de minhas tolices, tive um enterro honroso, que eu mesmo preparei, na cidade de Davi</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+			
+				<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">004</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Cornélio</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Fui o primeiro não judeu a se tornar cristão</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Eu era oficial do exército no comando de 100 soldados Italianos</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Certa vez, um anjo me disse que minhas orações e ajudas aos pobres "subiram como lembrança perante a Deus"</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Fui o primeiro não judeu a ser ungido por Jeová</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Por causa de minha fé, um anjo apareceu e me mandou levar alguém até Jope para trazer o Apóstolo Pedro até a mim.</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Depois do meu batismo, não se sabe nada sobre mim</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Eu era um "homem devoto", que "fazia muitas dádivas de misericórdia ao povo e fazia continuamente súplicas a Deus"</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Eu era de Cesareia</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Para vir pregar para mim, o Apóstolo Pedro teve que ter uma visão</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Todos que estvam na minha casa quando um Apóstolo veio para cá, se tornaram cristãos</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+		
+						<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">005</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Rubem</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Vivi na época pós diluviana</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Eu, junto com meus 5 irmãos gêmeos, originamos metade das tribos de Israel</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Eu não era a favor da morte de José</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Ofereci minha vida a José, caso não trouxesse Benjamim até ele.</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Cometi uma grande maldade com meu pai, tendo relações com a sua concubina</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Eu era o primogênito da família</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Meu pai se chamava Jacó</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Eu era filho de Leia</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Meu nome significa "Veja, um filho!"</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Não recebi os direitos que eut tinha por ser primogênito</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+		
+						<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">006</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Maria Madalena</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Jesus expulsou 7 demônios de mim</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Ajudei Jesus e seus apóstolos com meus próprios recursos</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Sou uma mulher</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Convivi com Jesus</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Eu era uma das únicas que estavam com Jesus em sua morte</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Fui uma das primeiras a ver Jesus ressuscitado</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Meu nome significa "De Magdala"</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Eu tinha uma enorme fé em Jesus, demonstrando isso na prática</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Fui mencionada na Bíblia pela primeira vez quando Jesus e seus apóstolos foram "de cidade em cidade e de aldeia em aldeia" pregando as boas novas</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Fui eu quem contei aos Apóstolos João e Pedro que o túmulo de Jesus estava vazio</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+		
+			
+						<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">007</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Timóteo</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">O nome do meu pai não é mencionado na Bíblia</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Ao Paulo visitar minha cidade e me conhecer, ele disse isso a respeito de mim: 
+								“Os irmãos em Listra e Icônio davam dele bom relato.“</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Fui contemporâneo de Paulo</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Fui um dos companheiros de viagem de Paulo</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Por causa da consciência de alguns irmãos, fui circuncidado quando eu já era adulto</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Estive junto com Paulo em sua terceira viagem missionária 
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Paulo escreveu duas cartas inspiraras para mim</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Eu tinha problemas estomacais</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica"> Fui encarregado de nomear anciãos e superintendes não congregação</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Fui um dos melhores amigos de Paulo </span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+						<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">008</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Metusalém</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Sou da 8º geração humano</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Sou da época pré diluviana</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Sou filho de Enoque</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Sou pai de Lameque</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Sou descendente de Adão através de Sete</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Vivi mais de 950 anos 
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Morri no ano do dilúvio</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Sou avô de um dos principais personagens bíblicos de Gêneses.</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Meu nome provavelmente significa “Homem do Projétil “</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Sou conhecido por causa da minha longevidade</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+						<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">009</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Silas</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Meu nome significa “ Floresta; Bosque”</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Fui um cidadão romano.</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Fui companheiro de Paulo em sua segunda viagem missionária </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica"> Eu, junto com mais 2, levamos a decisão a respeito da circuncisão aos irmãos da Antioquia
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Eu fui com Paulo para Macedônio </span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Eu, junto com Paulo, salvamos a vida de um carcereiro 
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Eu fui secretário de Pedro</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Vivi na mesma época que os Apóstolos.</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Já fui espacandos por varas e fiquei preso em troncos</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Fui um membro de destaque da congregação de Jerusalém</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+		
+						<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">010</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Samuel Herd</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Já fui enviado à Alemanha pelo exército dos Estados Unidos</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Ainda estou vivo </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Me batizei em março de 1957</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Recentemente, estive na América do Sul
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Tenho mais de 60 anos de casado</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Sou membro do Corpo Governante desde 1999 
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Sofri bastante com racismo</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Tenho 85 anos</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Nasci numa família bem pobre </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Sou bastante idoso</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+		
+								<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade medium">Médio</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">011</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Amós</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Eu era criador de ovelhas </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Meu nome significa “ Ser uma carga; levar uma carga”</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Comecei a servir como profeta 2 anos antes do grande terremoto que ocorreu no reinado de Uzias</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Profetizei contra o reino setentrorial de Israel
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Faço parte dos chamados “ 12 profetas menores”</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Profetizei por mais ou menos 26 anos
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Fui uma pessoa simples </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Sou da cidade de Tecoa </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Amazias não gostou nada das minha profecias, e até tentou me expulsar</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Eu conhecia bastante sobre figos</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+				
+							<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">012</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Josué ( Sacerdote )</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Já fui coroado para prefigurar o Messias.</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Sou chamado também de Jesua </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Eu estava com os israelitas no exílio babilonico</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Sou filho de Jeozadaque
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Conheci pessoalmente Zacarias e Ageu</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Fui o primeiro israelita a servir como sumo sacerdote depois do exílio babilônico
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Em uma visão, Zacarias me viu de pé ao lado de Satanás </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Jeová me enviou dois profetas para me encorajar e terminar a minha obra </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Eu fui um dos primeiros Israelitas a voltarem do exílio babilônico na primeira vez</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica"> Sou homem </span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+				<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">013</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Rutherford</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Eu quem sugeri que deveríamos chamar nosso local de adoração de “Salão do Reino”</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">No começo, nem todos me apoiavam  </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Tive a grande responsabilidade de substituir um grande presidente</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Minha personalidade era um pouco incomum
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Minha personalidade é um pouco incomum</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Morri em 1942, devido a um câncer de cólon
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Tinha o dom de animar meus queridos irmãos com meus discursos  </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Eu era advogado </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica"> Eu estava lá quando passamos a ser chamados de Testemunhas de Jeová </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica"> Intensifiquei bastante a obra de pregação.</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+				<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">014</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Monte Sinai</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Homens e anjos passaram por aqui</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Já fui palco de vários milagres</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Já fui alvos de fogo e raios</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Presenciei o início do pacto da lei
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Moisés esteve aqui muitas vezes</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Sou um lugar alto
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Foi aqui que Jeová se revelou a Moisés   </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Já tremi por causa de Jeová</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica"> Por Moisés ficar muito tempo aqui, muitos israelitas pecaram e vários deles morreram </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Não sou humano</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+				
+				<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">014</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Monte Sinai</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Homens e anjos passaram por aqui</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Já fui palco de vários milagres</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Já fui alvos de fogo e raios</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Presenciei o início do novo pacto
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Moisés esteve aqui muitas vezes</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Sou um lugar alto
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Foi aqui que Jeová se revelou a Moisés   </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Já tremi por causa de Jeová</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica"> Por Moisés ficar muito tempo aqui, os israelitas pecaram e muito deles morreram </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Não sou humano</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+							<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">015</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Calebe</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica"> Fui um dos únicos de minha geração que conseguiram entrar na Terra prometida</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Sou filho de Jefuné
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Fui contemporâneo de Moisés</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Eu quem disse essas palavras: “Ao homem que golpear Quiriate-Sefer e a tomar, darei minha filha Acsa como esposa.”
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Ao entrar na terra prometida, me deram a Terra de Hebrom.
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Eu, junto com mais um , já contradizemos 10 homens que achavam que não conseguiríamos entrar na Terra prometida.
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Já vivi dias de espião</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Sou homem</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Convivi muito com Josué, ajudante de Moisés</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Já vi vários milagres de Jeová</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+				<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">016</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Arão</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Nasci no Egito</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Meu bisavô era Levi, filho de Jacó, e minha esposa se chamava Eliseba
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Servi por muito anos como porta voz </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">O cargo que eu ocupei durante minha vida, hoje é “ocupado” por Jesus 
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Vi a morte de dois dos meus filhos
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Em certa ocasião, pequei gravemente contra Jeová, mas não fui morto como outros tantos que estavam comigo
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Tive 4 filhos</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Já tive de falar com a pessoa mais poderosa da minha época.</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Morri com 123 anos</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Sou homem</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+							<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">017</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Josué - AJudante de Moisés</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Fui designando para ser o comandante na luta contra os Amalequitas no ano de 1513 a.C</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Provavelmente, eu era um dos 70 anciãos que tiveram o privilégio de observar a magnífica visão da glória de Jeová
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Eu já fiquei 40 dias e 40 noites no Monte Sinai</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Para impedir que os israelitas entrassem na tenda de reunião numa condição impura, eu ficava ali sempre que Moisés retornava ao acampamento israelita.
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Sem saber, já conversei com Jesus antes dele vir a Terra
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Meu nome na verdade é Oseias, mas todos me chamam por outro nome 
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Morri com 110 anos</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Já tive vários cargos: Comandante, espião, ajudante ...</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica"> Escrevi um livro da Bíblia que leva meu nome</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica"> Fui fiel a Jeová a minha vida toda</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+			<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">018</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Jesus</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Meus pais já se esquecerem de mim.</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Tive sorte de ter grandes mulheres ao meu lado, que me apoiaram até a morte
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Quando eu era apenas uma criança, tentaram me matar</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Morri jovem, antes dos 40 anos
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Muitas pessoas me confundem com meu pai
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Meu melhores amigos me abandonaram quando estava prestes a morrer
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Sofri muito no final da minha vida</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Já deixei instrutores admirados por causa do meu conhecimento </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Jeová me deu poder para realizar várias curas</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Até hoje, sou bastante famoso</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>			
+			
+						<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">019</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Apóstolo Paulo</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Se fossem escrever um livro da minha história, com certeza tragédias e sofrimentos não seriam o que faltavam</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Eu era baixinho
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Nasci na tribo de Benjamim</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Eu era calvo, quase careca
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Lutei muito para adoração pura não ser contaminada, mas no fim, meus esforços não deram certo
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Meu nome significa “pequeno”
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Eu falava várias línguas </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Já disciplinei fortemente um dos apóstolos de Cristo</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Já viajei por vários lugares para pregar as boas novas</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Provavelmente, eu tinha um problema sério na vista</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>	
+			
+			
+									<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">020</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Abraão</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Nasci em 2018 a.C</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Já andei mais de 960 KM para obedecer uma ordem de Jeová 
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Minha esposa era Estéril, mas, graças a um milagre, ela teve um filho </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Aos 99 anos, tive meu nome mudado por Jeová
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Muitas profecias que Jeová fez para mim, só se cumpriram centenas de anos depois 
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Eu possuía muitos bens: rebanhos, manadas, ouro, prata, casas e muitos servos
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">A primeira ocorrência da palavra “profeta” nas Escrituras Hebraicas refere-se a mim</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Sou o primeiro homem da Bíblia a ser chamado de “Hebreu”</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Já hospedei anjos</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Provavelmente, aprendi a verdade por meio de Sem</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>	
+			
+		<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">021</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Sara</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Tive filhos quando eu já era idosa</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Para se cumprir a promessa que Jeová tinha feito a meu marido, já ofereci minha serva para ter filhos com ele
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Sou uma mulher</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Meu marido me chamava de “irmã”, e eu o chamava de "senhor"
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Casei com meu meio irmão
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Paulo, numa carta, já falou que eu representava a “Jerusalém de cima"
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Morri com 127 anos</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Sou citada por Paulo com um exemplo de fé</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Mesma idosa, já tentaram me levar por causa da minha beleza</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica"> Já ri de uma profecia de um anjo</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>	
+			
+				<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">022</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Abigail</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Já salvei a vida do meu marido</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Eu era “sensata e bonita”
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Se não fosse por mim, Davi teria cometido um grande pecado</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Meu primeiro marido era um homem insensato e estúpido 
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Fui uma das esposas de Davi
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Meu nome significa “[Meu] pai se fez alegre”
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Sou uma mulher</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Tive um filho</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica"> Estive com Davi quando ele foi ungido</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Tive dois maridos</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>	
+			
+							<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade medium">Médio</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">023</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Nabal</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Poucas pessoas na Bíblia são descritos com tanto desprezo igual a mim</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Eu era descendente de Calebe
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Eu era rico</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Enquanto minha mulher estava salvando minha vida, eu estava me embebedando 
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Fui morto por Jeová 
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Agi de modo muito ingrato com o rei do meu país 
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Meu nome significava “Insensato; Estúpido”</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Eu era proprietário de ovelhas</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Eu morava em Judá</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Sou contemporâneo de Mical</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>	
+				
+			<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">024</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Josias</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Me tornei rei quando eu era apenas uma criança</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Fui um rei que adorava a Jeová
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Já fiz duas campanhas para acabar com qualquer tipo de idolatria em Judá</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Eu quem derrubei o altar construído em Betel para a adoração falsa
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Fiz uma das maiores páscoas de todos os tempos
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Meus filhos não tinham o mesmo zelo que eu
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Sofonias, Jeremias viveram junto comigo</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Eu tive pelo menos 2 esposas</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">3 de meus filhos reinou sobre Judá</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Morri cerca de 20 anos antes da destruiçao de Jerusalem pela Babilônia</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>	
+			
+			<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">025</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Ezequias</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Já tive a vida prolongada por Jeová</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Isaías, Oseias e Miqueias foram alguns de meus contemporâneos.
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Sou exemplo de quem confiou em Jeová</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">"não se mostrou haver nenhum igual a ele entre todos os reis de Judá, mesmo aqueles que vieram a ser antes dele"
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Governei Judá por cerca de 25 anos
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Copilei alguns provérbios de Salomão
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Meu pai foi um péssimo exemplo para mim</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Presenciei uma das maiores demonstrações de força de um anjo registrado na Bíblia </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Em certa época da minha vida, fiquei arrogante</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Já paguei a um rei mau cerca de 12 milhões de dólares</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+			
+						<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">026</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Jeremias</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Sou um profeta</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Sou uma das únicas pessoas que Jeová escolheu para ser seu servo antes mesmo do nascimento
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Eu era pesquisador e historiador</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Preguei uma forte mensagem
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">No começo, não quis muito assumir a responsabilidade que Jeová me comissionou
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Jeová me pediu para eu não me casar
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Já sofri muito durante minha vida</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Fui designado como profeta no ano de 647 a.C</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Em certo momento da vida fiquei desanimado, mas o "fogo" dentro de mim me impediu de desistir</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Presenciei a destruição de Jerusalém</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>	
+				
+			<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">027</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Ezequiel</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Durante minha vida de profeta, minha esposa morreu </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Tive uma das visões mais impressionantes registradas na Bíblia 
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Profetizei tanto uma mensagem de condenação como uma mensagem de esperança </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Fui fiel a Jeová até a morte
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Fiz inúmeras encenações incomuns
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Eu estava entre os primeiros que foram levados como cativo para Babilônia 
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Em minhas visões, já vi: um vale cheio de ossos, anjo com aspecto de cobre, enormes montanhas e um rio que deixava o Mar Morto com vida.</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Minha família já era uma família sacerdotal</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica"> Já tive que raspar minha barba e cabelo</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Meu nome significa “Deus fortalece”</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+			
+			<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">028</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Isaías</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Eu era casado</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Fui de muita ajuda para o rei Ezequias
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Além de ter escrito o livro Bíblico que leva meu nome, escrevi pelo menos mais um livro histórico</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Muitas profecias minhas tiveram/terá um cumprimento maior em Cristo
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Meu nome significa "Salvação de Jeová"
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Sou filho de Amoz
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Meus 2 filhos tinham nomes proféticos</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Escrevi muitas profecias de restauração de Jerusalém</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Profetizei que a Assíria não destruiria Judá</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Meu livro Bíblico é um dos maiores da Bíblia</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>		
+			
+			<div class="container caixaPerguntas naoAtual">
+				<div class="dificuldade easy">Fácil</div>
+				<span class="CodigoDaPergunta h1 naoFoi mr-3">029</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Maer-Salal-hás-baz</span>
+				<div class="dicasPersonagens">
+					<div class="metade1">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Sou um dos filhos de Isaías</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">O significado do meu nome na verdade era uma profecia
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Meu nome é composto</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Sou homem
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Eu nasci num dos períodos de mais medo em Israel
+</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+					</div>
+
+					<div class="metade2">
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">A Bíblia não fala muito sobre mim
+								</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">A Bíblia não cita o nome da minha mãe, apenas diz que ela era uma profetiza</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Nasci quando a Assíria era a principla potência mundial</span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Logo quando eu nasci, Damasco foi conquistado </span></div><button class="btn btn_dica">Ver dica</button>
+						</div>
+						<br>
+						<div class="divPai">
+							<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Meu nome é um pouco incomum</span></div><button class="btn  btn_dica">Ver dica</button>
+						</div>
+						<br>
+				</div>	
+			</div>
+					<span class="verPersonagem btn mb-5">Ver resposta</span>
+					<span class="btn proximo mb-5">Próximo</span>
+		</div>
+		
+		<div class="container caixaPerguntas naoAtual">
+			<div class="dificuldade medium">Médio</div>
+			<span class="CodigoDaPergunta h1 naoFoi mr-3">030</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Sear-Jasube</span>
+			<div class="dicasPersonagens">
+				<div class="metade1">
+					<div class="divPai">
+						<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Sou homem</span></div><button class="btn btn_dica">Ver dica</button>
+					</div>
+					<br>
+					<div class="divPai">
+						<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Estive com Isaías quando ele tranmitiu uma mensagem profética ao rei Acaz
+							</span></div><button class="btn btn_dica">Ver dica</button>
+					</div>
+					<br>
+					<div class="divPai">
+						<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Tive pelo menos um irmão</span></div><button class="btn btn_dica">Ver dica</button>
+					</div>
+					<br>
+					<div class="divPai">
+						<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Sou o primeiro filho de Isaías
+							</span></div><button class="btn btn_dica">Ver dica</button>
+					</div>
+					<br>
+					<div class="divPai">
+						<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Meu nome significa que 'um mero restante' retornaria de Babilônia
+</span></div><button class="btn  btn_dica">Ver dica</button>
+					</div>
+					<br>
+				</div>
+
+				<div class="metade2">
+					<div class="divPai">
+						<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">O nome da minha mãe não é mencionado na Bíblia
+							</span></div><button class="btn btn_dica">Ver dica</button>
+					</div>
+					<br>
+					<div class="divPai">
+						<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">A Bíblia não fala muito sobre mim</span></div><button class="btn btn_dica">Ver dica</button>
+					</div>
+					<br>
+					<div class="divPai">
+						<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Presenciei a ivasão do rei Peca, de Judá</span></div><button class="btn btn_dica">Ver dica</button>
+					</div>
+					<br>
+					<div class="divPai">
+						<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Meu nome é um pouco incomum</span></div><button class="btn btn_dica">Ver dica</button>
+					</div>
+					<br>
+					<div class="divPai">
+						<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Meu nome é composto</span></div><button class="btn  btn_dica">Ver dica</button>
+					</div>
+					<br>
+			</div>	
+		</div>
+				<span class="verPersonagem btn mb-5">Ver resposta</span>
+				<span class="btn proximo mb-5">Próximo</span>
+	</div>	
+
+	<div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade easy">Fácil</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">031</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Ooliabe</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Meu nome significa "O pai é minha tenda"</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Realizei tão bem o meu trabalho que depois de 500 anos os Israelitas ainda continuavam a usar o tabernáculo
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Fui um dos principais contrutores do tabernáculo</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Eu era da tribo de Dã
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Sou filho de Aisamaque
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Além de tecelão, eu era bordador e artífice
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Demonstrei muita humildade por não ter destaque na obra que Jeová me designou</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Sou contemporâneo de Moisés</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Se não fosse pelo espírito santo de Jeová, eu não teria  conseguido realizar minha tarefa tão complexa </span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Fui desigando para treinar outros para conseguirem ser bons construtores</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>	
+
+	<div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade easy">Fácil</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">032</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Marcos</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">O nome pelo qual todos me chamam na verdade é o meu sobrenome romano </span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Escrevi um livro da Bíblia
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Já escapei nu de um exército</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Meu nome de verdade é João
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Sou filho de Maria de Jerusalém
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Eu era primo de Barnabé
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Provavelmente, eu era um dos 120 discípulos que estava presente no derramamento do espírito santo no ano 33</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Já fui "motivo" de forte ira do Apóstolo Paulo</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">A casa da minha mãe era usado para as reuniões cristãs</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Sou homem</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>	
+			
+	<div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade medium">Médio</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">033</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Tito</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Já fui designado a várias congregações pelo Apóstolo Paulo</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Certa vez, fui designado para ir pra Creta para que eu “corrigisse as coisas que precisavam ser endireitadas e fizesse designações de anciãos”
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Já fui enviado pelo Apóstolo Paulo para Corinto a fim de ajudar na coleta feita para ajudar os irmãos mais necessitados </span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Sou homem
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Eu que dei um bom relato dos irmãos em corinto para Paulo, o que este citou em sua segunda carta aos Coríntios 
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Não escrevi nenhum livro bíblico, mas tenho um que leva meu nome 
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Ao analisar se um homem deve ser designado Ancião, os anciãos normalmente usam meu livro para avaliar esse irmão</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Paulo me mandou “repreender com severidade” os rebeldes de Creta</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Eu era grego</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Acompanhei o apóstolo Paulo até Jerusalém para resolver a questão da circuncisão em Antioquia</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+			
+	<div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade easy">Fácil</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">033</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Esdras</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Provavelmente, eu que escrevi os 2 livros de Crônicas</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Eu era um excelente copista
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Eu estva entre os primeiros Israelitas que voltaram do exílio para Babilônia</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Meu nome significa "Ajuda; Auxílio"
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Eu era capaz de falar tanto o hebraico como o aramaico
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Ao saber que alguns Israelitas haviam se casado com esposas estrangeiras, arranquei os pelos de minha barba e cabelo
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Por ser perito na lei, eu li a lei de Moisés para os Israelitas no reinado de Neemias</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Sou homem</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Por causa do meu relato, é possível saber como, quando e quantos Israelitas vieram de Babilônia</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Presenciei a epóca em que o rei Assuero assinou um decreto para matar todos os Israelitas</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>	
+			
+			<div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade easy">Fácil</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">037</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Zacarias ( Profeta )</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Nasci em Babilônia</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Tive 8 visões que fortaleceram os Israelitas
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Tive uma visão de 4 cavaleiros</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Sou neto de Ido
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Eu que profetizei que Jesus entraria em Jerusalém montado num jumentinho
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Escrevi o livro bíblico que leva meu nome
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Faço parte dos "12 pequenos profetas"</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Eu profetizei que os discípulos de Jesus o abandonaria</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Sou homem</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Fui usado por Jeová para incentivar Zorobabel a terminar a construção do templo</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+			
+	<div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade diogo">Diogo</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">040</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Stephen Langton</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Vivi entre os séculos XII e XIII</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Fui um clérigo
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Eu quem dividi a Bíblia em capítulos</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Fui professor na universidade de Paris, na França
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Já fui arcebispo da Cantuaria
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Sou homem
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Se não fosse por mim, encontrar textos bíblicos seria muito mais difícil</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Não conheci nenhum personagem bíblico</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Fui figura central na disputa entre o rei João da Inglaterra e o papa Inocêncio III</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Não tenho meu nome registrado na Bíblia</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+			
+			
+	<div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade diogo">Diogo</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">041</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Robert Estienne</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Em 1539, comecei a produzir a primeira e melhor Bíblia na França</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Em minhas Bíblias, haviam ilustrações, mas não ilustrações fantasiosas, como era comum na minha época
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Fui um famoso impressor e erudito</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Na época, muitos não gostaram do que eu fiz na Bíblia, mas, se não fosse por mim, achar textos da Bíblia seria muito mais difícil
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Em minhas traduções, sempre usei o nome de Jeová
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Para fazer uma boa tradução da Bíblia, tive que recorrer a escritos muito antigos da Bíblia
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Fui uma das pessoas que se arriscaram para que, hoje, tenhamos a Bíblia como conhecemos</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Eu quem dividi a Bíblia em versículos</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Sou homem e vivi no século XVI</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Em 1533, fui a primeira pessoa a publicar a Bíblia praticamente como a que conhecemos hoje</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>	
+			
+	
+    <div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade easy">Fácil</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">043</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Ninrode</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Sou filho de Cus</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Já fui caçador, guerreiro e rei
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Fui um dos únicos que ousaram desafiar Jeová</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Provavelmente, foi em meu reinado que começaram a construir a torre de Babel 
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Fui dono de grandes impérios: Ninive, Calá, Sinear, Babel ...
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">O conceito judaico disse isso sobre mim: "[Ele sustentava] que a única maneira de afastar os homens de Deus era fazê-los dependentes do seu própio poder"
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Eu cheguei ameaçar Deus caso ele trouxesse outro dilúvio</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Fui uma pessoa muito má</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Fui fundador do primeiro império pós dilúvio</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Meu nome é derivado de um verbo que significa "rebelar"</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+	
+			 <div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade hard">Difícil</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">062</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Febe</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Sou mulher</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Paulo, em uma de suas cartas, pediu para os irmãos me dar toda ajuda necessária, pois eu me mostrei "defensora de muito"
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Meu nome significa "Puro; Brilhante; Radiante"</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Eu pertencia a congregação de Cencreia, do primeiro século
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Sou mencionada em apenas um versículo, em Romanos
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Fui contemporânea do Apóstolo Paulo
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Possivelmente, eu possuía alguma riqueza</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Possivelmente, eu que entrequei a carta de Paulo aos Romanos</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Não sou muito mencionado na Bíblia</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Provavelmente, eu era viúva</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+			
+	 <div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade hard">Difícil</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">064</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Himeneu</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Meu nome é derivado do deus grego do casamento</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Não fui um servo fiel de Jeová, pelo contrário, fui um apóstata.
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Em uma de suas cartas, Paulo disse que tinha me entregado a Satánas</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Um de meus ensinos falsos, era que a ressurreição já havia ocorrido
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Alguns de meus "companheiros" eram Alexandre e Fileto
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Eu acreditava que a ressurreição era apenas simbólica
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Sou mencionado nas cartas a Timóteo</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Fui desassociado</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Fui identificado por Paulo como blasfemador, cheio de "falatórios vãos que violam o que é santo"</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Sou homem</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+			
+	 <div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade medium">Médio</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">065</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Demas</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Certa vez, fui colaborador de Paulo </span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Já fui mencionado nos cumprimentos que Paulo mandava em suas cartas
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Abandonei Paulo “por causa de [meu] amor ao atual sistemas de coisas”</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Quando abandonei Paulo, parti para Tessalônica 
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Estive com Apóstolo Paulo durante seu primeiro aprisionamento em Roma
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Meu nome significa “De Deméter”
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Não me tornei opositor, mas coloquei o amor as coisas materiais em primeiro lugar na vida</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Quando as coisas começaram a apertar eu abandonei a verdade</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Não sou um bom exemplo para seguir</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Sou homem</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+			
+			<div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade easy">Fácil</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">075</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Enoque</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Profetizei que "Jeová viria com suas santas miríades para executar julgamento contra todos"</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Fui o sétimo homem na linhagem de Adão
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Fui mencionado na "grande nuvem de testemunhas"</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Muitos me perseguiram e tentaram me matar
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Meu nome é igual a da primeira cidade mencionada na Bíblia
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Sou homem
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Não morri de uma forma natural. A Bíblia diz que Jeová me "tomou"</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Morri novo, com 365 anos</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Minha vida é contado no livro de Gênesis e Judas</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Fui pai de Metusalém</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+			
+		 <div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade medium">Médio</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">088</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Jaaziel</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Eu era Levita</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Eu quem disse essas famosas palavras: “Não tenham medo nem fiquem apovarado ...  pois a batalha não é sua, mas de Deus"
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Eu era descendente de Asafe</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Eu era filho de Zacarias
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Eu quem disse: “ Vocês não terão que lutar nesse batalha. Tomem a sua posição, fiquem parados e vejam a salvação de Jeová”
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Sou homem
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Vivi num momento em que estava tendo muito medo em Israel</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Presenciei quando Jeová armou uma emboscado e fez os homens que estavam invadindo Judá se matarem</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Proferi uma das mensagens mais encorajadoras registradas na Bíblia </span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Vivi antes de Cristo</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+			
+		<div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade easy">Fácil</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">097</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Caifás</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Fui designado por Pôncio Pilatos</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Eu era o Sumo Sacerdote durante todo o ministério de Jesus
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Estive em todos esses momentos: "Para a estaca com ele"; "Não temos rei senão César"; "O rei dos Judeus"; "Ele blasfemou"</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Fui genro de Anás
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Maltratei muito Jesus e seus apóstolos
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Somente após muito tempo, Vitelio me removeu do meu cargo
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Não fui um servo de Jeová</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Sou homem</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Eu era saduceu </span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+				<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Sem querer, profetizei que Jesus morreria pela nação</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+			
+			 <div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade easy">Fácil</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">099</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Tibério</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Durante meu reinado, eu endureci as leis contra qualquer palavra dirigida a mim, lei essa que os judeus se basearam para matar Jesus</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Fui o imperador durante todo o período do ministério de Jesus
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Fui um “rei do norte”</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Eu era extremamente suspeitoso e hipocrita ao lidar com outros
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Fui o segundo imperador de Roma
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Não fui um servo de Jeová
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Tudo indica que era minha imagem na moeda que foi trazida até Jesus quando ele disse pra pagar a "César o que é de César"</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Algumas de minhas qualidades era não se considerar um deus, algo muito comum entre os imperadores da minha época </span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Eu fui um imperador</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Matei milhares de pessoas durante meu reinado</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+			
+	
+				 <div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade easy">Fácil</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">100</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Golias</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Eu era um dos refains</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Durante muito tempo, ninguém teve coragem de lutar comigo
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Eu era um incrível soldado</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Selei minha ruína quando desafiei Jeová
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Não fui um servo de Jeová
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Só minha cota de malha, pesava 57kg
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Fui derrotado por um pastor</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica">Provavelmente, eu era um mercenário</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Minha cabeça foi decepada pela minha própria espada</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Eu era da cidade de Gate</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+			
+		<div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade hard">Difícil</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">101</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Hulda</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Fui esposa de Salum</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Sou uma mulher
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Quando Josias encontrou o livro da lei no templo, ele veio me consultar para saber qual era a mensagem de Jeová </span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Eu era profetiza
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Meu nome significa "Duração da Vida; Sistemas de Coisas”
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">A Bíblia não fala muito sobre mim
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Eu profetizei que Josias seria ajuntado a seus antepassados e levado ao ser cemitério em paz </span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica"> Meu nome é a forma feminina do nome Helede
+</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica"> Eu morava em Jerusalém </span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Eu que transmiti a mensagem de Jeová dizendo que a nação de Israel sofreria as calamidades registradas no livro da lei</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+			<div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade medium">Uzias</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">102</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Hulda</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Reinei por mais de 50 anos e fui contemporâneo de vários profetas</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">Por causa do meu sucesso, me tornei orgulhoso
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Em meu reinado, ocorreu um terremoto muito incomum</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Fiz uma coisa que só os sacerdotes podiam fazer
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Eu tinha grande interesse na agricultura e na criação de gado
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Me tronei rei com 16 anos
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Fui atacado por lepra por Jeová </span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica"> Sou homem
+</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Fui um dos reis de Judá</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Fiquei famoso por caus das minhas vitórias militares</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+			
+	<div class="container caixaPerguntas naoAtual">
+		<div class="dificuldade easy">Fácil</div>
+		<span class="CodigoDaPergunta h1 naoFoi mr-3">103</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">Mulher do fluxo de sangue</span>
+		<div class="dicasPersonagens">
+			<div class="metade1">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica">Fui curada por Jesus</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica">"Se eu apenas tocar na sua roupa, ficarei boa"
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica">Minha fé me fez ficar boa</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica">Sou a primeira mulher registrada na Bíblia que Jesus chamou de "filha"
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica">Sou mencionada em apenas um relato da Bíblia
+</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+			</div>
+
+			<div class="metade2">
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica">Jesus curou sem me ver
+						</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica">Sofri muito nas mãos de vários médicos</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica"> Por 12 anos, sofri por causa de uma doença
+</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica">Quando fui curada por Jesus, havia uma grande multidão ao seu redor</span></div><button class="btn btn_dica">Ver dica</button>
+				</div>
+				<br>
+				<div class="divPai">
+					<div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica">Sou uma mulher</span></div><button class="btn  btn_dica">Ver dica</button>
+				</div>
+				<br>
+		</div>	
+	</div>
+			<span class="verPersonagem btn mb-5">Ver resposta</span>
+			<span class="btn proximo mb-5">Próximo</span>
+	</div>
+	
+</div>
+
+		
+			
+	<script src="js/main%20.js" type="module"></script>
+    
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>    
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	
+	</body>
+</html>
