@@ -1,9 +1,32 @@
 {
   "perguntas": [
     {
-      "personagem": "Zacarias",
-      "primeiraDica": "Fui contemporâneo de Jesus",
+      "0": "Zacarias",
+      "1": "Fui contemporâneo de Jesus",
+      "2": "Na Bíblia, há um livro com meu nome, porém, o livro é de outra pessoa",
+      "3": "Minha esposa era parente de Jesus",
+      "4": "Por minha relutância, fiquei mudo",
+      "5": "Fiz uma profecia a respeito do meu filho e a respeito de Jesus",
+      "6": "Minha esposa se chamava Elisabete",
+      "7": "Minha esposa era estéril, mas graças a um milagre, ela teve um filho",
+      "8": "Eu, junto com minha esposa, morávamos nas colinas de Judeia",
+      "9": "Eu pertencia a turma de Abias",
+      "10": "Minha esposa era parente de Arão",
       "id": 1
+    },
+    {
+      "0": "Áquila",
+      "1": "Nasci em Ponto, na parte setentrorial da Ásia Menor",
+      "2": "Eu e minha esposa éramos bastante hospitaleiros",
+      "3": "Fui banido de Roma e, por causa disso, passei a morar em Coríntio",
+      "4": "Eu tinha a mesma profissão que o apóstolo Paulo",
+      "5": "Eu, junto com minha esposa, fomos com Paulo para Éfeso",
+      "6": "Minha casa era usada para as reuniões",
+      "7": "Ajudei o eloquente Apolo a ter conhecimento exato da verdade",
+      "8": "Arrisquei minha vida por Paulo",
+      "9": "Tive uma amizade bem íntima com Paulo",
+      "10": "Fui contemporâneo de Paulo",
+      "id": 2
     }
   ]
 }

@@ -60,7 +60,9 @@
             const inputSubmit = document.querySelector('.subInput');
             const inputs = document.querySelectorAll('input');
 
-            console.log(inputSubmit);
+            function cb(json){
+                console.log(json)
+            }
 
             inputSubmit.addEventListener('click', function(){
                 var valores = [];
@@ -72,11 +74,109 @@
                         
                     }
                     valores.push(inputs[x].value);
+
+                    inputs[x].value = "";
                     x++;
+
                 }
+
+                let _valores = Object.assign({}, valores);  
                 
-                console.log(valores);
+                ajaxSend(_valores)
+               
             })
+
+            function ajaxSend(val){      
+                let xhr = new XMLHttpRequest();
+                let url = "http://localhost:3000/perguntas";
+                let dataStringFly = JSON.stringify(val);
+
+                xhr.open("POST", url);
+                xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+                xhr.send(dataStringFly);
+                xhr.onreadystatechange = verificaAjax
+
+                function verificaAjax(cb){
+                    console.log(xhr.readyState)
+                    if(xhr.readyState === 4){
+                        if(xhr.status < 400){
+                            const json = JSON.parse(xhr.responseText);
+                        }else{
+                            alert("Deu ruim")
+                        }
+                    }
+                }
+            }
+
+
+    
+
+             
+        // async function getUser(id){
+        //     let url = `https://jsonplaceholder.typicode.com/users/${id}`;           
+        //     let promise  = await fetch(url);
+            
+        //     if(!promise.ok){
+        //         throw new Error('FALHOU --- ')
+        //     }            
+            
+        //     let usuario = await promise.json();
+            
+        //     return usuario;
+                
+        // }
+        
+        // function mostraUsuarios(usuario){   
+        //     adicionarElemento($listaUsuarios, 'dt', usuario.id);
+        //     adicionarElemento($listaUsuarios, 'dd', usuario.name, usuario.email, usuario.phone, usuario. website);  
+        // }
+        
+    
+        // function adicionarElemento(container, tag, ...text){
+            
+        //     [...text].forEach( str => {
+        //         let _tag = document.createElement(tag);
+        //         let _textNode = document.createTextNode(str);
+        //         _tag.appendChild(_textNode);
+        //         container.appendChild(_tag);
+                
+        //     } )
+        // }
+        
+        
+        // getUser(1)
+        //     .then( resposta => {
+        //         console.log('---sucesso');
+        //         console.log(resposta);
+        //         mostraUsuarios(resposta);
+        //     return getUser(2);
+        //     } )
+        //     .then( resposta => {
+        //         console.log('---sucesso');
+        //         console.log(resposta);
+        //         mostraUsuarios(resposta);
+        //         return getUser('3a');
+        //     } )
+        //     .then( resposta => {
+        //         console.log('---sucesso');
+        //         console.log(resposta);
+        //         mostraUsuarios(resposta);
+        //         return getUser(4);
+        //     } )
+        //     .then( resposta => {
+        //         console.log('---sucesso');
+        //         console.log(resposta);
+        //         mostraUsuarios(resposta);
+        //     } )
+        //     .catch( err => {
+        //         console.log('---erro')
+        //         console.log(err.message);
+        //     } )
+        
+    
+        
+        
+    </script>
         </script>
 
     </body>
