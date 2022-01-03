@@ -132,74 +132,61 @@
                             <br>
                     </div>	
                     </div>
-                            <span class="verPersonagem btn mb-5">Ver resposta</span>
-                            <span class="btn proximo mb-5">Próximo</span>
-                    </div>`
+                            <span class="btn proximo mb-5">Atualizar</span>
+                    </div>`;
+
+                    inputBusca.value = "";
+                    let btnAtualizar = document.querySelector('.proximo');
+
+
+                    btnAtualizar.addEventListener('click', atualizaPersonagem);
+
+                    function atualizaPersonagem(){
+                        let inputsTextArea = document.querySelectorAll('textarea');
+                        let valores = [];
+                        var x = 0;
+                        while(x <= 9){
+                            if(inputsTextArea[x].value === ""){
+                                alert("Preencha todos os campos");
+                                return;
+                            }
+
+                            valores.push(inputsTextArea[x].value);
+                            
+                            x++;
+                        }
+
+                        ajaxSend(valores);
+
+                        function ajaxSend(val){ 
+
+                            let xhr = new XMLHttpRequest();
+                            let url = `http://localhost:3000/perguntas/${el[12]}`;
+                            let _valores = Object.assign({}, val);
+                            let dataStringFy = JSON.stringify(_valores);
+
+                            xhr.open("PUT", url);
+                            xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+                            xhr.send(dataStringFy);
+                            xhr.onreadystatechange = verificaAjax;
+
+                            function verificaAjax(){
+                                if(xhr.readyState === 4){
+                                    if(xhr.status < 400){
+                                        const json = JSON.parse(xhr.responseText);
+                                        alert("Deu certo");
+                                    }else{
+                                        alert("Deu ruim");
+                                    }
+                                }
+                            }
+
+                        }
                     }
+
+                }
                    
             }
-
-
-            // async function getUser(id){
-        //     let url = `https://jsonplaceholder.typicode.com/users/${id}`;           
-        //     let promise  = await fetch(url);
-            
-        //     if(!promise.ok){
-        //         throw new Error('FALHOU --- ')
-        //     }            
-            
-        //     let usuario = await promise.json();
-            
-        //     return usuario;
-                
-        // }
-        
-        // function mostraUsuarios(usuario){   
-        //     adicionarElemento($listaUsuarios, 'dt', usuario.id);
-        //     adicionarElemento($listaUsuarios, 'dd', usuario.name, usuario.email, usuario.phone, usuario. website);  
-        // }
-        
-    
-        // function adicionarElemento(container, tag, ...text){
-            
-        //     [...text].forEach( str => {
-        //         let _tag = document.createElement(tag);
-        //         let _textNode = document.createTextNode(str);
-        //         _tag.appendChild(_textNode);
-        //         container.appendChild(_tag);
-                
-        //     } )
-        // }
-        
-        
-        // getUser(1)
-        //     .then( resposta => {
-        //         console.log('---sucesso');
-        //         console.log(resposta);
-        //         mostraUsuarios(resposta);
-        //     return getUser(2);
-        //     } )
-        //     .then( resposta => {
-        //         console.log('---sucesso');
-        //         console.log(resposta);
-        //         mostraUsuarios(resposta);
-        //         return getUser('3a');
-        //     } )
-        //     .then( resposta => {
-        //         console.log('---sucesso');
-        //         console.log(resposta);
-        //         mostraUsuarios(resposta);
-        //         return getUser(4);
-        //     } )
-        //     .then( resposta => {
-        //         console.log('---sucesso');
-        //         console.log(resposta);
-        //         mostraUsuarios(resposta);
-        //     } )
-        //     .catch( err => {
-        //         console.log('---erro')
-        //         console.log(err.message);
-        //     } )
         </script>
     </body>
 </html>
