@@ -57,14 +57,14 @@
 
                 personagem.forEach((element, index) => {
                     element = Object.values(element);                    
-                    let _element = element[0];
+                    let _element = element[1];
                     if(_element === personagemProcurado){
                          elementEncontrado(element);
                     }
                 })
 
                 function elementEncontrado(el){
-                    let levelPergunta = el[11];
+                    let levelPergunta = el[0];
                     let _level = undefined;
 
                     switch(levelPergunta){
@@ -83,51 +83,51 @@
 
                     resultados.innerHTML = ` 
                     <div class="container caixaPerguntas">
-                    <div class="dificuldade ${_level}">${el[11]}</div>
-                    <span class="CodigoDaPergunta h1 mr-3">0${el[12]}</span><span class="h1 personagem">Personagem:</span><span class="h2 p-2">${el[0]}</span>
+                    <div class="dificuldade ${_level}"><textarea>${el[0]}</textarea></div>
+                    <span class="CodigoDaPergunta h1 mr-3">0${el[12]}</span><span class="h1 personagem">Personagem:</span><span class="h2 p-2"><textarea>${el[1]}</textarea></span>
                     <div class="dicasPersonagens">
                         <div class="metade1">
                             <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica"><textarea>${el[1]}</textarea></span></div>
+                                <div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica"><textarea>${el[2]}</textarea></span></div>
                             </div>
                             <br>
                             <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica"><textarea>${el[2]}</textarea></span></div>
+                                <div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica"><textarea>${el[3]}</textarea></span></div>
                             </div>
                             <br>
                             <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica"><textarea>${el[3]}</textarea></span></div>
+                                <div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica"><textarea>${el[4]}</textarea></span></div>
                             </div>
                             <br>
                             <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica"><textarea>${el[4]}</textarea></span></div>
+                                <div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica"><textarea>${el[5]}</textarea></span></div>
                             </div>
                             <br>
                             <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica"><textarea>${el[5]}</textarea></span></div>
+                                <div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica"><textarea>${el[6]}</textarea></span></div>
                             </div>
                             <br>
                         </div>
                         
                         <div class="metade2">
                             <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica"><textarea>${el[6]}</textarea></span></div>
+                                <div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica"><textarea>${el[7]}</textarea></span></div>
                             </div>
                             <br>
                             <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica"><textarea>${el[7]}</textarea></span></div>
+                                <div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica"><textarea>${el[8]}</textarea></span></div>
                             </div>
                             <br>
                             <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica"><textarea>${el[8]}</textarea></span></div>
+                                <div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica"><textarea>${el[9]}</textarea></span></div>
                             </div>
                             <br>
                             <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica"><textarea>${el[9]}</textarea></span></div>
+                                <div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica"><textarea>${el[10]}</textarea></span></div>
                             </div>
                             <br>
                             <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica"><textarea>${el[10]}</textarea></span></div>
+                                <div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica"><textarea>${el[11]}</textarea></span></div>
                             </div>
                             <br>
                     </div>	
