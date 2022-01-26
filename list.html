@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+		<link href="css/estilo.css" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <input type="text" class="textInput"> <button class="btnPersonagem">Enviar Personagem</button>
+        <input type="number" class="textId"> <button class="btnId">Enviar ID</button>
+
+        <div class="listPersonagens">
+            <ul class="ulPersonagens">
+            </ul>
+        </div>
+
+        <script>
+            const $ulPersonagens = document.querySelector('.ulPersonagens');
+
+                let xhr = new XMLHttpRequest();
+                let url = "http://localhost:3000/perguntas";
+                xhr.open("GET", url);
+                xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+                xhr.send(null);
+                xhr.onreadystatechange = verificaAjax;
+
+                function verificaAjax(){
+                    console.log(xhr.readyState);
+
+                    if(xhr.readyState === 4){
+                        if(xhr.status < 400){
+                            const json = JSON.parse(xhr.responseText);
+                            viewList(json);
+                        }else{
+                            alert("Deu ruim");
+                        }
+                    }
+                }
+
+                function viewList(list){
+                    console.log(list);
+                    var x = 0;
+                    while(x <= list.length){
+                        const $li = document.createElement('li');
+                        const text = document.createTextNode(list[x].id + " " + list[x][1]);
+                        $li.appendChild(text); 
+                        $ulPersonagens.appendChild($li);
+                        x++;
+                    }
+                }
+
+                const $inputText = document.querySelector('.textInput');
+                const $inputId = document.querySelector('.textId');
+                const $btnPersonagem = document.querySelector('.btnPersonagem');
+                const $btnId = document.querySelector('.btnId');
+
+                $btnPersonagem.addEventListener('click', function(){
+                    const personagemProcurado = $inputText.value;
+                    $ulPersonagens.innerHTML = personagemProcurado;
+                });
+
+                $btnId.addEventListener('click', function(){
+                    const personagemProcurado = $inputId.value;
+                    $ulPersonagens.innerHTML = personagemProcurado;
+                })
+
+        </script>
+    </body>
+</html>

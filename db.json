@@ -1,49 +1,19 @@
 {
   "perguntas": [
     {
-      "0": "Fácil",
-      "1": "Zacarias",
-      "2": "Fui contemporâneo de Jesus",
-      "3": "Na Bíblia, há um livro com meu nome, porém, o livro é de outra pessoa",
-      "4": "Minha esposa era parente de Jesus",
-      "5": "Por minha relutância, fiquei mudo",
-      "6": "Fiz uma profecia a respeito do meu filho e a respeito de Jesus",
-      "7": "Minha esposa se chamava Elisabete",
-      "8": "Minha esposa era estéril, mas graças a um milagre, ela teve um filho",
-      "9": "Eu, junto com minha esposa, morávamos nas colinas de Judeia",
-      "10": "Eu pertencia a turma de Abias",
-      "11": "Minha esposa era parente de Arão",
+      "nivel": "Médio",
+      "personagem": "Zacarias",
+      "dicaUm": "Fui contemporâneo de Jesus",
+      "dicaDois": "Na Bíblia, há um livro com meu nome, porém, o livro é de outra pessoa",
+      "dicaTres": "Minha esposa era parente de Jesus",
+      "dicaQuatro": "Por minha relutância, fiquei mudo",
+      "dicaCinco": "Fiz uma profecia a respeito do meu filho e a respeito de Jesus",
+      "dicaSeis": "Minha esposa se chamava Elisabete",
+      "dicaSete": "Minha esposa era estéril, mas graças a um milagre, ela teve um filho",
+      "dicaOito": "Eu, junto com minha esposa, morávamos nas colinas de Judeia",
+      "dicaNove": "Minha esposa era estéril, mas graças a um milagre, ela teve um filho",
+      "dicaDez": "Eu, junto com minha esposa",
       "id": 1
-    },
-    {
-      "0": "Fácil",
-      "1": "Áquila",
-      "2": "Nasci em Ponto, na parte setentrorial da Ásia Menor",
-      "3": "Eu e minha esposa éramos bastante hospitaleiros",
-      "4": "Fui banido de Roma e, por causa disso, passei a morar em Coríntio",
-      "5": "Eu tinha a mesma profissão que o apóstolo Paulo",
-      "6": "Eu, junto com minha esposa, fomos com Paulo para Éfeso",
-      "7": "Minha casa era usada para as reuniões",
-      "8": "Ajudei o eloquente Apolo a ter conhecimento exato da verdade",
-      "9": "Arrisquei minha vida por Paulo",
-      "10": "Tive uma amizade bem íntima com Paulo",
-      "11": "Fui contemporâneo de Paulo",
-      "id": 2
-    },
-    {
-      "0": "Fácil",
-      "1": "Asa",
-      "2": "Fui o terceiro rei de Israel depois que o Reino foi dividido",
-      "3": "Tive um zelo enorme pela adoração pura",
-      "4": "Por causa do meu zelo, Israel teve um longo período de paz",
-      "5": "Com ajuda de jeová, venci um exército de mais de 1 milhão de soldados",
-      "6": "No fim de minha vida, tive uma doença nos pés",
-      "7": "Apesar da minha falta de sabedoria e perspicácia em alguns momentos, fui considerado um rei justo",
-      "8": "No reinado do meu filho, ele mostrou apreço pela adoração pura",
-      "9": "Por causa de minha tolice, enfrentei guerras contínuas",
-      "10": "Tratei injustamente Hanai, um vidente que queria me ajudar a confiar em Jeová",
-      "11": "Apesar de minhas tolices, tive um enterro honroso, que eu mesmo preparei, na cidade de Davi",
-      "id": 3
     }
   ]
 }

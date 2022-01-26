@@ -151,7 +151,7 @@
                         let inputsTextArea = document.querySelectorAll('textarea');
                         let valores = [];
                         var x = 0;
-                        while(x <= 9){
+                        while(x <= 11){
                             if(inputsTextArea[x].value === ""){
                                 alert("Preencha todos os campos");
                                 return;
@@ -164,11 +164,15 @@
 
                         ajaxSend(valores);
 
-                        function ajaxSend(val){ 
+                        function ajaxSend(dataArray){ 
 
+                            console.log(dataArray);
+
+                            let _valores = {"nivel": dataArray[0], "personagem": dataArray[1], "dicaUm": dataArray[2], "dicaDois": dataArray[3], "dicaTres": dataArray[4], "dicaQuatro": dataArray[5], "dicaCinco": dataArray[6], "dicaSeis": dataArray[7], "dicaSete": dataArray[8], "dicaOito": dataArray[9], "dicaNove": dataArray[10], "dicaDez": dataArray[11], "id": el[12]};
+                            console.log(_valores);
+                            
                             let xhr = new XMLHttpRequest();
-                            let url = `http://localhost:3000/perguntas/${el[12]}`;
-                            let _valores = Object.assign({}, val);
+                            let url = `http://localhost:3000/perguntas/${_valores.id}`;
                             let dataStringFy = JSON.stringify(_valores);
 
                             xhr.open("PUT", url);
