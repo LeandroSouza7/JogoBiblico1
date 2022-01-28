@@ -30,8 +30,6 @@
                 xhr.onreadystatechange = verificaAjax;
 
                 function verificaAjax(){
-                    console.log(xhr.readyState);
-
                     if(xhr.readyState === 4){
                         if(xhr.status < 400){
                             const json = JSON.parse(xhr.responseText);
@@ -42,32 +40,58 @@
                     }
                 }
 
-                function viewList(list){
-                    console.log(list);
+                function viewList(list){ 
+                    const l = list[0];
                     var x = 0;
-                    while(x <= list.length){
+                    while(x < list.length){
                         const $li = document.createElement('li');
-                        const text = document.createTextNode(list[x].id + " " + list[x][1]);
+                        let i = 0;
+                        i += x;
+                        let text = document.createTextNode(list[i].id + " " + list[x].personagem);
                         $li.appendChild(text); 
                         $ulPersonagens.appendChild($li);
                         x++;
                     }
+
+                    const $inputText = document.querySelector('.textInput');
+                    const $inputId = document.querySelector('.textId');
+                    const $btnPersonagem = document.querySelector('.btnPersonagem');
+                    const $btnId = document.querySelector('.btnId');
+
+                    $btnPersonagem.addEventListener('click', function(){
+                        const personagemProcurado = $inputText.value;
+
+                        let x = 0;
+                        while(x < list.length){
+                            let personagens = list[x].personagem;
+                            if(personagemProcurado === personagens){
+                                $ulPersonagens.innerHTML = `<li>${list[x].id} ${list[x].personagem}`;
+                            }else{
+                                
+                            }
+
+                            x++;
+                        }
+
+                    });
+
+                    $btnId.addEventListener('click', function(){
+                        const idProcurado = $inputId.value;
+
+                        let x = 0;
+                        while(x < list.length){
+                            let ids = list[x].id;
+                            if(idProcurado == ids){
+                                $ulPersonagens.innerHTML = `<li>${list[x].id} ${list[x].personagem}`;
+                            }else{
+                            }
+
+                            x++;
+                        }
+
+                    })
                 }
 
-                const $inputText = document.querySelector('.textInput');
-                const $inputId = document.querySelector('.textId');
-                const $btnPersonagem = document.querySelector('.btnPersonagem');
-                const $btnId = document.querySelector('.btnId');
-
-                $btnPersonagem.addEventListener('click', function(){
-                    const personagemProcurado = $inputText.value;
-                    $ulPersonagens.innerHTML = personagemProcurado;
-                });
-
-                $btnId.addEventListener('click', function(){
-                    const personagemProcurado = $inputId.value;
-                    $ulPersonagens.innerHTML = personagemProcurado;
-                })
 
         </script>
     </body>
