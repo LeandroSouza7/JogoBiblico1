@@ -8,6 +8,18 @@
 	
 		<link href="css/estilo.css" rel="stylesheet">
 
+        <style>
+
+            .btnVoltarTela{
+                border: solid 2px black;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                padding: 10px;
+                cursor: pointer;
+            }
+        </style>
+
     </head>
     <body>
 
@@ -19,9 +31,22 @@
             </ul>
         </div>
 
+        <div class="none btnVoltarTela"><btn>Voltar lista completa</btn></div>
+
         <script>
             const $ulPersonagens = document.querySelector('.ulPersonagens');
+            const $inputText = document.querySelector('.textInput');
+            const $inputId = document.querySelector('.textId');
+            const $btnPersonagem = document.querySelector('.btnPersonagem');
+            const $btnId = document.querySelector('.btnId');
+            const $btnVoltarTela = document.querySelector('.btnVoltarTela')
 
+            if($inputText.value === "" && $inputId.value === ""){
+                ajaxGet();
+            }
+
+
+            function ajaxGet(){
                 let xhr = new XMLHttpRequest();
                 let url = "http://localhost:3000/perguntas";
                 xhr.open("GET", url);
@@ -39,8 +64,12 @@
                         }
                     }
                 }
+            }
+
+                
 
                 function viewList(list){ 
+                    $ulPersonagens.innerHTML = "";
                     const l = list[0];
                     var x = 0;
                     while(x < list.length){
@@ -52,11 +81,6 @@
                         $ulPersonagens.appendChild($li);
                         x++;
                     }
-
-                    const $inputText = document.querySelector('.textInput');
-                    const $inputId = document.querySelector('.textId');
-                    const $btnPersonagem = document.querySelector('.btnPersonagem');
-                    const $btnId = document.querySelector('.btnId');
 
                     $btnPersonagem.addEventListener('click', function(){
                         const personagemProcurado = $inputText.value;
@@ -73,6 +97,16 @@
                             x++;
                         }
 
+                        $inputText.value = "";
+
+                        $btnVoltarTela.classList.remove('none');
+
+                        $btnVoltarTela.addEventListener('click', function(){
+                            $ulPersonagens.innerHTML = ""; 
+                            ajaxGet();
+                            $btnVoltarTela.classList.add('none');
+                        })
+
                     });
 
                     $btnId.addEventListener('click', function(){
@@ -88,6 +122,16 @@
 
                             x++;
                         }
+
+                        $inputId.value = "";
+
+                        $btnVoltarTela.classList.remove('none');
+
+                        $btnVoltarTela.addEventListener('click', function(){
+                            $ulPersonagens.innerHTML = ""; 
+                            ajaxGet();
+                            $btnVoltarTela.classList.add('none');
+                        })
 
                     })
                 }
