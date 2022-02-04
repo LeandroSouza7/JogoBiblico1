@@ -40,6 +40,7 @@
 
             async function procuraPersonagem(){
                 let personagemProcurado = inputBusca.value;
+                personagemProcurado = personagemProcurado.toLowerCase();
 
                 let url = "http://localhost:3000/perguntas";
                 let promise = await fetch(url);
@@ -56,6 +57,7 @@
                 personagem.forEach((element, index) => {
                     element = Object.values(element);                    
                     let _element = element[1];
+                    _element = _element.toLowerCase();
                     if(_element === personagemProcurado){
                          elementEncontrado(element);
                     }else{
@@ -71,16 +73,17 @@
 
                 function elementEncontrado(el){
                     let levelPergunta = el[0];
+                    levelPergunta = levelPergunta.toLowerCase();
                     let _level = undefined;
 
                     switch(levelPergunta){
-                        case "Fácil":
+                        case "fácil":
                             _level = "easy";
                             break;
-                        case "Médio":
+                        case "médio":
                             _level = "medium";
                             break;
-                        case "Difícil":
+                        case "difícil":
                             _level = "hard";
                             break;
                         default:

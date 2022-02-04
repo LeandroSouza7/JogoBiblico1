@@ -1,7 +1,7 @@
 {
   "perguntas": [
     {
-      "nivel": "Médio",
+      "nivel": "Fácil",
       "personagem": "Zacarias",
       "dicaUm": "Fui contemporâneo de Jesus",
       "dicaDois": "Na Bíblia, há um livro com meu nome, porém, o livro é de outra pessoa",
@@ -29,6 +29,51 @@
       "dicaNove": "Minha esposa era estéril, mas graças a um milagre, ela teve um filho",
       "dicaDez": "Eu, junto com minha esposa",
       "id": 2
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Ezequiale",
+      "dicaUm": "y",
+      "dicaDois": "y",
+      "dicaTres": "y",
+      "dicaQuatro": "g",
+      "dicaCinco": "g",
+      "dicaSeis": "g",
+      "dicaSete": "g",
+      "dicaOito": "g",
+      "dicaNove": "g",
+      "dicaDez": "g",
+      "id": 3
+    },
+    {
+      "nivel": "t",
+      "personagem": "t",
+      "dicaUm": "t",
+      "dicaDois": "t",
+      "dicaTres": "t",
+      "dicaQuatro": "t",
+      "dicaCinco": "t",
+      "dicaSeis": "t",
+      "dicaSete": "t",
+      "dicaOito": "t",
+      "dicaNove": "t",
+      "dicaDez": "t",
+      "id": 4
+    },
+    {
+      "nivel": "t",
+      "personagem": "t",
+      "dicaUm": "t",
+      "dicaDois": "t",
+      "dicaTres": "tt",
+      "dicaQuatro": "t",
+      "dicaCinco": "t",
+      "dicaSeis": "t",
+      "dicaSete": "t",
+      "dicaOito": "t",
+      "dicaNove": "t",
+      "dicaDez": "d",
+      "id": 5
     }
   ]
 }

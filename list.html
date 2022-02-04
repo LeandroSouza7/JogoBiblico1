@@ -23,8 +23,8 @@
     </head>
     <body>
 
-        <input type="text" class="textInput"> <button class="btnPersonagem">Enviar Personagem</button>
-        <input type="number" class="textId"> <button class="btnId">Enviar ID</button>
+        <input type="text" class="textInput"> <button class="btnPersonagem btn">Enviar Personagem</button>
+        <input type="number" class="textId"> <button class="btnId btn">Enviar ID</button>
 
         <div class="listPersonagens">
             <ul class="ulPersonagens">
@@ -83,55 +83,78 @@
                     }
 
                     $btnPersonagem.addEventListener('click', function(){
-                        const personagemProcurado = $inputText.value;
+                        let personagemProcurado = $inputText.value;
 
+                        personagemProcurado = personagemProcurado.toLowerCase();
+
+                        if(personagemProcurado == ""){
+                            alert("Input vazio");
+                            return
+                        }
+
+                        let qtdPersonagens = list.length;
                         let x = 0;
                         while(x < list.length){
                             let personagens = list[x].personagem;
+                            personagens = personagens.toLowerCase();
                             if(personagemProcurado === personagens){
                                 $ulPersonagens.innerHTML = `<li>${list[x].id} ${list[x].personagem}`;
+                                $inputText.value = "";
+
+                                $btnVoltarTela.classList.remove('none');
+
+                                $btnVoltarTela.addEventListener('click', function(){
+                                    $ulPersonagens.innerHTML = ""; 
+                                    ajaxGet();
+                                    $btnVoltarTela.classList.add('none');
+                                })
+                                return;
                             }else{
-                                
+                                if(x + 1 == qtdPersonagens){
+                                    alert("Personagem não encontrado");
+                                    return
+                                }
                             }
 
                             x++;
                         }
-
-                        $inputText.value = "";
-
-                        $btnVoltarTela.classList.remove('none');
-
-                        $btnVoltarTela.addEventListener('click', function(){
-                            $ulPersonagens.innerHTML = ""; 
-                            ajaxGet();
-                            $btnVoltarTela.classList.add('none');
-                        })
 
                     });
 
                     $btnId.addEventListener('click', function(){
                         const idProcurado = $inputId.value;
 
+                        if(idProcurado == ""){
+                            alert("Input vazio");
+                            return
+                        }
+
                         let x = 0;
+                        let qtdPersonagens = list.length;
                         while(x < list.length){
                             let ids = list[x].id;
                             if(idProcurado == ids){
                                 $ulPersonagens.innerHTML = `<li>${list[x].id} ${list[x].personagem}`;
+                                $inputId.value = "";
+
+                                $btnVoltarTela.classList.remove('none');
+
+                                $btnVoltarTela.addEventListener('click', function(){
+                                    $ulPersonagens.innerHTML = ""; 
+                                    ajaxGet();
+                                    $btnVoltarTela.classList.add('none');
+                                })
+                                return;
                             }else{
+                                console.log(x + 1, qtdPersonagens);
+                                if(x + 1 == qtdPersonagens){
+                                    alert("Personagem não encontrado");
+                                    return
+                                }
                             }
 
                             x++;
                         }
-
-                        $inputId.value = "";
-
-                        $btnVoltarTela.classList.remove('none');
-
-                        $btnVoltarTela.addEventListener('click', function(){
-                            $ulPersonagens.innerHTML = ""; 
-                            ajaxGet();
-                            $btnVoltarTela.classList.add('none');
-                        })
 
                     })
                 }
