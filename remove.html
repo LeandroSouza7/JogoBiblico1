@@ -9,17 +9,71 @@
 		<link href="css/estilo.css" rel="stylesheet">
 
         <style>
-
+            btn{
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
 
-        <input type="text" class="namePersonagem"><btn>Pesquisar personagem</btn>
-        <input type="text" class="idPersonagem"><btn>Pesquisar ID</btn>
+        <input type="text" class="namePersonagem"><btn class="btnPersonagem">Pesquisar personagem</btn>
+        <input type="text" class="idPersonagem"><btn class="btnId">Pesquisar ID</btn>
         
         <script>
-            const btnPersonagem = document.querySelector('.namePersonagem');
-            const idPersonagem = document.querySelector('.idPersonagem');
+            const valuePersonagemBtn = document.querySelector('.namePersonagem');
+            const btnPersonagem = document.querySelector('.btnPersonagem');
+            const valuePersonagemId = document.querySelector('.idPersonagem');
+            const btnId = document.querySelector('.btnId');
+
+            btnPersonagem.addEventListener('click', procuraPersonagem);
+
+            function procuraPersonagem(){
+                let personagemBuscado = valuePersonagemBtn.value;
+                personagemBuscado = personagemBuscado.toLowerCase();
+                
+                if(personagemBuscado === ""){
+                    alert("Digite um personagem");
+                }
+
+                ajaxGet(personagemBuscado);
+
+            }
+
+            function ajaxGet(personagem){
+                let xhr = new XMLHttpRequest();
+                let url = "http://localhost:3000/perguntas";
+                xhr.open("GET", url);
+                xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+                xhr.send(null);
+                xhr.onreadystatechange = verificaAjax;
+
+                function verificaAjax(){
+                    if(xhr.readyState === 4){
+                        if(xhr.status < 400){
+                            const json = JSON.parse(xhr.responseText);
+                            viewList(json);
+                        }else{
+                            alert("Deu ruim");
+                        }
+                    }
+                }
+
+                function viewList(information){
+                    var x = 0;
+                    while(x < information.length){
+                        let arr = [];
+                        let personagens = information[x].personagem;
+                        personagens = personagens.toLowerCase();
+                        if(personagens == personagem){
+                            console.log("Deu certo")
+                        }else{
+                            console.log("Deu ruim")
+                        }
+                        x++;
+                    }
+                    
+                }
+            }
         </script>
     </body>
 </html>
