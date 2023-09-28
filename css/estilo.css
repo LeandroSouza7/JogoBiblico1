@@ -24,11 +24,10 @@ body{
 
 .inputsParticipantes h3{
 	text-align: center;
+	padding: 25px 0 10px 0;
 }
 
 .inputsParticipantes input{
-	display: block;
-	width: 100%;
 	font-size: 32px;
 	margin: 0.7em 0;
 }
@@ -38,6 +37,12 @@ body{
 	font-size: 24px;
 	margin: 0.5em;
 	float: right;
+}
+
+.inputs{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 20px;
 }
 
 .divPai{

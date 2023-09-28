@@ -83,7 +83,8 @@
         <div class="msg"> </div>
 
 
-        <script>
+        <script type="module">
+            import { createFetch } from './js/createFetch.js';
             const inputSubmit = document.querySelector('.subInput');
             const inputs = document.querySelectorAll('input');
 
@@ -131,26 +132,30 @@
 
                 const data = {"nivel": dataArray[0], "personagem": dataArray[1], "dicaUm": dataArray[2], "dicaDois": dataArray[3], "dicaTres": dataArray[4], "dicaQuatro": dataArray[5], "dicaCinco": dataArray[6], "dicaSeis": dataArray[7], "dicaSete": dataArray[8], "dicaOito": dataArray[9], "dicaNove": dataArray[10], "dicaDez": dataArray[11]};
 
-                inputs.value = "";     
-                let xhr = new XMLHttpRequest();
-                let url = "http://localhost:3000/perguntas";
-                let dataStringFly = JSON.stringify(data);
+                inputs.value = ""; 
 
-                xhr.open("POST", url);
-                xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
-                xhr.send(dataStringFly);
-                xhr.onreadystatechange = verificaAjax
+                let fetchList = createFetch("POST", "http://localhost:3000/perguntas", data)
+                    .then(response => deuCertoOuErrado("certo"));  
+                    
+                // let xhr = new XMLHttpRequest();
+                // let url = "http://localhost:3000/perguntas";
+                // let dataStringFly = JSON.stringify(data);
 
-                function verificaAjax(cb){
-                    if(xhr.readyState === 4){
-                        if(xhr.status < 400){
-                            const json = JSON.parse(xhr.responseText);
-                            deuCertoOuErrado("certo");
-                        }else{
-                            deuCertoOuErrado("errado");
-                        }
-                    }
-                }
+                // xhr.open("POST", url);
+                // xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+                // xhr.send(dataStringFly);
+                // xhr.onreadystatechange = verificaAjax
+
+                // function verificaAjax(cb){
+                //     if(xhr.readyState === 4){
+                //         if(xhr.status < 400){
+                //             const json = JSON.parse(xhr.responseText);
+                //             deuCertoOuErrado("certo");
+                //         }else{
+                //             deuCertoOuErrado("errado");
+                //         }
+                //     }
+                // }
 
                 function  deuCertoOuErrado(certoOuErrado){
                     const msg = document.querySelector('.msg');

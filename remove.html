@@ -33,11 +33,27 @@
                 
                 if(personagemBuscado === ""){
                     alert("Digite um personagem");
+                    return;
                 }
 
                 ajaxGet(personagemBuscado);
-
             }
+
+            btnId.addEventListener('click', procuraPersonagemId);
+
+            function procuraPersonagemId(){
+                let personagemProcuradoId = valuePersonagemId.value;
+
+                if(personagemProcuradoId === ""){
+                    alert("Digite um ID");
+                    return;
+                }
+
+                personagemProcuradoId = parseInt(personagemProcuradoId);
+
+                ajaxGet(personagemProcuradoId)
+            }
+
 
             function ajaxGet(personagem){
                 let xhr = new XMLHttpRequest();
@@ -59,6 +75,7 @@
                 }
 
                 function viewList(information){
+                    console.log(information[2].personagem)
                     var x = 0;
                     while(x < information.length){
                         let arr = [];
@@ -74,6 +91,8 @@
                     
                 }
             }
+
+
         </script>
     </body>
 </html>

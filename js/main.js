@@ -4,7 +4,7 @@ import { ChangeClass } from './Controller/ChangeClass.js';
 import { ChangeClassNamePersonagem } from './Controller/ChangeClassNamePersonagem.js';
 import { MsgVencedor } from './View/MsgVencedor.js';
 //import {Cronometro} from './Controller/Cronometro.js';
-
+ 
 var $players = document.querySelectorAll('.inputPlayers');
 var $comecar = document.querySelector('.comecar');
 var $codigoDaPergunta = document.querySelectorAll('.CodigoDaPergunta');
@@ -20,7 +20,6 @@ var $paragrafoCaixa = document.querySelector('.msgVencedor .jogadores');
 var $body = document.querySelector('body');
 var divPrincipal = document.querySelector('.div_principal');
 //var $cronometro = new Cronometro();
-
 
 
 

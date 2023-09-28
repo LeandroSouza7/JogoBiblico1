@@ -1,18 +1,21 @@
 {
   "perguntas": [
     {
-      "nivel": "Fácil",
-      "personagem": "Zacarias",
-      "dicaUm": "Fui contemporâneo de Jesus",
-      "dicaDois": "Na Bíblia, há um livro com meu nome, porém, o livro é de outra pessoa",
-      "dicaTres": "Minha esposa era parente de Jesus",
-      "dicaQuatro": "Por minha relutância, fiquei mudo",
-      "dicaCinco": "Fiz uma profecia a respeito do meu filho e a respeito de Jesus",
-      "dicaSeis": "Minha esposa se chamava Elisabete",
-      "dicaSete": "Minha esposa era estéril, mas graças a um milagre, ela teve um filho",
-      "dicaOito": "Eu, junto com minha esposa, morávamos nas colinas de Judeia",
-      "dicaNove": "Minha esposa era estéril, mas graças a um milagre, ela teve um filho",
-      "dicaDez": "Eu, junto com minha esposa",
+      "data": {
+        "nivel": "Fácil",
+        "personagem": "Za",
+        "dicaUm": "Fui contemporâneo de Jesus",
+        "dicaDois": "Na Bíblia, há um livro com meu nome, porém, o livro é de outra pessoa",
+        "dicaTres": "Minha esposa era parente de Jesus",
+        "dicaQuatro": "Por minha relutância, fiquei mudo",
+        "dicaCinco": "Fiz uma profecia a respeito do meu filho e a respeito de Jesus",
+        "dicaSeis": "Minha esposa se chamava Elisabete",
+        "dicaSete": "Minha esposa era estéril, mas graças a um milagre, ela teve um filho",
+        "dicaOito": "Eu, junto com minha esposa, morávamos nas colinas de Judeia",
+        "dicaNove": "Minha esposa era estéril, mas graças a um milagre, ela teve um filho",
+        "dicaDez": "Eu, junto com minha esposa",
+        "id": 1
+      },
       "id": 1
     },
     {
@@ -74,6 +77,68 @@
       "dicaNove": "t",
       "dicaDez": "d",
       "id": 5
+    },
+    {
+      "nivel": "L",
+      "personagem": "L",
+      "dicaUm": "L",
+      "dicaDois": "L",
+      "dicaTres": "L",
+      "dicaQuatro": "L",
+      "dicaCinco": "L",
+      "dicaSeis": "L",
+      "dicaSete": "L",
+      "dicaOito": "L",
+      "dicaNove": "L",
+      "dicaDez": "L",
+      "id": 6
+    },
+    {
+      "nivel": "fFf",
+      "personagem": "F",
+      "dicaUm": "F",
+      "dicaDois": "F",
+      "dicaTres": "F",
+      "dicaQuatro": "F",
+      "dicaCinco": "F",
+      "dicaSeis": "F",
+      "dicaSete": "F",
+      "dicaOito": "F",
+      "dicaNove": "F",
+      "dicaDez": "F",
+      "id": 7
+    },
+    {
+      "nivel": "LE",
+      "personagem": "L4L",
+      "dicaUm": "LEL",
+      "dicaDois": "L",
+      "dicaTres": "L",
+      "dicaQuatro": "L",
+      "dicaCinco": "L",
+      "dicaSeis": "L",
+      "dicaSete": "L",
+      "dicaOito": "L",
+      "dicaNove": "LL",
+      "dicaDez": "L",
+      "id": 8
+    },
+    {
+      "data": {
+        "nivel": "g",
+        "personagem": "g",
+        "dicaUm": "g",
+        "dicaDois": "g",
+        "dicaTres": "g",
+        "dicaQuatro": "g",
+        "dicaCinco": "g",
+        "dicaSeis": "g",
+        "dicaSete": "g",
+        "dicaOito": "g",
+        "dicaNove": "g",
+        "dicaDez": "g"
+      },
+      "id": 9
     }
   ]
 }

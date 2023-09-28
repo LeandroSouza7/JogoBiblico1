@@ -22,7 +22,7 @@
 
     </head>
     <body>
-
+        <label>Pesquise se um personagem já existe</label>
         <input type="text" class="textInput"> <button class="btnPersonagem btn">Enviar Personagem</button>
         <input type="number" class="textId"> <button class="btnId btn">Enviar ID</button>
 
@@ -33,7 +33,9 @@
 
         <div class="none btnVoltarTela"><btn>Voltar lista completa</btn></div>
 
-        <script>
+        <script type="module">
+            import { createFetch } from './js/createFetch.js';
+
             const $ulPersonagens = document.querySelector('.ulPersonagens');
             const $inputText = document.querySelector('.textInput');
             const $inputId = document.querySelector('.textId');
@@ -47,28 +49,33 @@
 
 
             function ajaxGet(){
-                let xhr = new XMLHttpRequest();
-                let url = "http://localhost:3000/perguntas";
-                xhr.open("GET", url);
-                xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
-                xhr.send(null);
-                xhr.onreadystatechange = verificaAjax;
 
-                function verificaAjax(){
-                    if(xhr.readyState === 4){
-                        if(xhr.status < 400){
-                            const json = JSON.parse(xhr.responseText);
-                            viewList(json);
-                        }else{
-                            alert("Deu ruim");
-                        }
-                    }
-                }
+               let fetchList = createFetch("GET", "http://localhost:3000/perguntas")
+                .then(response => viewList(response));
+                
+                // let xhr = new XMLHttpRequest();
+                // let url = "http://localhost:3000/perguntas";
+                // xhr.open("GET", url);
+                // xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+                // xhr.send(null);
+                // xhr.onreadystatechange = verificaAjax;
+
+                // function verificaAjax(){
+                //     if(xhr.readyState === 4){
+                //         if(xhr.status < 400){
+                //             const json = JSON.parse(xhr.responseText);
+                //             viewList(json);
+                //         }else{
+                //             alert("Deu ruim");
+                //         }
+                //     }
+                // }
             }
 
                 
 
                 function viewList(list){ 
+                    console.log(list);
                     $ulPersonagens.innerHTML = "";
                     const l = list[0];
                     var x = 0;
