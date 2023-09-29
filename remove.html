@@ -19,7 +19,9 @@
         <input type="text" class="namePersonagem"><btn class="btnPersonagem">Pesquisar personagem</btn>
         <input type="text" class="idPersonagem"><btn class="btnId">Pesquisar ID</btn>
         
-        <script>
+        <script type="module">
+            import { createFetch } from './js/createFetch.js';
+
             const valuePersonagemBtn = document.querySelector('.namePersonagem');
             const btnPersonagem = document.querySelector('.btnPersonagem');
             const valuePersonagemId = document.querySelector('.idPersonagem');
@@ -56,30 +58,33 @@
 
 
             function ajaxGet(personagem){
-                let xhr = new XMLHttpRequest();
-                let url = "http://localhost:3000/perguntas";
-                xhr.open("GET", url);
-                xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
-                xhr.send(null);
-                xhr.onreadystatechange = verificaAjax;
+                // let xhr = new XMLHttpRequest();
+                // let url = "http://localhost:3000/perguntas";
+                // xhr.open("GET", url);
+                // xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+                // xhr.send(null);
+                // xhr.onreadystatechange = verificaAjax;
 
-                function verificaAjax(){
-                    if(xhr.readyState === 4){
-                        if(xhr.status < 400){
-                            const json = JSON.parse(xhr.responseText);
-                            viewList(json);
-                        }else{
-                            alert("Deu ruim");
-                        }
-                    }
-                }
+                // function verificaAjax(){
+                //     if(xhr.readyState === 4){
+                //         if(xhr.status < 400){
+                //             const json = JSON.parse(xhr.responseText);
+                //             viewList(json);
+                //         }else{
+                //             alert("Deu ruim");
+                //         }
+                //     }
+                // }
+
+                createFetch("GET", "http://localhost:3000/perguntas")
+                    .then(response => viewList(response));
 
                 function viewList(information){
-                    console.log(information[2].personagem)
                     var x = 0;
                     while(x < information.length){
                         let arr = [];
                         let personagens = information[x].personagem;
+                        console.log(personagens);
                         personagens = personagens.toLowerCase();
                         if(personagens == personagem){
                             console.log("Deu certo")

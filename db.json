@@ -139,6 +139,38 @@
         "dicaDez": "g"
       },
       "id": 9
+    },
+    {
+      "data": {
+        "nivel": "k",
+        "personagem": "j",
+        "dicaUm": "j",
+        "dicaDois": "j",
+        "dicaTres": "j",
+        "dicaQuatro": "j",
+        "dicaCinco": "j",
+        "dicaSeis": "j",
+        "dicaSete": "j",
+        "dicaOito": "j",
+        "dicaNove": "j",
+        "dicaDez": "j"
+      },
+      "id": 10
+    },
+    {
+      "nivel": "wq",
+      "personagem": "q",
+      "dicaUm": "q",
+      "dicaDois": "q",
+      "dicaTres": "q",
+      "dicaQuatro": "q",
+      "dicaCinco": "q",
+      "dicaSeis": "q",
+      "dicaSete": "q",
+      "dicaOito": "q",
+      "dicaNove": "q",
+      "dicaDez": "q",
+      "id": 11
     }
   ]
 }

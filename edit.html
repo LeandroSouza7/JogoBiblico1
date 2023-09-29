@@ -44,22 +44,30 @@
             async function procuraPersonagem(){
                 let personagemProcurado = inputBusca.value;
                 personagemProcurado = personagemProcurado.toLowerCase();
+                // let personagem;
+
+                // createFetch("GET", "http://localhost:3000/perguntas")
+                //     .then(response => personagem = response);
+
+
 
                 let url = "http://localhost:3000/perguntas";
                 let promise = await fetch(url);
 
                 if(!promise.ok){
                     alert("Deu ruim");
-                }
-
+                }   
+                
                 let personagem = await promise.json();
-
+                
+                
                 let i = 0;
                 let qtdPersonagens = personagem.length;
 
                 personagem.forEach((element, index) => {
                     element = Object.values(element);                    
                     let _element = element[1];
+                    console.log(_element);
                     _element = _element.toLowerCase();
                     if(_element === personagemProcurado){
                          elementEncontrado(element);
