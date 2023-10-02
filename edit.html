@@ -41,46 +41,51 @@
             btnBusca.addEventListener('click', procuraPersonagem);
            
 
-            async function procuraPersonagem(){
+           function procuraPersonagem(){
                 let personagemProcurado = inputBusca.value;
                 personagemProcurado = personagemProcurado.toLowerCase();
-                // let personagem;
+                let personagem;
 
-                // createFetch("GET", "http://localhost:3000/perguntas")
-                //     .then(response => personagem = response);
+                createFetch("GET", "http://localhost:3000/perguntas")
+                    .then(response => {
+                        personagem = response;
+
+                        console.log(response);
+
+                        let i = 0;
+                        let qtdPersonagens = personagem.length;
+
+                        personagem.forEach((element, index) => {
+                            element = Object.values(element);                    
+                            let _element = element[1];
+                            console.log(_element);
+                            _element = _element.toLowerCase();
+                            if(_element === personagemProcurado){
+                                elementEncontrado(element);
+                            }else{
+                                i++;
+                                console.log(i, qtdPersonagens);
+                                if(i == qtdPersonagens){
+                                    alert("Personagem não encontrado");
+                                    inputBusca.value = "";
+                                    inputBusca.focus();
+                                }
+                            }
+                        })
+                    });
 
 
 
-                let url = "http://localhost:3000/perguntas";
-                let promise = await fetch(url);
+                // let url = "http://localhost:3000/perguntas";
+                // let promise = await fetch(url);
 
-                if(!promise.ok){
-                    alert("Deu ruim");
-                }   
+                // if(!promise.ok){
+                //     alert("Deu ruim");
+                // }   
                 
-                let personagem = await promise.json();
+                // let personagem = await promise.json();
                 
-                
-                let i = 0;
-                let qtdPersonagens = personagem.length;
-
-                personagem.forEach((element, index) => {
-                    element = Object.values(element);                    
-                    let _element = element[1];
-                    console.log(_element);
-                    _element = _element.toLowerCase();
-                    if(_element === personagemProcurado){
-                         elementEncontrado(element);
-                    }else{
-                        i++;
-                        console.log(i, qtdPersonagens);
-                        if(i == qtdPersonagens){
-                            alert("Personagem não encontrado");
-                            inputBusca.value = "";
-                            inputBusca.focus();
-                        }
-                    }
-                })
+            
 
                 function elementEncontrado(el){
                     let levelPergunta = el[0];

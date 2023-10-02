@@ -18,6 +18,11 @@
 
         <input type="text" class="namePersonagem"><btn class="btnPersonagem">Pesquisar personagem</btn>
         <input type="text" class="idPersonagem"><btn class="btnId">Pesquisar ID</btn>
+
+        <div class="listPersonagens">
+            <ul class="ulPersonagens">
+            </ul>
+        </div>
         
         <script type="module">
             import { createFetch } from './js/createFetch.js';
@@ -26,6 +31,7 @@
             const btnPersonagem = document.querySelector('.btnPersonagem');
             const valuePersonagemId = document.querySelector('.idPersonagem');
             const btnId = document.querySelector('.btnId');
+            const $ulPersonagens = document.querySelector('.ulPersonagens');
 
             btnPersonagem.addEventListener('click', procuraPersonagem);
 
@@ -87,7 +93,18 @@
                         console.log(personagens);
                         personagens = personagens.toLowerCase();
                         if(personagens == personagem){
-                            console.log("Deu certo")
+                                $ulPersonagens.innerHTML = `<li>${personagens}</li>`;
+                                valuePersonagemBtn.value = "";
+                                valuePersonagemId.value = "";
+
+                                // $btnVoltarTela.classList.remove('none');
+
+                                // $btnVoltarTela.addEventListener('click', function(){
+                                //     $ulPersonagens.innerHTML = ""; 
+                                //     ajaxGet();
+                                //     $btnVoltarTela.classList.add('none');
+                                // })
+                                return;
                         }else{
                             console.log("Deu ruim")
                         }
