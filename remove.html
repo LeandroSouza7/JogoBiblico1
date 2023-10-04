@@ -85,17 +85,30 @@
                 createFetch("GET", "http://localhost:3000/perguntas")
                     .then(response => viewList(response));
 
+
+                function removePersonagem(personagemm){
+                    let btnRemovePersona = document.querySelector('.removePersona');
+                    btnRemovePersona.addEventListener('click', function(){
+                        createFetch("DELETE", `http://localhost:3000/perguntas/${personagemm}`)
+                                    .then(respponse => cosole.log(respponse, "Deu certo"))
+                                valuePersonagemBtn.value = "";
+                                valuePersonagemId.value = "";
+                    })
+                    
+                }
+
                 function viewList(information){
                     var x = 0;
                     while(x < information.length){
                         let arr = [];
                         let personagens = information[x].personagem;
-                        console.log(personagens);
+                        console.log(information[x].id);
                         personagens = personagens.toLowerCase();
                         if(personagens == personagem){
-                                $ulPersonagens.innerHTML = `<li>${personagens}</li>`;
-                                valuePersonagemBtn.value = "";
-                                valuePersonagemId.value = "";
+                                $ulPersonagens.innerHTML = `<li>${personagens}</li> <button class="removePersona">remove</button>`;
+
+                                removePersonagem(information[x].id)
+    
 
                                 // $btnVoltarTela.classList.remove('none');
 

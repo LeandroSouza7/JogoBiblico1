@@ -1,7 +1,7 @@
 {
   "perguntas": [
     {
-      "nivel": "Fácil",
+      "nivel": "Médio",
       "personagem": "Zacari",
       "dicaUm": "Fui contemporâneo de Jesus",
       "dicaDois": "Na Bíblia, há um livro com meu nome, porém, o livro é de outra pessoa",
@@ -119,6 +119,21 @@
       "dicaNove": "q",
       "dicaDez": "q",
       "id": 8
+    },
+    {
+      "nivel": "w",
+      "personagem": "w",
+      "dicaUm": "w",
+      "dicaDois": "w",
+      "dicaTres": "w",
+      "dicaQuatro": "w",
+      "dicaCinco": "w",
+      "dicaSeis": "w",
+      "dicaSete": "w",
+      "dicaOito": "w",
+      "dicaNove": "w",
+      "dicaDez": "w",
+      "id": 9
     }
   ]
 }

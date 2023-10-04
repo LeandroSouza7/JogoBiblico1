@@ -20,7 +20,7 @@ export function createFetch(method, url, data = null){
                     "Content-type": "application/json;charset=UTF-8"
                 }
             })
-        }
+         }      
    } 
     
    return returnFetch()
