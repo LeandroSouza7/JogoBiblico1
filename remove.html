@@ -23,6 +23,8 @@
             <ul class="ulPersonagens">
             </ul>
         </div>
+
+        <div class="msg"> </div>
         
         <script type="module">
             import { createFetch } from './js/createFetch.js';
@@ -90,19 +92,50 @@
                     let btnRemovePersona = document.querySelector('.removePersona');
                     btnRemovePersona.addEventListener('click', function(){
                         createFetch("DELETE", `http://localhost:3000/perguntas/${personagemm}`)
-                                    .then(respponse => cosole.log(respponse, "Deu certo"))
+                                    .then(respponse => console.log(respponse, deuCertoOuErrado("certo")))
                                 valuePersonagemBtn.value = "";
                                 valuePersonagemId.value = "";
+
+                                const msg = document.querySelector('.msg');
+
+                                function  deuCertoOuErrado(certoOuErrado){
+                                    const msg = document.querySelector('.msg');
+
+                                    if(certoOuErrado === "certo"){
+                                        msg.classList.remove('none')
+                                        msg.innerHTML = "Excluído com suceeso";
+                                        msg.style.backgroundColor = "green";
+                                        $ulPersonagens.innerHTML = "";
+
+                                        setTimeout(function(){
+                                            msg.classList.add('none');
+                                        }, 2000)
+                                    }
+
+                                    if(certoOuErrado === "errado"){
+                                        msg.classList.remove('none');
+                                        msg.innerHTML = "Deu erro na hora do envio";
+                                        msg.style.backgroundColor = "red";
+
+                                        setTimeout(function(){
+                                            msg.classList.add('none');
+                                        }, 2000)
+
+                                    }
+
+                                
+                                }
                     })
                     
                 }
+
+                let qtd = 0
 
                 function viewList(information){
                     var x = 0;
                     while(x < information.length){
                         let arr = [];
                         let personagens = information[x].personagem;
-                        console.log(information[x].id);
                         personagens = personagens.toLowerCase();
                         if(personagens == personagem){
                                 $ulPersonagens.innerHTML = `<li>${personagens}</li> <button class="removePersona">remove</button>`;
@@ -119,7 +152,11 @@
                                 // })
                                 return;
                         }else{
-                            console.log("Deu ruim")
+                            qtd += 1;
+                            console.log(information.length);
+                            if(qtd == information.length){
+                                console.log("Deu ruim")
+                            }
                         }
                         x++;
                     }

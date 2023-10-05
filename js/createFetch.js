@@ -12,7 +12,10 @@ export function createFetch(method, url, data = null){
    function returnFetch(){
         if(method == "GET"){
             return fetch(url)
-        }else{
+        }else if(method == "DELETE"){
+            return fetch(url, { method });
+        }
+        else{
             return fetch(url, {
                 method,
                 body: JSON.stringify(data),
