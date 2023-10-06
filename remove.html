@@ -89,9 +89,13 @@
 
 
                 function removePersonagem(personagemm){
-                    let btnRemovePersona = document.querySelector('.removePersona');
-                    btnRemovePersona.addEventListener('click', function(){
-                        createFetch("DELETE", `http://localhost:3000/perguntas/${personagemm}`)
+                    let btnRemovePersona = document.querySelectorAll('.removePersona');
+                    let z = 0;
+                    while(z < btnRemovePersona.length){
+                        btnRemovePersona[z].addEventListener('click', function(e){
+                            console.log(e.target)
+                            console.log(e.target.getAttribute("value"));
+                        createFetch("DELETE", `http://localhost:3000/perguntas/${e.target.getAttribute("value")}`)
                                     .then(respponse => console.log(respponse, deuCertoOuErrado("certo")))
                                 valuePersonagemBtn.value = "";
                                 valuePersonagemId.value = "";
@@ -126,6 +130,8 @@
                                 
                                 }
                     })
+                        z++;
+                    }
                     
                 }
 
@@ -138,10 +144,10 @@
                         let personagens = information[x].personagem;
                         personagens = personagens.toLowerCase();
                         if(personagens == personagem){
-                                $ulPersonagens.innerHTML = `<li>${personagens}</li> <button class="removePersona">remove</button>`;
+                                $ulPersonagens.innerHTML += `<li>${personagens} ${information[x].id}</li> <button class="removePersona" value="${information[x].id}">remove</button>`;
 
                                 removePersonagem(information[x].id)
-    
+
 
                                 // $btnVoltarTela.classList.remove('none');
 
@@ -150,7 +156,6 @@
                                 //     ajaxGet();
                                 //     $btnVoltarTela.classList.add('none');
                                 // })
-                                return;
                         }else{
                             qtd += 1;
                             console.log(information.length);
