@@ -35,60 +35,8 @@
             const btnId = document.querySelector('.btnId');
             const $ulPersonagens = document.querySelector('.ulPersonagens');
 
-            btnPersonagem.addEventListener('click', procuraPersonagem);
 
-            function procuraPersonagem(){
-                let personagemBuscado = valuePersonagemBtn.value;
-                personagemBuscado = personagemBuscado.toLowerCase();
-                
-                if(personagemBuscado === ""){
-                    alert("Digite um personagem");
-                    return;
-                }
-
-                ajaxGet(personagemBuscado);
-            }
-
-            btnId.addEventListener('click', procuraPersonagemId);
-
-            function procuraPersonagemId(){
-                let personagemProcuradoId = valuePersonagemId.value;
-
-                if(personagemProcuradoId === ""){
-                    alert("Digite um ID");
-                    return;
-                }
-
-                personagemProcuradoId = parseInt(personagemProcuradoId);
-
-                ajaxGet(personagemProcuradoId)
-            }
-
-
-            function ajaxGet(personagem){
-                // let xhr = new XMLHttpRequest();
-                // let url = "http://localhost:3000/perguntas";
-                // xhr.open("GET", url);
-                // xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
-                // xhr.send(null);
-                // xhr.onreadystatechange = verificaAjax;
-
-                // function verificaAjax(){
-                //     if(xhr.readyState === 4){
-                //         if(xhr.status < 400){
-                //             const json = JSON.parse(xhr.responseText);
-                //             viewList(json);
-                //         }else{
-                //             alert("Deu ruim");
-                //         }
-                //     }
-                // }
-
-                createFetch("GET", "http://localhost:3000/perguntas")
-                    .then(response => viewList(response));
-
-
-                function removePersonagem(personagemm){
+            function removePersonagem(personagemm){
                     let btnRemovePersona = document.querySelectorAll('.removePersona');
                     let z = 0;
                     while(z < btnRemovePersona.length){
@@ -135,34 +83,126 @@
                     
                 }
 
+
+            createFetch("GET", "http://localhost:3000/perguntas")
+                .then(response => {
+                    $ulPersonagens.innerHTML = "";
+                    const l = response[0];
+                    var x = 0;
+                    while(x < response.length){
+                        // const $li = document.createElement('li');
+                        // let i = 0;
+                        // i += x;
+                        // let text = document.createTextNode(response[i].id + " " + response[x].personagem);
+                        // $li.appendChild(text); 
+                        // $ulPersonagens.appendChild($li);
+
+                        $ulPersonagens.innerHTML += `<li>${response[x].personagem} ${response[x].id}</li> <button class="removePersona" value="${response[x].id}">remove</button>`;
+                        x++;
+                    }
+                })
+
+
+
+            
+
+
+
+
+
+            btnPersonagem.addEventListener('click', procuraPersonagem);
+
+            function procuraPersonagem(){
+                let personagemBuscado = valuePersonagemBtn.value;
+                personagemBuscado = personagemBuscado.toLowerCase();
+                
+                if(personagemBuscado === ""){
+                    alert("Digite um personagem");
+                    return;
+                }
+
+                ajaxGet(personagemBuscado);
+            }
+
+            btnId.addEventListener('click', procuraPersonagemId);
+
+            function procuraPersonagemId(){
+                let personagemProcuradoId = valuePersonagemId.value;
+
+                if(personagemProcuradoId === ""){
+                    alert("Digite um ID");
+                    return;
+                }
+
+                personagemProcuradoId = parseInt(personagemProcuradoId);
+
+                ajaxGet(personagemProcuradoId)
+            }
+
+
+            function ajaxGet(personagem){
+
+                createFetch("GET", "http://localhost:3000/perguntas")
+                    .then(response => viewList(response)); 
+
                 let qtd = 0
 
                 function viewList(information){
                     var x = 0;
+
+
                     while(x < information.length){
-                        let arr = [];
-                        let personagens = information[x].personagem;
-                        personagens = personagens.toLowerCase();
-                        if(personagens == personagem){
-                                $ulPersonagens.innerHTML += `<li>${personagens} ${information[x].id}</li> <button class="removePersona" value="${information[x].id}">remove</button>`;
 
-                                removePersonagem(information[x].id)
+                        if(typeof personagem == 'number'){
+                            let personagensId = information[x].id;
+                            if(personagensId == personagem){
+                                console.log("Chqgou aqui")
+                                    $ulPersonagens.innerHTML += `<li>${information[x].personagem} ${information[x].id}</li> <button class="removePersona" value="${information[x].id}">remove</button>`;
+
+                                    removePersonagem(information[x].id)
 
 
-                                // $btnVoltarTela.classList.remove('none');
+                                    // $btnVoltarTela.classList.remove('none');
 
-                                // $btnVoltarTela.addEventListener('click', function(){
-                                //     $ulPersonagens.innerHTML = ""; 
-                                //     ajaxGet();
-                                //     $btnVoltarTela.classList.add('none');
-                                // })
-                        }else{
-                            qtd += 1;
-                            console.log(information.length);
-                            if(qtd == information.length){
-                                console.log("Deu ruim")
+                                    // $btnVoltarTela.addEventListener('click', function(){
+                                    //     $ulPersonagens.innerHTML = ""; 
+                                    //     ajaxGet();
+                                    //     $btnVoltarTela.classList.add('none');
+                                    // })
+                            }else{
+                                qtd += 1;
+                                console.log(information.length);
+                                if(qtd == information.length){
+                                    console.log("Deu ruim")
+                                }
+                            }
+                        }else if(typeof personagem != 'number'){
+                            let arr = [];
+                            let personagens = information[x].personagem;
+                            personagens = personagens.toLowerCase();
+                            if(personagens == personagem){
+                                    $ulPersonagens.innerHTML += `<li>${personagens} ${information[x].id}</li> <button class="removePersona" value="${information[x].id}">remove</button>`;
+
+                                    removePersonagem(information[x].id)
+
+
+                                    // $btnVoltarTela.classList.remove('none');
+
+                                    // $btnVoltarTela.addEventListener('click', function(){
+                                    //     $ulPersonagens.innerHTML = ""; 
+                                    //     ajaxGet();
+                                    //     $btnVoltarTela.classList.add('none');
+                                    // })
+                            }else{
+                                qtd += 1;
+                                console.log(information.length);
+                                if(qtd == information.length){
+                                    console.log("Deu ruim")
+                                }
                             }
                         }
+
+
                         x++;
                     }
                     
