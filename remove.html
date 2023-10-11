@@ -61,6 +61,7 @@
 
                                         setTimeout(function(){
                                             msg.classList.add('none');
+                                            carregaPersonagens();
                                         }, 2000)
                                     }
 
@@ -83,7 +84,7 @@
                     
                 }
 
-
+        function carregaPersonagens(){
             createFetch("GET", "http://localhost:3000/perguntas")
                 .then(response => {
                     $ulPersonagens.innerHTML = "";
@@ -98,13 +99,18 @@
                         // $ulPersonagens.appendChild($li);
 
                         $ulPersonagens.innerHTML += `<li>${response[x].personagem} ${response[x].id}</li> <button class="removePersona" value="${response[x].id}">remove</button>`;
+
+                        removePersonagem(response[x].id);
+
                         x++;
                     }
                 })
-
-
-
+        }
             
+
+
+
+            carregaPersonagens();
 
 
 
@@ -150,16 +156,28 @@
                 function viewList(information){
                     var x = 0;
 
-
+                    $ulPersonagens.innerHTML = "";
+                    valuePersonagemBtn.value = "";
+                    valuePersonagemId.value = "";
                     while(x < information.length){
 
                         if(typeof personagem == 'number'){
                             let personagensId = information[x].id;
                             if(personagensId == personagem){
                                 console.log("Chqgou aqui")
-                                    $ulPersonagens.innerHTML += `<li>${information[x].personagem} ${information[x].id}</li> <button class="removePersona" value="${information[x].id}">remove</button>`;
+                                    $ulPersonagens.innerHTML += `<li>${information[x].personagem} ${information[x].id}</li> <button class="removePersona" value="${information[x].id}">remove</button>
+                                    <br>
+                                    <button class="voltarTela">Voltar todos os personagens</button>
+                                    `;
+                                    
 
-                                    removePersonagem(information[x].id)
+                                    removePersonagem(information[x].id);
+
+                                    let btnVoltarTelaId = document.querySelector('.voltarTela');
+
+                                    btnVoltarTelaId.addEventListener('click', function(){
+                                        carregaPersonagens();
+                                    })
 
 
                                     // $btnVoltarTela.classList.remove('none');
@@ -173,7 +191,8 @@
                                 qtd += 1;
                                 console.log(information.length);
                                 if(qtd == information.length){
-                                    console.log("Deu ruim")
+                                    alert("Personagem não encontrado");
+                                    carregaPersonagens();
                                 }
                             }
                         }else if(typeof personagem != 'number'){
@@ -181,10 +200,19 @@
                             let personagens = information[x].personagem;
                             personagens = personagens.toLowerCase();
                             if(personagens == personagem){
-                                    $ulPersonagens.innerHTML += `<li>${personagens} ${information[x].id}</li> <button class="removePersona" value="${information[x].id}">remove</button>`;
+                                    $ulPersonagens.innerHTML += `<li>${personagens} ${information[x].id}</li> <button class="removePersona" value="${information[x].id}">remove</button>
+                                    <br>
+                                    <button class="voltarTela">Voltar todos os personagens</button>
+                                    `;
 
                                     removePersonagem(information[x].id)
 
+
+                                    let btnVoltarTelaBtn = document.querySelector('.voltarTela');
+
+                                    btnVoltarTelaBtn.addEventListener('click', function(){
+                                        carregaPersonagens();
+                                    })
 
                                     // $btnVoltarTela.classList.remove('none');
 
@@ -197,7 +225,8 @@
                                 qtd += 1;
                                 console.log(information.length);
                                 if(qtd == information.length){
-                                    console.log("Deu ruim")
+                                    alert("Personagem não encontrado");
+                                    carregaPersonagens();
                                 }
                             }
                         }

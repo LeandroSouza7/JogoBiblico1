@@ -13,22 +13,52 @@
       "dicaOito": "q",
       "dicaNove": "q",
       "dicaDez": "q",
-      "id": 2
+      "id": 3
     },
     {
-      "nivel": "q",
-      "personagem": "q",
-      "dicaUm": "q",
-      "dicaDois": "q",
-      "dicaTres": "q",
-      "dicaQuatro": "q",
-      "dicaCinco": "q",
-      "dicaSeis": "q",
-      "dicaSete": "q",
-      "dicaOito": "q",
-      "dicaNove": "q",
-      "dicaDez": "q",
-      "id": 3
+      "nivel": "m",
+      "personagem": "m",
+      "dicaUm": "m",
+      "dicaDois": "m",
+      "dicaTres": "m",
+      "dicaQuatro": "m",
+      "dicaCinco": "m",
+      "dicaSeis": "m",
+      "dicaSete": "m",
+      "dicaOito": "m",
+      "dicaNove": "m",
+      "dicaDez": "m",
+      "id": 4
+    },
+    {
+      "nivel": "h",
+      "personagem": "h",
+      "dicaUm": "h",
+      "dicaDois": "h",
+      "dicaTres": "h",
+      "dicaQuatro": "h",
+      "dicaCinco": "h",
+      "dicaSeis": "h",
+      "dicaSete": "h",
+      "dicaOito": "h",
+      "dicaNove": "h",
+      "dicaDez": "h",
+      "id": 5
+    },
+    {
+      "nivel": "o",
+      "personagem": "o",
+      "dicaUm": "o",
+      "dicaDois": "o",
+      "dicaTres": "o",
+      "dicaQuatro": "o",
+      "dicaCinco": "o",
+      "dicaSeis": "o",
+      "dicaSete": "o",
+      "dicaOito": "o",
+      "dicaNove": "o",
+      "dicaDez": "o",
+      "id": 6
     }
   ]
 }
