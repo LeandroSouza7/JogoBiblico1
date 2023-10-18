@@ -16,12 +16,6 @@ export class JogoModel{
     }
 
     pesquisaPersonagemByString(personagemBuscado){
-        if(typeof personagemBuscado != 'string'){
-            alert("Personagem deve ser uma string");
-
-            return;
-        }
-
         let qtd = 0;
 
         createFetch("GET", "http://localhost:3000/perguntas")
@@ -29,6 +23,25 @@ export class JogoModel{
                 resposta.forEach(element =>{
                     personagemBuscado = personagemBuscado.toLowerCase();
                     if(personagemBuscado = resposta.personagem){
+                        return element;
+                    }else{
+                        qtd += 1;
+                        if(qtd == resposta.length){
+                            alert("Personagem não encontrado");
+                        } 
+                    }
+                })
+            })
+    }
+
+    pesquisaPersonagemById(personagemBuscado){
+        let qtd = 0;
+
+        createFetch("GET", "http://localhost:3000/perguntas")
+            .then(resposta => {
+                resposta.forEach(element =>{
+                    personagemBuscado = personagemBuscado.toLowerCase();
+                    if(personagemBuscado = resposta.id){
                         return element;
                     }else{
                         qtd += 1;
@@ -53,6 +66,20 @@ export class JogoModel{
     removePersonagens(data, cb){
         createFetch("DELETE", `http://localhost:3000/perguntas/${data.id}`)
             .then(resposta => cb(resposta, "Ok"));
+    }
+
+    getNumerosAleatorio(qtdPerguntas){
+        let numeros = [];
+		let x = 0;
+		while(x <= qtdPerguntas){
+			let aleatorio = Math.floor(Math.random() * 5)
+			if (numeros.indexOf(aleatorio) == -1){
+			 	numeros.push(aleatorio);
+			}
+			
+			x++;
+		}
+		return numeros;
     }
 
 }
