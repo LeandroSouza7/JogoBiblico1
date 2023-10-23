@@ -4,6 +4,15 @@ import { ChangeClass } from './Controller/ChangeClass.js';
 import { ChangeClassNamePersonagem } from './Controller/ChangeClassNamePersonagem.js';
 import { MsgVencedor } from './View/MsgVencedor.js';
 //import {Cronometro} from './Controller/Cronometro.js';
+
+import { ListView } from './View/ListView.js';
+import { JogoController } from './Controller/JogoController.js';
+import { JogoModel } from './Model/JogoModel.js';
+
+var testeView = new ListView();
+var testeController = new JogoController();
+var testeModel = new JogoModel();
+testeView.init();
  
 var $players = document.querySelectorAll('.inputPlayers');
 var $comecar = document.querySelector('.comecar');

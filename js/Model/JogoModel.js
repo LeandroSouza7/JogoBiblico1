@@ -1,4 +1,4 @@
-import { createFetch  } from "../createFetch";
+import { createFetch  } from "../createFetch.js";
 
 export class JogoModel{
     constructor(){
@@ -6,13 +6,14 @@ export class JogoModel{
 
     listaPersonagens(){
         return createFetch("GET", "http://localhost:3000/perguntas")
-                .then(resposta => {
-                    resposta.forEach(element => {
-                        const $li = document.createElement('li');
-                        const $text = document.createTextNode(element.id + " " + element.personagem);
-                        $li.appendChild($text); 
-                    });
-                });
+            .then(resposta => resposta);
+                // .then(resposta => {
+                //     return resposta.forEach(element => {
+                //         const $li = document.createElement('li');
+                //         const $text = document.createTextNode(element.id + " " + element.personagem);
+                //         $li.appendChild($text); 
+                //     });
+                // });
     }
 
     pesquisaPersonagemByString(personagemBuscado){

@@ -1,4 +1,4 @@
-import { JogoModel } from "../Model/JogoModel";
+import { JogoModel } from "../Model/JogoModel.js";
 
 export class JogoController{
     constructor(){
@@ -6,7 +6,7 @@ export class JogoController{
     }
 
     lista(){
-        this.model.listaPersonagens();
+       return this.model.listaPersonagens();
     }
 
     pesquisaByString(personagemBuscado){
