@@ -33,122 +33,127 @@
 
         <div class="none btnVoltarTela"><btn>Voltar lista completa</btn></div>
 
-        <script type="module" src="js/main.js"></script>
         <script type="module">
-            import { createFetch } from './js/createFetch.js';
-
+            import { ListView } from './js/View/ListView.js';
             const $ulPersonagens = document.querySelector('.ulPersonagens');
-            const $inputText = document.querySelector('.textInput');
-            const $inputId = document.querySelector('.textId');
-            const $btnPersonagem = document.querySelector('.btnPersonagem');
-            const $btnId = document.querySelector('.btnId');
-            const $btnVoltarTela = document.querySelector('.btnVoltarTela')
+            new ListView($ulPersonagens);
+            // initAll($ulPersonagens);
+            // let jj = new ListView($ulPersonagens);
+        </script>
+        <script type="module">
+            // import { createFetch } from './js/createFetch.js';
 
-            if($inputText.value === "" && $inputId.value === ""){
-                ajaxGet();
-            }
+            // const $inputText = document.querySelector('.textInput');
+            // const $inputId = document.querySelector('.textId');
+            // const $btnPersonagem = document.querySelector('.btnPersonagem');
+            // const $btnId = document.querySelector('.btnId');
+            // const $btnVoltarTela = document.querySelector('.btnVoltarTela')
+
+            // if($inputText.value === "" && $inputId.value === ""){
+            //     ajaxGet();
+            // }
 
 
-            function ajaxGet(){
+            // function ajaxGet(){
 
-               let fetchList = createFetch("GET", "http://localhost:3000/perguntas")
-                .then(response => viewList(response));
+            //    let fetchList = createFetch("GET", "http://localhost:3000/perguntas")
+            //     .then(response => viewList(response));
                 
-            }
+            // }
 
                 
 
-                function viewList(list){ 
-                    console.log(list);
-                    $ulPersonagens.innerHTML = "";
-                    const l = list[0];
-                    var x = 0;
-                    while(x < list.length){
-                        const $li = document.createElement('li');
-                        let i = 0;
-                        i += x;
-                        let text = document.createTextNode(list[i].id + " " + list[x].personagem);
-                        $li.appendChild(text); 
-                        $ulPersonagens.appendChild($li);
-                        x++;
-                    }
+            //     function viewList(list){ 
+            //         console.log(list);
+            //         $ulPersonagens.innerHTML = "";
+            //         const l = list[0];
+            //         var x = 0;
+            //         while(x < list.length){
+            //             const $li = document.createElement('li');
+            //             let i = 0;
+            //             i += x;
+            //             let text = document.createTextNode(list[i].id + " " + list[x].personagem);
+            //             $li.appendChild(text); 
+            //             $ulPersonagens.appendChild($li);
+            //             x++;
+            //         }
 
-                    $btnPersonagem.addEventListener('click', function(){
-                        let personagemProcurado = $inputText.value;
+            //         $btnPersonagem.addEventListener('click', function(){
+            //             let personagemProcurado = $inputText.value;
 
-                        personagemProcurado = personagemProcurado.toLowerCase();
+            //             personagemProcurado = personagemProcurado.toLowerCase();
 
-                        if(personagemProcurado == ""){
-                            alert("Input vazio");
-                            return
-                        }
+            //             if(personagemProcurado == ""){
+            //                 alert("Input vazio");
+            //                 return
+            //             }
 
-                        let qtdPersonagens = list.length;
-                        let x = 0;
-                        while(x < list.length){
-                            let personagens = list[x].personagem;
-                            personagens = personagens.toLowerCase();
-                            if(personagemProcurado === personagens){
-                                $ulPersonagens.innerHTML = `<li>${list[x].id} ${list[x].personagem}`;
-                                $inputText.value = "";
+            //             let qtdPersonagens = list.length;
+            //             let x = 0;
+            //             while(x < list.length){
+            //                 let personagens = list[x].personagem;
+            //                 personagens = personagens.toLowerCase();
+            //                 if(personagemProcurado === personagens){
+            //                     $ulPersonagens.innerHTML = `<li>${list[x].id} ${list[x].personagem}`;
+            //                     $inputText.value = "";
 
-                                $btnVoltarTela.classList.remove('none');
+            //                     $btnVoltarTela.classList.remove('none');
 
-                                $btnVoltarTela.addEventListener('click', function(){
-                                    $ulPersonagens.innerHTML = ""; 
-                                    ajaxGet();
-                                    $btnVoltarTela.classList.add('none');
-                                })
-                                return;
-                            }else{
-                                if(x + 1 == qtdPersonagens){
-                                    alert("Personagem não encontrado");
-                                    return
-                                }
-                            }
+            //                     $btnVoltarTela.addEventListener('click', function(){
+            //                         $ulPersonagens.innerHTML = ""; 
+            //                         ajaxGet();
+            //                         $btnVoltarTela.classList.add('none');
+            //                     })
+            //                     return;
+            //                 }else{
+            //                     if(x + 1 == qtdPersonagens){
+            //                         alert("Personagem não encontrado");
+            //                         return
+            //                     }
+            //                 }
 
-                            x++;
-                        }
+            //                 x++;
+            //             }
 
-                    });
+            //         });
 
-                    $btnId.addEventListener('click', function(){
-                        const idProcurado = $inputId.value;
+            //         $btnId.addEventListener('click', function(){
+            //             const idProcurado = $inputId.value;
 
-                        if(idProcurado == ""){
-                            alert("Input vazio");
-                            return
-                        }
+            //             if(idProcurado == ""){
+            //                 alert("Input vazio");
+            //                 return
+            //             }
 
-                        let x = 0;
-                        let qtdPersonagens = list.length;
-                        while(x < list.length){
-                            let ids = list[x].id;
-                            if(idProcurado == ids){
-                                $ulPersonagens.innerHTML = `<li>${list[x].id} ${list[x].personagem}`;
-                                $inputId.value = "";
+            //             let x = 0;
+            //             let qtdPersonagens = list.length;
+            //             while(x < list.length){
+            //                 let ids = list[x].id;
+            //                 if(idProcurado == ids){
+            //                     $ulPersonagens.innerHTML = `<li>${list[x].id} ${list[x].personagem}`;
+            //                     $inputId.value = "";
 
-                                $btnVoltarTela.classList.remove('none');
+            //                     $btnVoltarTela.classList.remove('none');
 
-                                $btnVoltarTela.addEventListener('click', function(){
-                                    $ulPersonagens.innerHTML = ""; 
-                                    ajaxGet();
-                                    $btnVoltarTela.classList.add('none');
-                                })
-                                return;
-                            }else{
-                                console.log(x + 1, qtdPersonagens);
-                                if(x + 1 == qtdPersonagens){
-                                    alert("Personagem não encontrado");
-                                    return
-                                }
-                            }
+            //                     $btnVoltarTela.addEventListener('click', function(){
+            //                         $ulPersonagens.innerHTML = ""; 
+            //                         ajaxGet();
+            //                         $btnVoltarTela.classList.add('none');
+            //                     })
+            //                     return;
+            //                 }else{
+            //                     console.log(x + 1, qtdPersonagens);
+            //                     if(x + 1 == qtdPersonagens){
+            //                         alert("Personagem não encontrado");
+            //                         return
+            //                     }
+            //                 }
 
-                            x++;
-                        }
+            //                 x++;
+            //             }
 
-                    })
-                }
+            //         })
+            //     }
 
 
         </script>
