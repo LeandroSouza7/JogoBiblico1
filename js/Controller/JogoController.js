@@ -9,24 +9,24 @@ export class JogoController{
        return this.model.listaPersonagens();
     }
 
-    pesquisaByString(personagemBuscado){
-        if(typeof personagemBuscado != 'string'){
+    pesquisaByString(personagemBuscadoByString){
+        if(typeof personagemBuscadoByString != 'string'){
             alert("Personagem deve ser uma string");
 
             return;
         }
 
-        this.model.pesquisaPersonagemByString(personagemBuscado);
+        return this.model.pesquisaPersonagemByString(personagemBuscadoByString);
     }
 
-    pesquisaById(personagemBuscado){
-        if(typeof personagemBuscado != 'number'){
+    pesquisaById(personagemBuscadoByID){
+        if(typeof personagemBuscadoByID != 'number'){
             alert("Personagem deve ser um id");
 
             return;
         }
 
-        this.model.pesquisaPersonagemById(personagemBuscado);
+        this.model.pesquisaPersonagemById(personagemBuscadoByID);
     }
 
     add(data, cb){

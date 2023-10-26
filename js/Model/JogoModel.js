@@ -18,12 +18,12 @@ export class JogoModel{
 
     pesquisaPersonagemByString(personagemBuscado){
         let qtd = 0;
+        personagemBuscado = personagemBuscado.toLowerCase();
 
         createFetch("GET", "http://localhost:3000/perguntas")
             .then(resposta => {
                 resposta.forEach(element =>{
-                    personagemBuscado = personagemBuscado.toLowerCase();
-                    if(personagemBuscado = resposta.personagem){
+                    if(personagemBuscado == element.personagem){
                         return element;
                     }else{
                         qtd += 1;

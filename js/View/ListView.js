@@ -1,15 +1,15 @@
 import { JogoController } from "../Controller/JogoController.js";
 
 export class ListView{
-    constructor(listContainer){
-        console.log('cheogu aqui');
+    constructor(listContainer, btnPersonagemBuscado){
         this.jogoController = new JogoController();
         this.$listContainer = listContainer;
+        // this.$btnPersonagemBuscado = btnPersonagemBuscado;
         this.init();
+        this.pesquisarPersonagemByNome();
     }
 
     init(){
-        console.log('cheogu aqui')
        this.jogoController.lista()
         .then(resposta => {
                     resposta.forEach(element => {
@@ -20,4 +20,19 @@ export class ListView{
                 });
             });
     }
+
+    pesquisarPersonagemByNome(){
+        const $btnPersonagemBuscado = document.querySelector('.btnPersonagem');
+        $btnPersonagemBuscado.addEventListener('click', ()=> {
+            let personagemProcuradoByNome = document.querySelector('.textInput').value;
+            // console.log(this.JogoController);
+            // console.log(personagemProcuradoByNome)
+            // this.jogoController.pesquisaByString(personagemProcuradoByNome)
+            //     .then(resposta => {
+            //         console.log(resposta);
+            //     })
+            this.jogoController.pesquisaByString(personagemProcuradoByNome);
+        });
+        
+    } 
 }

@@ -36,7 +36,8 @@
         <script type="module">
             import { ListView } from './js/View/ListView.js';
             const $ulPersonagens = document.querySelector('.ulPersonagens');
-            new ListView($ulPersonagens);
+            const $btnPersonagemBuscado = document.querySelector('.btnPersonagem');
+            new ListView($ulPersonagens, $btnPersonagemBuscado);
             // initAll($ulPersonagens);
             // let jj = new ListView($ulPersonagens);
         </script>
