@@ -10,7 +10,7 @@ export class JogoController{
     }
 
     pesquisaByString(personagemBuscadoByString){
-        if(typeof personagemBuscadoByString != 'string'){
+        if(typeof personagemBuscadoByString !== 'string'){
             alert("Personagem deve ser uma string");
 
             return;

@@ -17,22 +17,8 @@ export class JogoModel{
     }
 
     pesquisaPersonagemByString(personagemBuscado){
-        let qtd = 0;
-        personagemBuscado = personagemBuscado.toLowerCase();
-
-        createFetch("GET", "http://localhost:3000/perguntas")
-            .then(resposta => {
-                resposta.forEach(element =>{
-                    if(personagemBuscado == element.personagem){
-                        return element;
-                    }else{
-                        qtd += 1;
-                        if(qtd == resposta.length){
-                            alert("Personagem não encontrado");
-                        } 
-                    }
-                })
-            })
+        return createFetch("GET", "http://localhost:3000/perguntas")
+            .then(resposta => resposta);
     }
 
     pesquisaPersonagemById(personagemBuscado){
@@ -42,7 +28,7 @@ export class JogoModel{
             .then(resposta => {
                 resposta.forEach(element =>{
                     personagemBuscado = personagemBuscado.toLowerCase();
-                    if(personagemBuscado = resposta.id){
+                    if(personagemBuscado == resposta.id){
                         return element;
                     }else{
                         qtd += 1;
