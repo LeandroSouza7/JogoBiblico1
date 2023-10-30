@@ -7,22 +7,27 @@ export class ListView{
         // this.$btnPersonagemBuscado = btnPersonagemBuscado;
         this.init();
         this.pesquisarPersonagemByNome();
+        this.pesquisarPersonagemById();
     }
 
-    init($container){
-
-        if($container == undefined){ 
-            $container = this.$listContainer;
-        }
-
+    init(personagemEncontrado){
        this.jogoController.lista()
         .then(resposta => {
+                if(personagemEncontrado == undefined){ 
                     resposta.forEach(element => {
+                        const $li = document.createElement('li');
+                        const $text = document.createTextNode(element.id + " " + element.personagem);
+                        $li.appendChild($text); 
+                        this.$listContainer.appendChild($li);
+                    });
+                }else{
+                    this.$listContainer.innerHTML = "";
                     const $li = document.createElement('li');
-                    const $text = document.createTextNode(element.id + " " + element.personagem);
+                    const $text = document.createTextNode(personagemEncontrado.id + " " + personagemEncontrado.personagem);
                     $li.appendChild($text); 
-                    $container.appendChild($li);
-                });
+                    this.$listContainer.appendChild($li);
+                }
+                    
             });
     }
 
@@ -32,15 +37,41 @@ export class ListView{
         $btnPersonagemBuscado.addEventListener('click', ()=> {
             let personagemProcuradoByNome = document.querySelector('.textInput').value;
         
-            this.jogoController.pesquisaByString(personagemProcuradoByNome)
+            this.jogoController.lista()
                 .then(resposta => {
                     let qtd = 0;
                     personagemProcuradoByNome = personagemProcuradoByNome.toLowerCase();
                     resposta.forEach(element =>{
                         if(personagemProcuradoByNome == element.personagem){
-                            console.log(element);
-                            return element;
-                            //init com o element
+                            this.init(element);
+                            return;
+                        }else{
+                            qtd += 1;
+                            if(qtd == resposta.length){
+                                alert("Personagem não encontrado");
+                            } 
+                        }
+                    })
+                })
+        });
+        
+    } 
+
+    pesquisarPersonagemById(){
+        const $btnPersonagemBuscado = document.querySelector('.btnId');
+
+        $btnPersonagemBuscado.addEventListener('click', ()=> {
+            console.log("chegou aqui");
+            let personagemProcuradoById = document.querySelector('.textId').value;
+            console.log(personagemProcuradoById);
+        
+            this.jogoController.lista()
+                .then(resposta => {
+                    let qtd = 0;
+                    resposta.forEach(element =>{
+                        if(personagemProcuradoById == element.id){
+                            this.init(element);
+                            return;
                         }else{
                             qtd += 1;
                             if(qtd == resposta.length){

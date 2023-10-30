@@ -9,25 +9,25 @@ export class JogoController{
        return this.model.listaPersonagens();
     }
 
-    pesquisaByString(personagemBuscadoByString){
-        if(typeof personagemBuscadoByString !== 'string'){
-            alert("Personagem deve ser uma string");
+    // pesquisaByString(personagemBuscadoByString){
+    //     if(typeof personagemBuscadoByString !== 'string'){
+    //         alert("Personagem deve ser uma string");
 
-            return;
-        }
+    //         return;
+    //     }
 
-        return this.model.pesquisaPersonagemByString(personagemBuscadoByString);
-    }
+    //     return this.model.pesquisaPersonagemByString(personagemBuscadoByString);
+    // }
 
-    pesquisaById(personagemBuscadoByID){
-        if(typeof personagemBuscadoByID != 'number'){
-            alert("Personagem deve ser um id");
+    // pesquisaById(personagemBuscadoByID){
+    //     // if(typeof personagemBuscadoByID != 'number'){
+    //     //     alert("Personagem deve ser um id");
 
-            return;
-        }
+    //     //     return;
+    //     // }
 
-        this.model.pesquisaPersonagemById(personagemBuscadoByID);
-    }
+    //     return this.model.pesquisaPersonagemById(personagemBuscadoByID);
+    // }
 
     add(data, cb){
         this.model.addPersonagens(data, cb);

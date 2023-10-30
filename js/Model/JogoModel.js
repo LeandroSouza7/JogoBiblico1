@@ -16,29 +16,15 @@ export class JogoModel{
                 // });
     }
 
-    pesquisaPersonagemByString(personagemBuscado){
-        return createFetch("GET", "http://localhost:3000/perguntas")
-            .then(resposta => resposta);
-    }
+    // pesquisaPersonagemByString(){
+    //     return createFetch("GET", "http://localhost:3000/perguntas")
+    //         .then(resposta => resposta);
+    // }
 
-    pesquisaPersonagemById(personagemBuscado){
-        let qtd = 0;
-
-        createFetch("GET", "http://localhost:3000/perguntas")
-            .then(resposta => {
-                resposta.forEach(element =>{
-                    personagemBuscado = personagemBuscado.toLowerCase();
-                    if(personagemBuscado == resposta.id){
-                        return element;
-                    }else{
-                        qtd += 1;
-                        if(qtd == resposta.length){
-                            alert("Personagem não encontrado");
-                        } 
-                    }
-                })
-            })
-    }
+    // pesquisaPersonagemById(){
+    //     return createFetch("GET", "http://localhost:3000/perguntas")
+    //         .then(resposta => resposta);
+    // }
 
     addPersonagens(data, cb){
         createFetch("POST", "http://localhost:3000/perguntas", data)
