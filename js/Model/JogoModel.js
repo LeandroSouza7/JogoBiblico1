@@ -7,24 +7,7 @@ export class JogoModel{
     listaPersonagens(){
         return createFetch("GET", "http://localhost:3000/perguntas")
             .then(resposta => resposta);
-                // .then(resposta => {
-                //     return resposta.forEach(element => {
-                //         const $li = document.createElement('li');
-                //         const $text = document.createTextNode(element.id + " " + element.personagem);
-                //         $li.appendChild($text); 
-                //     });
-                // });
     }
-
-    // pesquisaPersonagemByString(){
-    //     return createFetch("GET", "http://localhost:3000/perguntas")
-    //         .then(resposta => resposta);
-    // }
-
-    // pesquisaPersonagemById(){
-    //     return createFetch("GET", "http://localhost:3000/perguntas")
-    //         .then(resposta => resposta);
-    // }
 
     addPersonagens(data, cb){
         createFetch("POST", "http://localhost:3000/perguntas", data)

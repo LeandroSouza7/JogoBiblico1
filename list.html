@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Lista de personagens</title>
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	
@@ -35,11 +37,7 @@
 
         <script type="module">
             import { ListView } from './js/View/ListView.js';
-            const $ulPersonagens = document.querySelector('.ulPersonagens');
-            const $btnPersonagemBuscado = document.querySelector('.btnPersonagem');
-            new ListView($ulPersonagens, $btnPersonagemBuscado);
-            // initAll($ulPersonagens);
-            // let jj = new ListView($ulPersonagens);
+            new ListView();
         </script>
     </body>
 </html>

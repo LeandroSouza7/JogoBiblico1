@@ -1,18 +1,16 @@
 import { JogoController } from "../Controller/JogoController.js";
 
 export class ListView{
-    constructor(listContainer, btnPersonagemBuscado){
+    constructor(){
         this.jogoController = new JogoController();
-        this.$listContainer = listContainer;
-        // this.$btnPersonagemBuscado = btnPersonagemBuscado;
-        this.init();
+        this.$listContainer = document.querySelector('.ulPersonagens');
+        this.$btnVoltarTela = document.querySelector('.btnVoltarTela');
+        this.carregarPersonagens();
         this.pesquisarPersonagemByNome();
         this.pesquisarPersonagemById();
-        this.$btnVoltarTela = document.querySelector('.btnVoltarTela');
-
     }
 
-    init(personagemEncontrado){
+    carregarPersonagens(personagemEncontrado){
        this.jogoController.lista()
         .then(resposta => {
                 if(personagemEncontrado == undefined){ 
@@ -46,7 +44,7 @@ export class ListView{
                     personagemProcuradoByNome = personagemProcuradoByNome.value.toLowerCase();
                     resposta.forEach(element =>{
                         if(personagemProcuradoByNome == element.personagem){
-                            this.init(element);
+                            this.carregarPersonagens(element);
                             this.voltarTelaParaTodosOsPersonagens();
                             document.querySelector('.textInput').value = "";
                             return;
@@ -73,7 +71,7 @@ export class ListView{
                     let qtd = 0;
                     resposta.forEach(element =>{
                         if(personagemProcuradoById.value == element.id){
-                            this.init(element);
+                            this.carregarPersonagens(element);
                             personagemProcuradoById.value = "";
                             this.voltarTelaParaTodosOsPersonagens();
                             return;
@@ -93,8 +91,7 @@ export class ListView{
         this.$btnVoltarTela.style = 'display: block;';
 
         this.$btnVoltarTela.addEventListener('click', ()=>{
-            // this.$listContainer.innerHTML = "";
-            this.init();
+            this.carregarPersonagens();
             this.$btnVoltarTela.style = "display: none;";
         })
     }
