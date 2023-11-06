@@ -84,13 +84,17 @@
 
 
         <script type="module">
+            import {Personagens} from './js/View/PersonagensView.js';
+            new Personagens();
+        </script>
+        <script type="module">
             import { createFetch } from './js/createFetch.js';
-            const inputSubmit = document.querySelector('.subInput');
-            const inputs = document.querySelectorAll('input');
+            // const inputSubmit = document.querySelector('.subInput');
+            // const inputs = document.querySelectorAll('input');
 
-            inputs[0].focus();
+            // inputs[0].focus();
 
-            inputSubmit.addEventListener('click', valuesInputs);
+            // inputSubmit.addEventListener('click', valuesInputs);
 
             document.addEventListener('keyup', function(e){
                 if(e.keyCode === 13){
@@ -98,44 +102,44 @@
                 }
             })
 
-            function valuesInputs(){
-                var valores = [];
-                var x = 0;
-                while(x <= 11){
-                    if(inputs[x].value === ""){
-                        alert("Preencha todos os inputs");
-                        return;
+            // function valuesInputs(){
+            //     var valores = [];
+            //     var x = 0;
+            //     while(x <= 11){
+            //         if(inputs[x].value === ""){
+            //             alert("Preencha todos os inputs");
+            //             return;
                         
-                    }
+            //         }
                     
                     
-                    valores.push(inputs[x].value);
+            //         valores.push(inputs[x].value);
                     
 
-                    x++;
-                }
+            //         x++;
+            //     }
 
-                let _valores = Object.assign({}, valores);  
+            //     let _valores = Object.assign({}, valores);  
                 
-                ajaxSend(_valores)
+            //     ajaxSend(_valores)
                
-            }
+            // }
 
-            function ajaxSend(val){ 
-                let x = 0;
-                while(x <= 11){
-                    inputs[x].value = "";
-                    x++;
-                }
+            // function ajaxSend(val){ 
+            //     let x = 0;
+            //     while(x <= 11){
+            //         inputs[x].value = "";
+            //         x++;
+            //     }
 
-                const dataArray = Object.values(val);
+            //     const dataArray = Object.values(val);
 
-                const data = {"nivel": dataArray[0], "personagem": dataArray[1], "dicaUm": dataArray[2], "dicaDois": dataArray[3], "dicaTres": dataArray[4], "dicaQuatro": dataArray[5], "dicaCinco": dataArray[6], "dicaSeis": dataArray[7], "dicaSete": dataArray[8], "dicaOito": dataArray[9], "dicaNove": dataArray[10], "dicaDez": dataArray[11]};
+            //     const data = {"nivel": dataArray[0], "personagem": dataArray[1], "dicaUm": dataArray[2], "dicaDois": dataArray[3], "dicaTres": dataArray[4], "dicaQuatro": dataArray[5], "dicaCinco": dataArray[6], "dicaSeis": dataArray[7], "dicaSete": dataArray[8], "dicaOito": dataArray[9], "dicaNove": dataArray[10], "dicaDez": dataArray[11]};
 
-                inputs.value = ""; 
+            //     inputs.value = ""; 
 
-                let fetchList = createFetch("POST", "http://localhost:3000/perguntas", data)
-                    .then(response => deuCertoOuErrado("certo"));  
+            //     let fetchList = createFetch("POST", "http://localhost:3000/perguntas", data)
+            //         .then(response => deuCertoOuErrado("certo"));  
                     
                 // let xhr = new XMLHttpRequest();
                 // let url = "http://localhost:3000/perguntas";
@@ -183,7 +187,7 @@
 
                    
                 }
-            }
+            // }
     </script>
 
     </body>

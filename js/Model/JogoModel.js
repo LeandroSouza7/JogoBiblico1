@@ -9,9 +9,9 @@ export class JogoModel{
             .then(resposta => resposta);
     }
 
-    addPersonagens(data, cb){
+    addPersonagens(data){
         createFetch("POST", "http://localhost:3000/perguntas", data)
-            .then(resposta => cb(resposta, "Ok"));  
+            .then(resposta => resposta);  
     }
 
     editPersonagens(data, cb){
