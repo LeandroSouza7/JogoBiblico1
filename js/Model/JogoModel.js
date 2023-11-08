@@ -10,7 +10,7 @@ export class JogoModel{
     }
 
     addPersonagens(data){
-        createFetch("POST", "http://localhost:3000/perguntas", data)
+        return createFetch("POST", "http://localhost:3000/perguntas", data)
             .then(resposta => resposta);  
     }
 
