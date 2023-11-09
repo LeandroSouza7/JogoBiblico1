@@ -8,12 +8,14 @@ export class ListView{
         this.carregarPersonagens();
         this.pesquisarPersonagemByNome();
         this.pesquisarPersonagemById();
+
+        this.personagensEncontrados = [];
     }
 
-    carregarPersonagens(personagemEncontrado){
+    carregarPersonagens(){
        this.jogoController.lista()
         .then(resposta => {
-                if(personagemEncontrado == undefined){ 
+                if( this.personagensEncontrados == ""){ 
                     this.$listContainer.innerHTML = "";
                     resposta.forEach(element => {
                         const $li = document.createElement('li');
@@ -21,12 +23,14 @@ export class ListView{
                         $li.appendChild($text); 
                         this.$listContainer.appendChild($li);
                     });
-                }else{
+                }else{ 
                     this.$listContainer.innerHTML = "";
-                    const $li = document.createElement('li');
-                    const $text = document.createTextNode(personagemEncontrado.id + " " + personagemEncontrado.personagem);
-                    $li.appendChild($text); 
-                    this.$listContainer.appendChild($li);
+                    this.personagensEncontrados.forEach(element => {
+                        const $li = document.createElement('li');
+                        const $text = document.createTextNode(element.id + " " + element.personagem);
+                        $li.appendChild($text); 
+                        this.$listContainer.appendChild($li);
+                    });                    
                 }
                     
             });
@@ -36,18 +40,17 @@ export class ListView{
         const $btnPersonagemBuscado = document.querySelector('.btnPersonagem');
 
         $btnPersonagemBuscado.addEventListener('click', ()=> {
-            let personagemProcuradoByNome = document.querySelector('.textInput');
+            let personagemProcuradoByNome = document.querySelector('.textInput').value;
         
             this.jogoController.lista()
                 .then(resposta => {
                     let qtd = 0;
-                    personagemProcuradoByNome = personagemProcuradoByNome.value.toLowerCase();
                     resposta.forEach(element =>{
                         if(personagemProcuradoByNome == element.personagem){
-                            this.carregarPersonagens(element);
+                            this.personagensEncontrados.push(element);
+                            this.carregarPersonagens();
                             this.voltarTelaParaTodosOsPersonagens();
                             document.querySelector('.textInput').value = "";
-                            return;
                         }else{
                             qtd += 1;
                             if(qtd == resposta.length){
@@ -71,7 +74,8 @@ export class ListView{
                     let qtd = 0;
                     resposta.forEach(element =>{
                         if(personagemProcuradoById.value == element.id){
-                            this.carregarPersonagens(element);
+                            this.personagensEncontrados.push(element);
+                            this.carregarPersonagens();
                             personagemProcuradoById.value = "";
                             this.voltarTelaParaTodosOsPersonagens();
                             return;
@@ -91,6 +95,7 @@ export class ListView{
         this.$btnVoltarTela.style = 'display: block;';
 
         this.$btnVoltarTela.addEventListener('click', ()=>{
+            this.personagensEncontrados = [];
             this.carregarPersonagens();
             this.$btnVoltarTela.style = "display: none;";
         })

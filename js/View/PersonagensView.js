@@ -1,5 +1,5 @@
 import { JogoController } from "../Controller/JogoController.js";
-export class Personagens{
+export class PersonagensView{
     constructor(){
         this.jogoController = new JogoController();
         this.$inputs = document.querySelectorAll('input');
@@ -50,7 +50,6 @@ export class Personagens{
                 .then(() => {
                     let l = 0;
                     while(l <= 11){
-                        console.log("chegoooooooou");
                         this.$inputs[l].value = "";                        
         
                         l++;

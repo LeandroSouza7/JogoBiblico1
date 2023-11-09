@@ -1,21 +1,6 @@
 {
   "perguntas": [
     {
-      "nivel": "q",
-      "personagem": "q",
-      "dicaUm": "q",
-      "dicaDois": "q",
-      "dicaTres": "q",
-      "dicaQuatro": "q",
-      "dicaCinco": "q",
-      "dicaSeis": "q",
-      "dicaSete": "q",
-      "dicaOito": "q",
-      "dicaNove": "q",
-      "dicaDez": "q",
-      "id": 3
-    },
-    {
       "nivel": "m",
       "personagem": "m",
       "dicaUm": "m",
@@ -61,21 +46,6 @@
       "id": 6
     },
     {
-      "nivel": "t",
-      "personagem": "t",
-      "dicaUm": "t",
-      "dicaDois": "t",
-      "dicaTres": "t",
-      "dicaQuatro": "t",
-      "dicaCinco": "t",
-      "dicaSeis": "t",
-      "dicaSete": "t",
-      "dicaOito": "t",
-      "dicaNove": "t",
-      "dicaDez": "t",
-      "id": 7
-    },
-    {
       "nivel": "e",
       "personagem": "e",
       "dicaUm": "e",
@@ -98,57 +68,12 @@
       "dicaTres": "t",
       "dicaQuatro": "t",
       "dicaCinco": "t",
-      "dicaSeis": "tt",
-      "dicaSete": "t",
-      "dicaOito": "t",
-      "dicaNove": "t",
-      "dicaDez": "t",
-      "id": 9
-    },
-    {
-      "nivel": "t",
-      "personagem": "t",
-      "dicaUm": "t",
-      "dicaDois": "t",
-      "dicaTres": "t",
-      "dicaQuatro": "t",
-      "dicaCinco": "t",
       "dicaSeis": "t",
       "dicaSete": "t",
       "dicaOito": "t",
       "dicaNove": "t",
       "dicaDez": "t",
       "id": 10
-    },
-    {
-      "nivel": "r",
-      "personagem": "r",
-      "dicaUm": "r",
-      "dicaDois": "r",
-      "dicaTres": "r",
-      "dicaQuatro": "r",
-      "dicaCinco": "r",
-      "dicaSeis": "r",
-      "dicaSete": "r",
-      "dicaOito": "r",
-      "dicaNove": "r",
-      "dicaDez": "r",
-      "id": 11
-    },
-    {
-      "nivel": "gGg",
-      "personagem": "g",
-      "dicaUm": "g",
-      "dicaDois": "g",
-      "dicaTres": "g",
-      "dicaQuatro": "g",
-      "dicaCinco": "g",
-      "dicaSeis": "g",
-      "dicaSete": "g",
-      "dicaOito": "g",
-      "dicaNove": "g",
-      "dicaDez": "g",
-      "id": 12
     },
     {
       "nivel": "w",
@@ -164,21 +89,6 @@
       "dicaNove": "w",
       "dicaDez": "w",
       "id": 13
-    },
-    {
-      "nivel": "c",
-      "personagem": "c",
-      "dicaUm": "c",
-      "dicaDois": "c",
-      "dicaTres": "c",
-      "dicaQuatro": "c",
-      "dicaCinco": "c",
-      "dicaSeis": "c",
-      "dicaSete": "c",
-      "dicaOito": "c",
-      "dicaNove": "c",
-      "dicaDez": "c",
-      "id": 14
     },
     {
       "nivel": "v",
@@ -239,21 +149,6 @@
       "dicaNove": "S",
       "dicaDez": "S",
       "id": 18
-    },
-    {
-      "nivel": "sS",
-      "personagem": "S",
-      "dicaUm": "S",
-      "dicaDois": "S",
-      "dicaTres": "SS",
-      "dicaQuatro": "S",
-      "dicaCinco": "S",
-      "dicaSeis": "S",
-      "dicaSete": "S",
-      "dicaOito": "S",
-      "dicaNove": "S",
-      "dicaDez": "S",
-      "id": 19
     },
     {
       "nivel": "sS",
