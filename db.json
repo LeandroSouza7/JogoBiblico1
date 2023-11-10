@@ -16,21 +16,6 @@
       "id": 4
     },
     {
-      "nivel": "h",
-      "personagem": "h",
-      "dicaUm": "h",
-      "dicaDois": "h",
-      "dicaTres": "h",
-      "dicaQuatro": "h",
-      "dicaCinco": "h",
-      "dicaSeis": "h",
-      "dicaSete": "h",
-      "dicaOito": "h",
-      "dicaNove": "h",
-      "dicaDez": "h",
-      "id": 5
-    },
-    {
       "nivel": "o",
       "personagem": "o",
       "dicaUm": "o",
@@ -104,21 +89,6 @@
       "dicaNove": "v",
       "dicaDez": "v",
       "id": 15
-    },
-    {
-      "nivel": "a",
-      "personagem": "a",
-      "dicaUm": "a",
-      "dicaDois": "a",
-      "dicaTres": "a",
-      "dicaQuatro": "a",
-      "dicaCinco": "a",
-      "dicaSeis": "a",
-      "dicaSete": "a",
-      "dicaOito": "a",
-      "dicaNove": "a",
-      "dicaDez": "a",
-      "id": 16
     },
     {
       "nivel": "f",

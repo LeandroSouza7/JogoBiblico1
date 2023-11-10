@@ -18,7 +18,20 @@ export class RemoveView{
     carregarPersonagens(){
         this.jogoController.lista()
             .then(resposta => {
-                console.log(resposta);
+                resposta.forEach(personagem => {
+                    const $li = document.createElement('li');
+                    const $textLi = document.createTextNode(personagem.id + " " + personagem.personagem);
+                    $li.appendChild($textLi); 
+
+                    const $btnRemovePersonagem = document.createElement('button');
+                    $btnRemovePersonagem.classList.add('removePersona');
+                    $btnRemovePersonagem.setAttribute('value', personagem.id)
+                    const $textButton = document.createTextNode('Apagar personagem');
+                    $btnRemovePersonagem.appendChild($textButton);
+
+                    $li.appendChild($btnRemovePersonagem);
+                    this.$ulPersonagens.appendChild($li);
+                })
             })
     }
 
