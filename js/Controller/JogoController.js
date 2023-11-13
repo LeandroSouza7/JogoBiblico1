@@ -17,8 +17,8 @@ export class JogoController{
         this.model.editPersonagens(data, cb);
     }
 
-    remove(data, cb){
-        this.model.removePersonagens(data, cb);
+    remove(data){
+        return this.model.removePersonagens(data);
     }
 
     numeroAleatorio(qtdPerguntas){

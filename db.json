@@ -1,51 +1,6 @@
 {
   "perguntas": [
     {
-      "nivel": "m",
-      "personagem": "m",
-      "dicaUm": "m",
-      "dicaDois": "m",
-      "dicaTres": "m",
-      "dicaQuatro": "m",
-      "dicaCinco": "m",
-      "dicaSeis": "m",
-      "dicaSete": "m",
-      "dicaOito": "m",
-      "dicaNove": "m",
-      "dicaDez": "m",
-      "id": 4
-    },
-    {
-      "nivel": "o",
-      "personagem": "o",
-      "dicaUm": "o",
-      "dicaDois": "o",
-      "dicaTres": "o",
-      "dicaQuatro": "o",
-      "dicaCinco": "o",
-      "dicaSeis": "o",
-      "dicaSete": "o",
-      "dicaOito": "o",
-      "dicaNove": "o",
-      "dicaDez": "o",
-      "id": 6
-    },
-    {
-      "nivel": "e",
-      "personagem": "e",
-      "dicaUm": "e",
-      "dicaDois": "e",
-      "dicaTres": "e",
-      "dicaQuatro": "e",
-      "dicaCinco": "e",
-      "dicaSeis": "e",
-      "dicaSete": "e",
-      "dicaOito": "e",
-      "dicaNove": "e",
-      "dicaDez": "e",
-      "id": 8
-    },
-    {
       "nivel": "t",
       "personagem": "t",
       "dicaUm": "t",
@@ -149,21 +104,6 @@
       "dicaNove": "S",
       "dicaDez": "S",
       "id": 21
-    },
-    {
-      "nivel": "sS",
-      "personagem": "S",
-      "dicaUm": "S",
-      "dicaDois": "S",
-      "dicaTres": "SS",
-      "dicaQuatro": "S",
-      "dicaCinco": "S",
-      "dicaSeis": "S",
-      "dicaSete": "S",
-      "dicaOito": "S",
-      "dicaNove": "S",
-      "dicaDez": "S",
-      "id": 22
     },
     {
       "nivel": "sS",

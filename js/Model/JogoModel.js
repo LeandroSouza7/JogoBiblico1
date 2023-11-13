@@ -19,9 +19,9 @@ export class JogoModel{
             .then(resposta => cb(resposta, "Ok"));
     }
 
-    removePersonagens(data, cb){
-        createFetch("DELETE", `http://localhost:3000/perguntas/${data.id}`)
-            .then(resposta => cb(resposta, "Ok"));
+    removePersonagens(data){
+        return createFetch("DELETE", `http://localhost:3000/perguntas/${data}`)
+            .then(resposta => resposta);
     }
 
     getNumerosAleatorio(qtdPerguntas){

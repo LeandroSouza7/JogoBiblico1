@@ -31,8 +31,26 @@ export class RemoveView{
 
                     $li.appendChild($btnRemovePersonagem);
                     this.$ulPersonagens.appendChild($li);
+
+                    this.apagarPersonagens();
                 })
             })
     }
 
+    apagarPersonagens(){
+        let btnRemovePersona = document.querySelectorAll('.removePersona');
+        btnRemovePersona.forEach(btn => {
+            btn.addEventListener('click', (e)=> {
+                this.jogoController.remove(e.target.getAttribute("value"))
+                    .then(respponse => console.log(respponse, this.msgDeuCertoOuErrado("certo")));
+                // valuePersonagemBtn.value = "";
+                // aluePersonagemId.value = "";
+            })
+
+        })    
+    }
+
+    msgDeuCertoOuErrado(msg){
+        console.log(msg);
+    }
 }
