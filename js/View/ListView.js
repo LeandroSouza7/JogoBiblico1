@@ -1,9 +1,9 @@
 import { JogoController } from "../Controller/JogoController.js";
 
 export class ListView{
-    constructor(){
+    constructor(listContainer = document.querySelector('.ulPersonagens')){
         this.jogoController = new JogoController();
-        this.$listContainer = document.querySelector('.ulPersonagens');
+        this.$listContainer = listContainer;
         this.$btnVoltarTela = document.querySelector('.btnVoltarTela');
         this.carregarPersonagens();
         this.pesquisarPersonagemByNome();
