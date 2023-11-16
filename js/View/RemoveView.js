@@ -1,60 +1,59 @@
 import { JogoController } from "../Controller/JogoController.js";
-import { ListView } from "./ListView.js";
+// import { ListView } from "./ListView.js";
 
 export class RemoveView{
     constructor(){
         this.jogoController = new JogoController();
+        this.$ulPersonagens = document.querySelector('.ulPersonagens');
+        // this.listView = new ListView($ulPersonagens);
 
-        this.$valuePersonagemBtn = document.querySelector('.namePersonagem').value;
-        this.$btnPersonagem = document.querySelector('.btnPersonagem');
-        this.$valuePersonagemId = document.querySelector('.idPersonagem').value;
-        this.$btnId = document.querySelector('.btnId');
-        const $ulPersonagens = document.querySelector('.ulPersonagens');
-        this.listView = new ListView($ulPersonagens);
+        this.personagensEncontrados = [];
 
         this.carregarPersonagens();
         this.pesquisarPersonagem();
     }
 
     carregarPersonagens(personagemPesquisado){
-        this.listView.carregarPersonagens();
-        // console.log(personagemPesquisado);
-        // if(personagemPesquisado == undefined){
-        //     this.jogoController.lista()
-        //         .then(resposta => {
-        //             resposta.forEach(personagem => {
-        //                 const $li = document.createElement('li');
-        //                 const $textLi = document.createTextNode(personagem.id + " " + personagem.personagem);
-        //                 $li.appendChild($textLi); 
+        // this.listView.carregarPersonagens();
+        this.$ulPersonagens.innerHTML = "";
+        if(personagemPesquisado == undefined){
+            this.jogoController.lista()
+                .then(resposta => {
+                    resposta.forEach(personagem => {
+                        const $li = document.createElement('li');
+                        const $textLi = document.createTextNode(personagem.id + " " + personagem.personagem);
+                        $li.appendChild($textLi); 
 
-        //                 const $btnRemovePersonagem = document.createElement('button');
-        //                 $btnRemovePersonagem.classList.add('removePersona');
-        //                 $btnRemovePersonagem.setAttribute('value', personagem.id)
-        //                 const $textButton = document.createTextNode('Apagar personagem');
-        //                 $btnRemovePersonagem.appendChild($textButton);
+                        const $btnRemovePersonagem = document.createElement('button');
+                        $btnRemovePersonagem.classList.add('removePersona');
+                        $btnRemovePersonagem.setAttribute('value', personagem.id)
+                        const $textButton = document.createTextNode('Apagar personagem');
+                        $btnRemovePersonagem.appendChild($textButton);
 
-        //                 $li.appendChild($btnRemovePersonagem);
-        //                 this.$ulPersonagens.appendChild($li);
+                        $li.appendChild($btnRemovePersonagem);
+                        this.$ulPersonagens.appendChild($li);
 
-        //                 this.apagarPersonagens();
-        //             })
-        //         })
-        // }else{
-        //     const $li = document.createElement('li');
-        //     const $textLi = document.createTextNode(personagemPesquisado.id + " " + personagemPesquisado.personagem);
-        //     $li.appendChild($textLi); 
+                        this.apagarPersonagens();
+                    })
+                })
+        }else{
+            personagemPesquisado.forEach(element =>{
+                const $li = document.createElement('li');
+                const $textLi = document.createTextNode(element.id + " " + element.personagem);
+                $li.appendChild($textLi); 
 
-        //     const $btnRemovePersonagem = document.createElement('button');
-        //     $btnRemovePersonagem.classList.add('removePersona');
-        //     $btnRemovePersonagem.setAttribute('value', personagemPesquisado.id)
-        //     const $textButton = document.createTextNode('Apagar personagem');
-        //     $btnRemovePersonagem.appendChild($textButton);
+                const $btnRemovePersonagem = document.createElement('button');
+                $btnRemovePersonagem.classList.add('removePersona');
+                $btnRemovePersonagem.setAttribute('value', element.id)
+                const $textButton = document.createTextNode('Apagar personagem');
+                $btnRemovePersonagem.appendChild($textButton);
 
-        //     $li.appendChild($btnRemovePersonagem);
-        //     this.$ulPersonagens.appendChild($li);
+                $li.appendChild($btnRemovePersonagem);
+                this.$ulPersonagens.appendChild($li);
 
-        //     this.apagarPersonagens();
-        // }
+                this.apagarPersonagens();
+            })
+        }
     }
 
     apagarPersonagens(){
@@ -87,9 +86,50 @@ export class RemoveView{
     }
 
     pesquisarPersonagem(){
-        // this.$btnPersonagem.addEventListener('click', this.carregarPersonagens(this.listView.pesquisarPersonagemByNome()));
-        // this.$btnId.addEventListener('click', this.carregarPersonagens(this.listView.pesquisarPersonagemById()));
-        // this.listView.pesquisarPersonagemByNome(this.$btnPersonagem, this.$valuePersonagemBtn);
-        // this.listView.pesquisarPersonagemById(this.$btnId, this.$valuePersonagemId);
+        const $btnPersonagem = document.querySelector('.btnPersonagem');
+        const $btnId = document.querySelector('.btnId');
+
+        $btnPersonagem.addEventListener('click', ()=>{
+            let $valuePersonagemBtn = document.querySelector('.namePersonagem').value;
+            this.jogoController.lista()
+                .then(resposta => {
+                    let qtd = 0;
+                    resposta.forEach(element =>{
+                        if($valuePersonagemBtn == element.personagem){
+                            this.personagensEncontrados.push(element);
+                            this.carregarPersonagens(this.personagensEncontrados);
+                            // this.voltarTelaParaTodosOsPersonagens();
+                            document.querySelector('.namePersonagem').value = "";
+                        }else{
+                            qtd += 1;
+                            if(qtd == resposta.length){
+                                alert("Personagem não encontrado");
+                            } 
+                        }
+                    })
+                })
+        })
+
+        $btnId.addEventListener('click', ()=>{
+            let $valuePersonagemId = document.querySelector('.idPersonagem').value;
+            this.jogoController.lista()
+                .then(resposta => {
+                    let qtd = 0;
+                    resposta.forEach(element =>{
+                        if($valuePersonagemId == element.id){
+                            this.personagensEncontrados.push(element);
+                            this.carregarPersonagens(this.personagensEncontrados);
+                            // this.voltarTelaParaTodosOsPersonagens();
+                            document.querySelector('.namePersonagem').value = "";
+                        }else{
+                            qtd += 1;
+                            if(qtd == resposta.length){
+                                alert("Personagem não encontrado");
+                            } 
+                        }
+                    })
+                })
+        })
+
     }
 }

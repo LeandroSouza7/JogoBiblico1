@@ -10,6 +10,7 @@ export class ListView{
         this.pesquisarPersonagemById();
 
         this.personagensEncontrados = [];
+        // this.$btnPersonagemBuscado.addEventListener('click', this.pesquisarPersonagemByNome());
     }
 
     carregarPersonagens(){
@@ -39,7 +40,7 @@ export class ListView{
     pesquisarPersonagemByNome(){
         const $btnPersonagemBuscado = document.querySelector('.btnPersonagem');
 
-        $btnPersonagemBuscado.addEventListener('click', ()=> {
+        $btnPersonagemBuscado.addEventListener('click', ()=>{
             let personagemProcuradoByNome = document.querySelector('.textInput').value;
         
             this.jogoController.lista()
