@@ -41,6 +41,7 @@ export class ListView{
         const $btnPersonagemBuscado = document.querySelector('.btnPersonagem');
 
         $btnPersonagemBuscado.addEventListener('click', ()=>{
+            this.personagensEncontrados = [];
             let personagemProcuradoByNome = document.querySelector('.textInput').value;
         
             this.jogoController.lista()
@@ -68,6 +69,7 @@ export class ListView{
         const $btnPersonagemBuscado = document.querySelector('.btnId');
 
         $btnPersonagemBuscado.addEventListener('click', ()=> {
+            this.personagensEncontrados = [];
             let personagemProcuradoById = document.querySelector('.textId');
         
             this.jogoController.lista()

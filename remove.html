@@ -9,15 +9,25 @@
 		<link href="css/estilo.css" rel="stylesheet">
 
         <style>
-            btn{
+
+            button{
+                cursor: pointer;
+            }
+        
+            .btnVoltarTela button{
+                border: solid 2px black;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                padding: 10px;
                 cursor: pointer;
             }
         </style>
     </head>
     <body>
 
-        <input type="text" class="namePersonagem"><btn class="btnPersonagem">Pesquisar personagem</btn>
-        <input type="text" class="idPersonagem"><btn class="btnId">Pesquisar ID</btn>
+        <input type="text" class="namePersonagem"><button class="btnPersonagem">Pesquisar personagem</button>
+        <input type="text" class="idPersonagem"><button class="btnId">Pesquisar ID</button>
 
         <div class="listPersonagens">
             <ul class="ulPersonagens">
@@ -25,6 +35,8 @@
         </div>
 
         <div class="msg"> </div>
+
+        <div class="btnVoltarTela" style="display: none;"><button>Voltar lista completa</button></div>
 
 
         <script type="module">

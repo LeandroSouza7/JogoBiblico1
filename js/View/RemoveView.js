@@ -13,12 +13,14 @@ export class RemoveView{
         this.pesquisarPersonagem();
     }
 
-    carregarPersonagens(personagemPesquisado){
+    carregarPersonagens(){
         // this.listView.carregarPersonagens();
+        console.log('VHEGOU')
         this.$ulPersonagens.innerHTML = "";
-        if(personagemPesquisado == undefined){
+        if(this.personagensEncontrados == ""){
             this.jogoController.lista()
                 .then(resposta => {
+                    this.$ulPersonagens.innerHTML = "";
                     resposta.forEach(personagem => {
                         const $li = document.createElement('li');
                         const $textLi = document.createTextNode(personagem.id + " " + personagem.personagem);
@@ -37,7 +39,7 @@ export class RemoveView{
                     })
                 })
         }else{
-            personagemPesquisado.forEach(element =>{
+            this.personagensEncontrados.forEach(element =>{
                 const $li = document.createElement('li');
                 const $textLi = document.createTextNode(element.id + " " + element.personagem);
                 $li.appendChild($textLi); 
@@ -62,8 +64,6 @@ export class RemoveView{
             btn.addEventListener('click', (e)=> {
                 this.jogoController.remove(e.target.getAttribute("value"))
                     .then(respponse => console.log(respponse, this.msgDeuCertoOuErrado("certo")));
-                // valuePersonagemBtn.value = "";
-                // aluePersonagemId.value = "";
             })
 
         })    
@@ -80,7 +80,11 @@ export class RemoveView{
 
             setTimeout(()=> {
                 $msg.classList.add('none');
+                this.personagensEncontrados = [];
                 this.carregarPersonagens();
+                const $btnVoltarTela = document.querySelector('.btnVoltarTela')
+                $btnVoltarTela.style = 'display: none;';
+
             }, 1000)
         }
     }
@@ -90,6 +94,7 @@ export class RemoveView{
         const $btnId = document.querySelector('.btnId');
 
         $btnPersonagem.addEventListener('click', ()=>{
+            this.personagensEncontrados = [];
             let $valuePersonagemBtn = document.querySelector('.namePersonagem').value;
             this.jogoController.lista()
                 .then(resposta => {
@@ -97,8 +102,8 @@ export class RemoveView{
                     resposta.forEach(element =>{
                         if($valuePersonagemBtn == element.personagem){
                             this.personagensEncontrados.push(element);
-                            this.carregarPersonagens(this.personagensEncontrados);
-                            // this.voltarTelaParaTodosOsPersonagens();
+                            this.carregarPersonagens();
+                            this.voltarTelaParaTodosOsPersonagens();
                             document.querySelector('.namePersonagem').value = "";
                         }else{
                             qtd += 1;
@@ -111,6 +116,7 @@ export class RemoveView{
         })
 
         $btnId.addEventListener('click', ()=>{
+            this.personagensEncontrados = [];
             let $valuePersonagemId = document.querySelector('.idPersonagem').value;
             this.jogoController.lista()
                 .then(resposta => {
@@ -118,8 +124,8 @@ export class RemoveView{
                     resposta.forEach(element =>{
                         if($valuePersonagemId == element.id){
                             this.personagensEncontrados.push(element);
-                            this.carregarPersonagens(this.personagensEncontrados);
-                            // this.voltarTelaParaTodosOsPersonagens();
+                            this.carregarPersonagens();
+                            this.voltarTelaParaTodosOsPersonagens();
                             document.querySelector('.namePersonagem').value = "";
                         }else{
                             qtd += 1;
@@ -131,5 +137,16 @@ export class RemoveView{
                 })
         })
 
+    }
+
+    voltarTelaParaTodosOsPersonagens(){
+        const $btnVoltarTela = document.querySelector('.btnVoltarTela')
+        $btnVoltarTela.style = 'display: block;';
+
+        $btnVoltarTela.addEventListener('click', ()=>{
+            this.personagensEncontrados = [];
+            this.carregarPersonagens();
+            $btnVoltarTela.style = "display: none;";
+        })
     }
 }
