@@ -14,9 +14,9 @@ export class JogoModel{
             .then(resposta => resposta);  
     }
 
-    editPersonagens(data, cb){
-        createFetch("PUT", `http://localhost:3000/perguntas/${data.id}`, data)
-            .then(resposta => cb(resposta, "Ok"));
+    editPersonagens(data){
+        return createFetch("PUT", `http://localhost:3000/perguntas/${data.id}`, data)
+            .then(resposta => resposta);
     }
 
     removePersonagens(data){

@@ -13,8 +13,8 @@ export class JogoController{
         return this.model.addPersonagens(data);
     }
 
-    edit(data, cb){
-        this.model.editPersonagens(data, cb);
+    edit(data){
+        return this.model.editPersonagens(data);
     }
 
     remove(data){

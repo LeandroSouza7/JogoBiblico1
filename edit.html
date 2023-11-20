@@ -25,11 +25,23 @@
     <body>
         <div class="buscaDiv">
             <label>Digite um personagem para editar</label>
-            <input type="text" class="busca"><a class="btn btnBusca">Buscar</a>
+            <input type="text" class="buscaPersonagem"><a class="btn btnPersonagem">Buscar</a>
+        </div>
+        <div class="buscaDiv">
+            <label>Digite um id de personagem para editar</label>
+            <input type="id" class="buscaId"><a class="btn btnId">Buscar</a>
         </div>
         <div class="resultados"></div>
 
+        <div class="btnVoltarTela" style="display: none;"><button>Voltar lista completa</button></div>
+
         <script type="module">
+            import {EditView} from './js/View/EditView.js';
+
+            new EditView();
+        </script>
+
+        <!-- <script type="module">
             import { createFetch } from './js/createFetch.js';
 
             let inputBusca = document.querySelector('.busca');
@@ -219,6 +231,6 @@
                 }
                    
             }
-        </script>
+        </script> -->
     </body>
 </html>
