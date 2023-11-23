@@ -27,8 +27,8 @@ export class JogoModel{
     getNumerosAleatorio(qtdPerguntas){
         let numeros = [];
 		let x = 0;
-		while(x <= qtdPerguntas){
-			let aleatorio = Math.floor(Math.random() * 5)
+		while(x <= 100000){
+			let aleatorio = Math.floor(Math.random() * qtdPerguntas)
 			if (numeros.indexOf(aleatorio) == -1){
 			 	numeros.push(aleatorio);
 			}

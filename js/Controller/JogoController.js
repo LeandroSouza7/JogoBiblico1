@@ -22,6 +22,6 @@ export class JogoController{
     }
 
     numeroAleatorio(qtdPerguntas){
-        this.model.getNumerosAleatorio(qtdPerguntas);
+        return this.model.getNumerosAleatorio(qtdPerguntas);
     }
 }
