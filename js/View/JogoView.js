@@ -4,22 +4,20 @@ export class JogoView{
     constructor(){
         this.jogoController = new JogoController();
         this.$container = document.querySelector('.container');
-        // this.dadosJogo();
-        // this.mostrarPersonagem();
+        this.dadosJogo();
+        this.personagens = [];
 
         this.sequenciaAleatoria = [];
-
-        this.personagens = this.jogoController.lista()
-                .then(personagens => {
-                    return personagens;
-                });
-
-        let qtdDePersonagens = this.personagens;
-        console.log(qtdDePersonagens);
     }
 
     dadosJogo(){
-        
+        this.jogoController.lista()
+            .then(personagens => {
+                let qtdDePersonagens = personagens.length;
+                this.sequenciaAleatoria = this.jogoController.numeroAleatorio(qtdDePersonagens);
+                this.personagens = personagens;
+                this.mostrarPersonagem();
+            });
     }
 
     mostrarPersonagem(){
@@ -82,7 +80,17 @@ export class JogoView{
 				<span class="btn proximo mb-5">Próximo</span>
 		    </div>`;
             this.$container.innerHTML = htmlDados; 
+            this.verDicas();
             this.proximoPersonagem(); 
+    }
+
+    verDicas(){
+        let $btnsDicas = document.querySelectorAll('.btn_dica');
+        $btnsDicas.forEach(dica => {
+            dica.addEventListener('click', (e) => {
+                e.target.parentNode.querySelector('.dica').classList.add('visible');
+            })
+        })
     }
 
     proximoPersonagem(){

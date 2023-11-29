@@ -149,18 +149,18 @@ body{
 	font-weight: 500;
 }
 
-/* .none{
+.none{
 	display: none;
-} */
+}
 			
 .dica .btn{
 	visibility: visible;
 }
 			
 		
-/* .nomePersonagem{
+.nomePersonagem{
 	visibility: hidden;
-} */
+}
 			
 .visible{
 	visibility: visible !important;
