@@ -28,10 +28,12 @@ export class InicioJogoView{
             return alert("Adicione ao menos um participante");
         }
 
-        nomeDosParticipantes.forEach(nome => {
-            let dados = JSON.stringify(nome);
-            sessionStorage.setItem('participantes', dados );
-        })
+        // nomeDosParticipantes.forEach((nome, i) => {
+        //     let dados = JSON.stringify(nome);
+        //     sessionStorage.setItem('participantes' + i, dados );
+        // })
+
+        sessionStorage.setItem('participantes', JSON.stringify(nomeDosParticipantes));
 
         window.location.href = "jogo.html";
     }

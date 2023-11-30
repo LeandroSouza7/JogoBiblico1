@@ -96,7 +96,21 @@ export class JogoView{
     proximoPersonagem(){
         let $btnProximo = document.querySelector('.proximo');
         $btnProximo.addEventListener('click', ()=> {
-            this.mostrarPersonagem();
+            this.mostrarPlacar();
+            // this.mostrarPersonagem();
         })
+    }
+
+    mostrarPlacar(){
+        const $msgVencedor = document.querySelector('.msgVencedor');
+        let participantes = sessionStorage.getItem('participantes');
+        participantes = JSON.parse(participantes);
+        participantes.forEach(jogador => {
+            $msgVencedor.querySelector('ul').innerHTML += "<li>"+ jogador +"</li>";
+        })
+
+        $msgVencedor.style.display = "block";
+
+        
     }
 }
