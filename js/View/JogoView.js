@@ -81,6 +81,7 @@ export class JogoView{
 		    </div>`;
             this.$container.innerHTML = htmlDados; 
             this.verDicas();
+            this.verPersonagem();
             this.proximoPersonagem(); 
     }
 
@@ -93,23 +94,50 @@ export class JogoView{
         })
     }
 
+    verPersonagem(){
+        const $btnPersonagem = document.querySelector('.verPersonagem');
+        const $nomeDoPersonagem = document.querySelector('.nomePersonagem');;
+        $btnPersonagem.addEventListener('click', ()=> {
+            console.log($nomeDoPersonagem);
+            $nomeDoPersonagem.classList.toggle('visible');
+            window.scroll(0, 0);  
+        })
+    }
+
     proximoPersonagem(){
         let $btnProximo = document.querySelector('.proximo');
         $btnProximo.addEventListener('click', ()=> {
             this.mostrarPlacar();
-            // this.mostrarPersonagem();
         })
     }
 
     mostrarPlacar(){
         const $msgVencedor = document.querySelector('.msgVencedor');
+        const $body = document.querySelector('body');
         let participantes = sessionStorage.getItem('participantes');
         participantes = JSON.parse(participantes);
         participantes.forEach(jogador => {
-            $msgVencedor.querySelector('ul').innerHTML += "<li>"+ jogador +"</li>";
+            // $msgVencedor.querySelector('ul').innerHTML += "<li>"+ jogador +"</li>";
+            const $li = document.createElement('li');
+            const $textLi = document.createTextNode(jogador);
+            const $input = document.createElement('input');
+            $input.setAttribute('type', 'number');
+            $li.appendChild($textLi); 
+            $li.appendChild($input);
+            $msgVencedor.querySelector('ul').appendChild($li);
+
         })
 
         $msgVencedor.style.display = "block";
+        window.scroll(0, 50);
+ 		$body.classList.add('opacity');
+
+        const $btnProximoPersonagem = document.querySelector('.buttonDivMsg');
+        $btnProximoPersonagem.addEventListener('click', ()=> {
+            $msgVencedor.style.display = "none";
+            $body.classList.remove('opacity');
+            this.mostrarPersonagem();
+        })
 
         
     }
