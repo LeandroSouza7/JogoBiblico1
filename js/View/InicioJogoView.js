@@ -11,12 +11,15 @@ export class InicioJogoView{
         let $btnIniciarJogo = document.querySelector('.comecar');
         $btnIniciarJogo.addEventListener('click', ()=> {
             this.participantes();
+            this.placar();
         })
+
+        // window.location.href = "jogo.html";
     }
 
     participantes(){
         let nomeDosParticipantes = [];
-        let $inputs = document.querySelectorAll('input');
+        let $inputs = document.querySelectorAll('.inputPlayers');
 
         $inputs.forEach(input => {
             if(input.value != ""){
@@ -28,13 +31,16 @@ export class InicioJogoView{
             return alert("Adicione ao menos um participante");
         }
 
-        // nomeDosParticipantes.forEach((nome, i) => {
-        //     let dados = JSON.stringify(nome);
-        //     sessionStorage.setItem('participantes' + i, dados );
-        // })
-
         sessionStorage.setItem('participantes', JSON.stringify(nomeDosParticipantes));
+    }
 
-        window.location.href = "jogo.html";
+    placar(){
+        const $inputPlacar = document.querySelector('.inputPlacar').value;
+
+        if(!$inputPlacar){
+            alert("Defina um placar");
+        }
+
+        sessionStorage.setItem('placar', JSON.stringify($inputPlacar));
     }
 }

@@ -18,11 +18,27 @@ export class JogoView{
                 this.personagens = personagens;
                 this.mostrarPersonagem();
             });
+            const $msgVencedor = document.querySelector('.msgVencedor');
+            let participantes = sessionStorage.getItem('participantes');
+            participantes = JSON.parse(participantes);
+            participantes.forEach(jogador => {
+                // $msgVencedor.querySelector('ul').innerHTML += "<li>"+ jogador +"</li>";
+                const $li = document.createElement('li');
+                const $textLi = document.createTextNode(jogador);
+                const $input = document.createElement('input');
+                $input.classList.add('inputPlacar');
+                $input.setAttribute('type', 'number');
+                $li.appendChild($textLi); 
+                $li.appendChild($input);
+                $msgVencedor.querySelector('ul').appendChild($li);
+    
+            })    
     }
 
     mostrarPersonagem(){
         console.log(this.sequenciaAleatoria);
         let idPersonagemMostrado = this.sequenciaAleatoria.shift();
+        console.log(idPersonagemMostrado);
         let htmlDados = `
                 <div class="div_principal">
                 <div class="container caixaPerguntas">
@@ -114,31 +130,26 @@ export class JogoView{
     mostrarPlacar(){
         const $msgVencedor = document.querySelector('.msgVencedor');
         const $body = document.querySelector('body');
-        let participantes = sessionStorage.getItem('participantes');
-        participantes = JSON.parse(participantes);
-        participantes.forEach(jogador => {
-            // $msgVencedor.querySelector('ul').innerHTML += "<li>"+ jogador +"</li>";
-            const $li = document.createElement('li');
-            const $textLi = document.createTextNode(jogador);
-            const $input = document.createElement('input');
-            $input.setAttribute('type', 'number');
-            $li.appendChild($textLi); 
-            $li.appendChild($input);
-            $msgVencedor.querySelector('ul').appendChild($li);
-
-        })
-
         $msgVencedor.style.display = "block";
         window.scroll(0, 50);
  		$body.classList.add('opacity');
 
         const $btnProximoPersonagem = document.querySelector('.buttonDivMsg');
         $btnProximoPersonagem.addEventListener('click', ()=> {
+            const $inputPlacar = document.querySelector('.inputPlacar').value;
+            let $placar = sessionStorage.getItem('placar');
+            $placar = JSON.parse($placar);
+
+            console.log($placar, $inputPlacar);
+
+            if($placar == $inputPlacar || $inputPlacar > $placar){
+                window.location.href = "vencedor.html";
+                return;
+            }
+
             $msgVencedor.style.display = "none";
             $body.classList.remove('opacity');
             this.mostrarPersonagem();
-        })
-
-        
+        })   
     }
 }
