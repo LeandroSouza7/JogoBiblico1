@@ -12,9 +12,9 @@ export class InicioJogoView{
         $btnIniciarJogo.addEventListener('click', ()=> {
             this.participantes();
             this.placar();
+            window.location.href = "jogo.html";
         })
 
-        // window.location.href = "jogo.html";
     }
 
     participantes(){
@@ -28,7 +28,8 @@ export class InicioJogoView{
         });
 
         if(nomeDosParticipantes == ""){
-            return alert("Adicione ao menos um participante");
+            throw new Error("Não dá");
+            // return alert("Adicione ao menos um participante");
         }
 
         sessionStorage.setItem('participantes', JSON.stringify(nomeDosParticipantes));
@@ -38,7 +39,8 @@ export class InicioJogoView{
         const $inputPlacar = document.querySelector('.inputPlacar').value;
 
         if(!$inputPlacar){
-            alert("Defina um placar");
+            throw new Error("Não dá");
+            // alert("Defina um placar");
         }
 
         sessionStorage.setItem('placar', JSON.stringify($inputPlacar));

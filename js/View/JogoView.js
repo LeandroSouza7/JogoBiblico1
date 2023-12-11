@@ -24,11 +24,13 @@ export class JogoView{
             participantes.forEach(jogador => {
                 // $msgVencedor.querySelector('ul').innerHTML += "<li>"+ jogador +"</li>";
                 const $li = document.createElement('li');
-                const $textLi = document.createTextNode(jogador);
+                const $p = document.createElement('p');
+                const $textLiP = document.createTextNode(jogador);
                 const $input = document.createElement('input');
                 $input.classList.add('inputPlacar');
                 $input.setAttribute('type', 'number');
-                $li.appendChild($textLi); 
+                $p.appendChild($textLiP);
+                $li.appendChild($p); 
                 $li.appendChild($input);
                 $msgVencedor.querySelector('ul').appendChild($li);
     
@@ -136,17 +138,18 @@ export class JogoView{
 
         const $btnProximoPersonagem = document.querySelector('.buttonDivMsg');
         $btnProximoPersonagem.addEventListener('click', ()=> {
-            const $inputPlacar = document.querySelector('.inputPlacar').value;
+            const $inputPlacar = document.querySelectorAll('.inputPlacar');
             let $placar = sessionStorage.getItem('placar');
             $placar = JSON.parse($placar);
 
-            console.log($placar, $inputPlacar);
-
-            if($placar == $inputPlacar || $inputPlacar > $placar){
-                window.location.href = "vencedor.html";
-                return;
-            }
-
+            $inputPlacar.forEach(placar => {
+                if($placar == placar.value || placar.value > $placar){
+                    sessionStorage.setItem('vencedor', JSON.stringify(placar.parentNode.querySelector('p').textContent));
+                    window.location.href = "vencedor.html";
+                    return;
+                }    
+            })
+           
             $msgVencedor.style.display = "none";
             $body.classList.remove('opacity');
             this.mostrarPersonagem();
