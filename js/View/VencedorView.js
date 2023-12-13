@@ -11,5 +11,11 @@ export class VencedorView{
         $vencedor = JSON.parse($vencedor);
         console.log($vencedor);
 
+        let endGame = document.querySelector('.endGame');
+        let winnerPlayer = document.querySelector('.endGame .winner');
+
+        winnerPlayer.textContent = $vencedor;
+        endGame.classList.remove('none');
+
     }
 }
