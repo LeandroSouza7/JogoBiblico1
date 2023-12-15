@@ -38,14 +38,12 @@ export class JogoView{
     }
 
     mostrarPersonagem(){
-        console.log(this.sequenciaAleatoria);
         let idPersonagemMostrado = this.sequenciaAleatoria.shift();
-        console.log(idPersonagemMostrado);
         let htmlDados = `
                 <div class="div_principal">
                 <div class="container caixaPerguntas">
-                    <div class="dificuldade">${this.personagens[idPersonagemMostrado].nivel}</div>
-                    <span class="CodigoDaPergunta h1 naoFoi mr-3">${this.personagens[idPersonagemMostrado].id}</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">${this.personagens[idPersonagemMostrado].personagem}</span>
+                    <div class="dificuldade ${this.personagens[idPersonagemMostrado].nivel}">${this.personagens[idPersonagemMostrado].nivel}</div>
+                    <span class="CodigoDaPergunta h1 mr-3">${this.personagens[idPersonagemMostrado].id}</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">${this.personagens[idPersonagemMostrado].personagem}</span>
                     <div class="dicasPersonagens">
                         <div class="metade1">
                             <div class="divPai">
@@ -108,6 +106,7 @@ export class JogoView{
         $btnsDicas.forEach(dica => {
             dica.addEventListener('click', (e) => {
                 e.target.parentNode.querySelector('.dica').classList.add('visible');
+                e.target.classList.add('none');
             })
         })
     }

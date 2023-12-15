@@ -1,0 +1,28 @@
+.inputsParticipantes h3{
+	text-align: center;
+	padding: 25px 0 10px 0;
+}
+
+.inputsParticipantes h6{
+	text-align: center;
+	/* padding: 25px 0 10px 0; */
+    line-height: 90px;
+}
+
+.inputsParticipantes input{
+	font-size: 32px;
+	margin: 0.7em 0;
+}
+
+.inputsParticipantes .comecar{
+	border: 2px solid black;
+	font-size: 24px;
+	margin: 0.5em;
+	float: right;
+}
+
+.inputs{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 20px;
+}
