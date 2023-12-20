@@ -17,5 +17,15 @@ export class VencedorView{
         winnerPlayer.textContent = $vencedor;
         endGame.classList.remove('none');
 
+        this.jogarNovamente();
+
+    }
+
+    jogarNovamente(){
+        let $jogarNovamente = document.querySelector('.jogarNovamente');
+
+        $jogarNovamente.addEventListener('click', ()=> {
+            window.location.href = "index.html";
+        })
     }
 }
