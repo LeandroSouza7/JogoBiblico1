@@ -22,8 +22,10 @@ export class EditView{
                     this.$resultados.innerHTML = "";
                     resposta.forEach(personagem => {
                         const $li = document.createElement('li');
-                        const $textLi = document.createTextNode(personagem.id + " " + personagem.personagem);
-                        $li.appendChild($textLi); 
+                        const $p = document.createElement('p');
+                        const $textP = document.createTextNode(personagem.id + " " + personagem.personagem);
+                        $p.appendChild($textP); 
+                        $li.appendChild($p); 
 
                         const $btnEditPersonagem = document.createElement('button');
                         $btnEditPersonagem.classList.add('editPersona');
@@ -44,9 +46,9 @@ export class EditView{
                 $li.appendChild($textLi); 
 
                 const $btnEditPersonagem = document.createElement('button');
-                $btnEditPersonagem.classList.add('removePersona');
+                $btnEditPersonagem.classList.add('editPersona');
                 $btnEditPersonagem.setAttribute('value', element.id)
-                const $textButton = document.createTextNode('Apagar personagem');
+                const $textButton = document.createTextNode('Editar personagem');
                 $btnEditPersonagem.appendChild($textButton);
 
                 $li.appendChild($btnEditPersonagem);
@@ -108,6 +110,7 @@ export class EditView{
     }
 
     voltarTelaParaTodosOsPersonagens(){
+        console.log('chegou aqui')
         const $btnVoltarTela = document.querySelector('.btnVoltarTela')
         $btnVoltarTela.style = 'display: block;';
 
@@ -133,7 +136,6 @@ export class EditView{
         this.jogoController.lista()
             .then(resposta => {
                 resposta.forEach(personagem => {
-                    console.log(personagem.id, personagemEditar);
                     if(personagem.id == personagemEditar){
                         console.log(personagem.nivel)
                         let levelPergunta = personagem.nivel;
@@ -208,18 +210,14 @@ export class EditView{
                                 <span class="btn proximo mb-5">Atualizar</span>
                         </div>`;
 
+                        this.voltarTelaParaTodosOsPersonagens();
                         this.editarPersonagens(personagem.id);
-
-                        // inputBusca.value = "";
-
-                        // return;
                     }
                 })
             })
     }
 
     editarPersonagens(id){
-        console.log(id)
         let $btnAtualizar = document.querySelector('.proximo');
         $btnAtualizar.addEventListener('click', ()=>{
             let $inputsTextArea = document.querySelectorAll('textarea');

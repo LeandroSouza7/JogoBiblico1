@@ -7,31 +7,24 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	
 		<link href="css/estilo.css" rel="stylesheet">
-
-        <style>
-            .buscaDiv{
-                margin: 50px;
-            }
-
-            .dica{
-                visibility: visible;
-            }
-
-            textarea{
-                width: 90%;
-            }
-        </style>
+        <link href="css/edit.css" rel="stylesheet">
     </head>
     <body>
-        <div class="buscaDiv">
-            <label>Digite um personagem para editar</label>
-            <input type="text" class="buscaPersonagem"><a class="btn btnPersonagem">Buscar</a>
+        <div>
+            <span class="buscaDiv">
+                <label>Digite um personagem para editar</label>
+                <input type="text" class="buscaPersonagem"><a class="btn btnPersonagem">Buscar</a>
+            </span>
+            <span class="buscaDiv">
+                <label>Digite um id de personagem para editar</label>
+                <input type="id" class="buscaId"><a class="btn btnId">Buscar</a>
+            </span>
         </div>
-        <div class="buscaDiv">
-            <label>Digite um id de personagem para editar</label>
-            <input type="id" class="buscaId"><a class="btn btnId">Buscar</a>
+        <div>
+            <ul class="resultados">
+
+            </ul>
         </div>
-        <div class="resultados"></div>
 
         <div class="btnVoltarTela" style="display: none;"><button>Voltar lista completa</button></div>
 
@@ -40,197 +33,5 @@
 
             new EditView();
         </script>
-
-        <!-- <script type="module">
-            import { createFetch } from './js/createFetch.js';
-
-            let inputBusca = document.querySelector('.busca');
-            let btnBusca = document.querySelector('.btnBusca');
-            let resultados = document.querySelector('.resultados');
-
-            inputBusca.focus();
-
-            btnBusca.addEventListener('click', procuraPersonagem);
-           
-
-           function procuraPersonagem(){
-                let personagemProcurado = inputBusca.value;
-                personagemProcurado = personagemProcurado.toLowerCase();
-                let personagem;
-
-                createFetch("GET", "http://localhost:3000/perguntas")
-                    .then(response => {
-                        personagem = response;
-
-                        console.log(response);
-
-                        let i = 0;
-                        let qtdPersonagens = personagem.length;
-
-                        personagem.forEach((element, index) => {
-                            element = Object.values(element);                    
-                            let _element = element[1];
-                            console.log(_element);
-                            _element = _element.toLowerCase();
-                            if(_element === personagemProcurado){
-                                elementEncontrado(element);
-                            }else{
-                                i++;
-                                console.log(i, qtdPersonagens);
-                                if(i == qtdPersonagens){
-                                    alert("Personagem não encontrado");
-                                    inputBusca.value = "";
-                                    inputBusca.focus();
-                                }
-                            }
-                        })
-                    });
-
-
-
-                // let url = "http://localhost:3000/perguntas";
-                // let promise = await fetch(url);
-
-                // if(!promise.ok){
-                //     alert("Deu ruim");
-                // }   
-                
-                // let personagem = await promise.json();
-                
-            
-
-                function elementEncontrado(el){
-                    let levelPergunta = el[0];
-                    levelPergunta = levelPergunta.toLowerCase();
-                    let _level = undefined;
-
-                    switch(levelPergunta){
-                        case "fácil":
-                            _level = "easy";
-                            break;
-                        case "médio":
-                            _level = "medium";
-                            break;
-                        case "difícil":
-                            _level = "hard";
-                            break;
-                        default:
-                            alert("Alguma coisa deu errado com o nível da pergunta");  
-                    }
-
-                    resultados.innerHTML = ` 
-                    <div class="container caixaPerguntas">
-                    <div class="dificuldade ${_level}"><textarea>${el[0]}</textarea></div>
-                    <span class="CodigoDaPergunta h1 mr-3">0${el[12]}</span><span class="h1 personagem">Personagem:</span><span class="h2 p-2"><textarea>${el[1]}</textarea></span>
-                    <div class="dicasPersonagens">
-                        <div class="metade1">
-                            <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">1</span><span class="dica"><textarea>${el[2]}</textarea></span></div>
-                            </div>
-                            <br>
-                            <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">2</span><span class="dica"><textarea>${el[3]}</textarea></span></div>
-                            </div>
-                            <br>
-                            <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">3</span><span class="dica"><textarea>${el[4]}</textarea></span></div>
-                            </div>
-                            <br>
-                            <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">4</span><span class="dica"><textarea>${el[5]}</textarea></span></div>
-                            </div>
-                            <br>
-                            <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">5</span><span class="dica"><textarea>${el[6]}</textarea></span></div>
-                            </div>
-                            <br>
-                        </div>
-                        
-                        <div class="metade2">
-                            <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">6</span><span class="dica"><textarea>${el[7]}</textarea></span></div>
-                            </div>
-                            <br>
-                            <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">7</span><span class="dica"><textarea>${el[8]}</textarea></span></div>
-                            </div>
-                            <br>
-                            <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">8</span><span class="dica"><textarea>${el[9]}</textarea></span></div>
-                            </div>
-                            <br>
-                            <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">9</span><span class="dica"><textarea>${el[10]}</textarea></span></div>
-                            </div>
-                            <br>
-                            <div class="divPai">
-                                <div class="divDicas"><span class="mr-2 ml-1 number">10</span><span class="dica"><textarea>${el[11]}</textarea></span></div>
-                            </div>
-                            <br>
-                    </div>	
-                    </div>
-                            <span class="btn proximo mb-5">Atualizar</span>
-                    </div>`;
-
-                    inputBusca.value = "";
-                    let btnAtualizar = document.querySelector('.proximo');
-
-
-                    btnAtualizar.addEventListener('click', atualizaPersonagem);
-
-                    function atualizaPersonagem(){
-                        let inputsTextArea = document.querySelectorAll('textarea');
-                        let valores = [];
-                        var x = 0;
-                        while(x <= 11){
-                            if(inputsTextArea[x].value === ""){
-                                alert("Preencha todos os campos");
-                                return;
-                            }
-
-                            valores.push(inputsTextArea[x].value);
-                            
-                            x++;
-                        }
-
-                        ajaxSend(valores);
-
-                        function ajaxSend(dataArray){ 
-
-                            console.log(dataArray);
-
-                            let _valores = {"nivel": dataArray[0], "personagem": dataArray[1], "dicaUm": dataArray[2], "dicaDois": dataArray[3], "dicaTres": dataArray[4], "dicaQuatro": dataArray[5], "dicaCinco": dataArray[6], "dicaSeis": dataArray[7], "dicaSete": dataArray[8], "dicaOito": dataArray[9], "dicaNove": dataArray[10], "dicaDez": dataArray[11], "id": el[12]};
-                            console.log(_valores);
-
-                            let fetchList = createFetch("PUT", `http://localhost:3000/perguntas/${_valores.id}`, _valores)
-                             .then(response => alert("Deu certo"));
-                            
-                            // let xhr = new XMLHttpRequest();
-                            // let url = `http://localhost:3000/perguntas/${_valores.id}`;
-                            // let dataStringFy = JSON.stringify(_valores);
-
-                            // xhr.open("PUT", url);
-                            // xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
-                            // xhr.send(dataStringFy);
-                            // xhr.onreadystatechange = verificaAjax;
-
-                            // function verificaAjax(){
-                            //     if(xhr.readyState === 4){
-                            //         if(xhr.status < 400){
-                            //             const json = JSON.parse(xhr.responseText);
-                            //             alert("Deu certo");
-                            //         }else{
-                            //             alert("Deu ruim");
-                            //         }
-                            //     }
-                            // }
-
-                        }
-                    }
-
-                }
-                   
-            }
-        </script> -->
     </body>
 </html>

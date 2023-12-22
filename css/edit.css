@@ -1,0 +1,24 @@
+.buscaDiv{
+    margin: 50px;
+}
+
+.dica{
+    visibility: visible;
+}
+
+textarea{
+    width: 90%;
+}
+
+button{
+    cursor: pointer;
+}
+
+ul{
+    margin: 50px;
+}
+
+li p{
+    width: 100px;
+    display: inline-block;
+}
