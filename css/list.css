@@ -1,0 +1,21 @@
+.btnVoltarTela{
+    border: solid 2px black;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+ul{
+    margin: 50px;
+}
+
+li p{
+    width: 100px;
+    display: inline-block;
+}
+
+input{
+    margin: 10px 5px 0 50px;
+}

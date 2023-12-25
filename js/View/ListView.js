@@ -20,16 +20,20 @@ export class ListView{
                     this.$listContainer.innerHTML = "";
                     resposta.forEach(element => {
                         const $li = document.createElement('li');
-                        const $text = document.createTextNode(element.id + " " + element.personagem);
-                        $li.appendChild($text); 
+                        const $p = document.createElement('p');
+                        const $textP = document.createTextNode(element.id + " " + element.personagem);
+                        $p.appendChild($textP); 
+                        $li.appendChild($p); 
                         this.$listContainer.appendChild($li);
                     });
                 }else{ 
                     this.$listContainer.innerHTML = "";
                     this.personagensEncontrados.forEach(element => {
                         const $li = document.createElement('li');
-                        const $text = document.createTextNode(element.id + " " + element.personagem);
-                        $li.appendChild($text); 
+                        const $p = document.createElement('p');
+                        const $textP = document.createTextNode(element.id + " " + element.personagem);
+                        $p.appendChild($textP); 
+                        $li.appendChild($p); 
                         this.$listContainer.appendChild($li);
                     });                    
                 }

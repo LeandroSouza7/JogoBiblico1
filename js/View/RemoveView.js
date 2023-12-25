@@ -19,8 +19,10 @@ export class RemoveView{
                     this.$ulPersonagens.innerHTML = "";
                     resposta.forEach(personagem => {
                         const $li = document.createElement('li');
-                        const $textLi = document.createTextNode(personagem.id + " " + personagem.personagem);
-                        $li.appendChild($textLi); 
+                        const $p = document.createElement('p');
+                        const $textP = document.createTextNode(personagem.id + " " + personagem.personagem);
+                        $p.appendChild($textP); 
+                        $li.appendChild($p); 
 
                         const $btnRemovePersonagem = document.createElement('button');
                         $btnRemovePersonagem.classList.add('removePersona');
@@ -37,8 +39,10 @@ export class RemoveView{
         }else{
             this.personagensEncontrados.forEach(element =>{
                 const $li = document.createElement('li');
-                const $textLi = document.createTextNode(element.id + " " + element.personagem);
-                $li.appendChild($textLi); 
+                const $p = document.createElement('p');
+                const $textP = document.createTextNode(element.id + " " + element.personagem);
+                $p.appendChild($textP); 
+                $li.appendChild($p); 
 
                 const $btnRemovePersonagem = document.createElement('button');
                 $btnRemovePersonagem.classList.add('removePersona');
