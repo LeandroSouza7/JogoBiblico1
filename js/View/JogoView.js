@@ -22,7 +22,6 @@ export class JogoView{
             let participantes = sessionStorage.getItem('participantes');
             participantes = JSON.parse(participantes);
             participantes.forEach(jogador => {
-                // $msgVencedor.querySelector('ul').innerHTML += "<li>"+ jogador +"</li>";
                 const $li = document.createElement('li');
                 const $p = document.createElement('p');
                 const $textLiP = document.createTextNode(jogador);
@@ -43,7 +42,7 @@ export class JogoView{
                 <div class="div_principal">
                 <div class="container caixaPerguntas">
                     <div class="dificuldade ${this.personagens[idPersonagemMostrado].nivel}">${this.personagens[idPersonagemMostrado].nivel}</div>
-                    <span class="CodigoDaPergunta h1 mr-3">${this.personagens[idPersonagemMostrado].id}</span><span class="h1 personagem">Personagem:</span><span class="nomePersonagem h2 p-2">${this.personagens[idPersonagemMostrado].personagem}</span>
+                    <span class="CodigoDaPergunta h1 mr-3">${this.personagens[idPersonagemMostrado].id}</span><span class="h1 personagem">Personagem:</span><input type="text" class="nomePersonagemInput"><span class="nomePersonagem h2 p-2">${this.personagens[idPersonagemMostrado].personagem}</span>
                     <div class="dicasPersonagens">
                         <div class="metade1">
                             <div class="divPai">
@@ -99,6 +98,7 @@ export class JogoView{
             this.verDicas();
             this.verPersonagem();
             this.proximoPersonagem(); 
+            this.tentarVerPersonagem(idPersonagemMostrado);
     }
 
     verDicas(){
@@ -153,5 +153,16 @@ export class JogoView{
             $body.classList.remove('opacity');
             this.mostrarPersonagem();
         })   
+    }
+
+    tentarVerPersonagem(id){
+        const $inputTentativa = document.querySelector('.nomePersonagemInput');
+        $inputTentativa.addEventListener('keypress', (e)=>{
+            if(e.key == "Enter"){
+                if($inputTentativa.value == this.personagens[id].personagem){
+                    console.log("ACERTOU")
+                }
+            }
+        });
     }
 }

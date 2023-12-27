@@ -194,3 +194,9 @@
 .opacity .caixaPerguntas{
 	opacity: 0.3;
 } 
+
+.nomePersonagemInput{
+	margin-left: 20px;
+	height: 35px;
+	width: 400px;
+}
