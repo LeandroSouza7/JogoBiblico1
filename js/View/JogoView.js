@@ -115,9 +115,10 @@ export class JogoView{
         const $btnPersonagem = document.querySelector('.verPersonagem');
         const $nomeDoPersonagem = document.querySelector('.nomePersonagem');;
         $btnPersonagem.addEventListener('click', ()=> {
-            console.log($nomeDoPersonagem);
             $nomeDoPersonagem.classList.toggle('visible');
             window.scroll(0, 0);  
+            const $inputTentativa = document.querySelector('.nomePersonagemInput');
+            $inputTentativa.style.display = 'none';
         })
     }
 
@@ -159,8 +160,19 @@ export class JogoView{
         const $inputTentativa = document.querySelector('.nomePersonagemInput');
         $inputTentativa.addEventListener('keypress', (e)=>{
             if(e.key == "Enter"){
+                $inputTentativa.value = $inputTentativa.value.toLowerCase();
+                this.personagens[id].personagem = this.personagens[id].personagem.toLowerCase();
                 if($inputTentativa.value == this.personagens[id].personagem){
-                    console.log("ACERTOU")
+                    $inputTentativa.style.display = 'none';
+                    const $nomeDoPersonagem = document.querySelector('.nomePersonagem');;
+                    $nomeDoPersonagem.classList.toggle('visible');
+                    $nomeDoPersonagem.style.color = "green";
+                    setInterval(() => {
+                        $nomeDoPersonagem.style.color = "#212529";
+                        $nomeDoPersonagem.style.fontWeight = "500";
+                    }, 1000)
+                    window.scroll(0, 0);  
+
                 }
             }
         });
