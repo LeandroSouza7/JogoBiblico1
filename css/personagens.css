@@ -30,11 +30,13 @@ input{
 }
 
 .msg{
-    margin: 50px;
     font-size: 18px;
     font-weight: 700;
     padding: 20px;
     width: 40%;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .links{

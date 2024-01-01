@@ -74,6 +74,66 @@
       "dicaNove": "Meu nome significa \"Veja, um filho!\"",
       "dicaDez": "Não recebi os direitos que eu tinha por ser primogênito",
       "id": 5
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Maria Madalena",
+      "dicaUm": "Jesus expulsou 7 demônios de mim",
+      "dicaDois": "Ajudei Jesus e seus apóstolos com meus próprios recursos",
+      "dicaTres": "Sou uma mulher",
+      "dicaQuatro": "Convivi com Jesus",
+      "dicaCinco": "Eu era uma das únicas que estavam com Jesus em sua morte",
+      "dicaSeis": "Fui uma das primeiras a ver Jesus ressuscitado",
+      "dicaSete": "Meu nome significa \"De Magdala\"",
+      "dicaOito": "Eu tinha uma enorme fé em Jesus, e demonstrei isso na prática",
+      "dicaNove": "Fui mencionada na Bíblia pela primeira vez quando Jesus e seus apóstolos foram \"de cidade em cidade e de aldeia em aldeia\" pregando as boas novas",
+      "dicaDez": "Fui eu que contei aos Apóstolos João e Pedro que o túmulo de Jesus estava vazio",
+      "id": 6
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Timóteo",
+      "dicaUm": "O nome do meu pai não é mencionado na Bíblia",
+      "dicaDois": "Ao Paulo visitar minha cidade e me conhecer, ele disse isso a respeito de mim: “Os irmãos em Listra e Icônio davam dele bom relato.\"",
+      "dicaTres": "Fui contemporâneo de Paulo",
+      "dicaQuatro": "Fui um dos companheiros de viagem de Paulo",
+      "dicaCinco": "Por causa da consciência de alguns irmãos, fui circuncidado quando eu já era adulto",
+      "dicaSeis": "Estive junto com Paulo em sua terceira viagem missionária",
+      "dicaSete": "Paulo escreveu duas cartas inspiraras para mim",
+      "dicaOito": "Eu tinha problemas estomacais",
+      "dicaNove": "Fui encarregado de nomear anciãos e superintendes na congregação",
+      "dicaDez": "Fui um dos melhores amigos de Paulo",
+      "id": 7
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Metusalém",
+      "dicaUm": "Sou da 8º geração humana",
+      "dicaDois": "Sou da época pré diluviana",
+      "dicaTres": "Sou filho de Enoque",
+      "dicaQuatro": "Sou pai de Lameque",
+      "dicaCinco": "Sou descendente de Adão através de Sete",
+      "dicaSeis": "Vivi mais de 950 anos",
+      "dicaSete": "Morri no ano do dilúvio",
+      "dicaOito": "Sou avô de um dos principais personagens bíblicos de Gênesis",
+      "dicaNove": "Meu nome provavelmente significa “Homem do Projétil\"",
+      "dicaDez": "Sou conhecido por causa da minha longevidade",
+      "id": 8
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Silas",
+      "dicaUm": "Meu nome significa “Floresta; Bosque”",
+      "dicaDois": "Fui um cidadão romano",
+      "dicaTres": "Fui companheiro de Paulo em sua segunda viagem missionária",
+      "dicaQuatro": "Eu, junto com mais 2, levamos a decisão a respeito da circuncisão aos irmãos da Antioquia",
+      "dicaCinco": "Eu fui com Paulo para Macedônio",
+      "dicaSeis": "Eu, junto com Paulo, salvamos a vida de um carcereiro ",
+      "dicaSete": "Eu fui secretário de Pedro",
+      "dicaOito": "Vivi na mesma época que os Apóstolos",
+      "dicaNove": "Já fui espancado por varas e fiquei preso em troncos",
+      "dicaDez": "Fui um membro de destaque da congregação de Jerusalém",
+      "id": 9
     }
   ]
 }
