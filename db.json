@@ -99,7 +99,7 @@
       "dicaQuatro": "Fui um dos companheiros de viagem de Paulo",
       "dicaCinco": "Por causa da consciência de alguns irmãos, fui circuncidado quando eu já era adulto",
       "dicaSeis": "Estive junto com Paulo em sua terceira viagem missionária",
-      "dicaSete": "Paulo escreveu duas cartas inspiraras para mim",
+      "dicaSete": "Paulo escreveu duas cartas inspiradas para mim",
       "dicaOito": "Eu tinha problemas estomacais",
       "dicaNove": "Fui encarregado de nomear anciãos e superintendes na congregação",
       "dicaDez": "Fui um dos melhores amigos de Paulo",
@@ -134,6 +134,36 @@
       "dicaNove": "Já fui espancado por varas e fiquei preso em troncos",
       "dicaDez": "Fui um membro de destaque da congregação de Jerusalém",
       "id": 9
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Samuel Herd",
+      "dicaUm": "Já fui enviado à Alemanha pelo exército dos Estados Unidos",
+      "dicaDois": "Ainda estou vivo",
+      "dicaTres": "Me batizei em março de 1957",
+      "dicaQuatro": "Recentemente, estive na América do Sul",
+      "dicaCinco": "Tenho mais de 60 anos de casado",
+      "dicaSeis": "Sou membro do Corpo Governante desde 1999",
+      "dicaSete": "Sofri bastante com racismo",
+      "dicaOito": "Tenho 85 anos",
+      "dicaNove": "Nasci numa família bem pobre",
+      "dicaDez": "Atualmente, sou bastante limitado devido às minhas condições físicas",
+      "id": 10
+    },
+    {
+      "nivel": "Médio",
+      "personagem": "Amós",
+      "dicaUm": "Eu era criador de ovelhas",
+      "dicaDois": "Meu nome significa “Ser uma carga; levar uma carga”",
+      "dicaTres": "Comecei a servir como profeta 2 anos antes do grande terremoto que ocorreu no reinado de Uzias",
+      "dicaQuatro": "Profetizei contra o reino setentrorial de Israel",
+      "dicaCinco": "Faço parte dos chamados “ 12 profetas menores”",
+      "dicaSeis": "Profetizei por mais ou menos 26 anos",
+      "dicaSete": "Fui uma pessoa simples",
+      "dicaOito": "Sou da cidade de Tecoa",
+      "dicaNove": "Amazias não gostou nada das minha profecias, e até tentou me expulsar",
+      "dicaDez": "Eu conhecia bastante sobre figos",
+      "id": 11
     }
   ]
 }
