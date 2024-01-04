@@ -164,6 +164,36 @@
       "dicaNove": "Amazias não gostou nada das minha profecias, e até tentou me expulsar",
       "dicaDez": "Eu conhecia bastante sobre figos",
       "id": 11
+    },
+    {
+      "nivel": "Médio",
+      "personagem": "Josué",
+      "dicaUm": "Já fui coroado para prefigurar o Messias",
+      "dicaDois": "Sou chamado também de Jesua",
+      "dicaTres": "Eu estava com os israelitas no exílio babilônico",
+      "dicaQuatro": "Sou filho de Jeozadaque",
+      "dicaCinco": "Conheci pessoalmente Zacarias e Ageu",
+      "dicaSeis": "Fui o primeiro israelita a servir como sumo sacerdote depois do exílio babilônico",
+      "dicaSete": "Em uma visão, Zacarias me viu de pé ao lado de Satanás",
+      "dicaOito": "Jeová me enviou dois profetas para me encorajar e terminar a minha obra",
+      "dicaNove": "Eu fui um dos primeiros Israelitas a voltarem do exílio babilônico",
+      "dicaDez": "Sou homem",
+      "id": 12
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Rutherford",
+      "dicaUm": "Eu que sugeri que deveríamos chamar nosso local de adoração de “Salão do Reino”",
+      "dicaDois": "No começo, nem todos me apoiavam",
+      "dicaTres": "Tive a grande responsabilidade de substituir um grande presidente",
+      "dicaQuatro": "Minha personalidade era um pouco incomum",
+      "dicaCinco": "Morri em 1942, devido a um câncer de cólon",
+      "dicaSeis": "Tinha o dom de animar meus queridos irmãos com meus discursos",
+      "dicaSete": "Eu era advogado",
+      "dicaOito": "Eu estava lá quando passamos a ser chamados de Testemunhas de Jeová",
+      "dicaNove": "Intensifiquei bastante a obra de pregação",
+      "dicaDez": "Eu já fui preso",
+      "id": 13
     }
   ]
 }

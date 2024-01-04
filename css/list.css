@@ -16,6 +16,17 @@ li p{
     display: inline-block;
 }
 
-input{
-    margin: 10px 5px 0 50px;
+.inputs{
+    width: 100%;
+    text-align: center; 
+}
+
+.container{
+    width: 100vw;
+}
+
+.titulo{
+    /* margin-left: 50px; */
+    width: 100%;
+    text-align: center;
 }
