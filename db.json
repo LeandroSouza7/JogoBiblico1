@@ -194,6 +194,36 @@
       "dicaNove": "Intensifiquei bastante a obra de pregação",
       "dicaDez": "Eu já fui preso",
       "id": 13
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Monte Sinai",
+      "dicaUm": "Homens e anjos passaram por aqui",
+      "dicaDois": "Já fui palco de vários milagres",
+      "dicaTres": "Já fui alvos de fogo e raios",
+      "dicaQuatro": "Presenciei o início do pacto da lei",
+      "dicaCinco": "Moisés esteve aqui muitas vezes",
+      "dicaSeis": "Sou um lugar alto",
+      "dicaSete": "Foi aqui que Jeová se revelou a Moisés",
+      "dicaOito": "Já tremi por causa de Jeová",
+      "dicaNove": "Por Moisés ficar muito tempo aqui, muitos israelitas pecaram e vários deles morreram",
+      "dicaDez": "Sou um monte",
+      "id": 14
+    },
+    {
+      "nivel": "Médio",
+      "personagem": "Calebe",
+      "dicaUm": "Fui um dos únicos de minha geração que conseguiu entrar na Terra prometida",
+      "dicaDois": "Sou filho de Jefuné",
+      "dicaTres": "Fui contemporâneo de Moisés",
+      "dicaQuatro": "Eu que disse essas palavras: “Ao homem que golpear Quiriate-Sefer e a tomar, darei minha filha Acsa como esposa”",
+      "dicaCinco": "Ao entrar na terra prometida, me deram a Terra de Hebrom",
+      "dicaSeis": "Eu, junto com mais um , já contradizemos 10 homens que achavam que não conseguiríamos entrar na Terra prometida",
+      "dicaSete": "Já vivi dias de espião",
+      "dicaOito": "Sou homem",
+      "dicaNove": "Convivi muito com Josué, ajudante de Moisés",
+      "dicaDez": "Já presenciei vários milagres de Jeová",
+      "id": 15
     }
   ]
 }
