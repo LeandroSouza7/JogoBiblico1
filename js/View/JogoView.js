@@ -37,7 +37,9 @@ export class JogoView{
     }
 
     mostrarPersonagem(){
+        console.log(this.sequenciaAleatoria)
         let idPersonagemMostrado = this.sequenciaAleatoria.shift();
+        console.log(idPersonagemMostrado)
         let htmlDados = `
                 <div class="div_principal">
                 <div class="container caixaPerguntas">

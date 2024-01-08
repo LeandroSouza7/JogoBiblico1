@@ -224,6 +224,51 @@
       "dicaNove": "Convivi muito com Josué, ajudante de Moisés",
       "dicaDez": "Já presenciei vários milagres de Jeová",
       "id": 15
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Arão",
+      "dicaUm": "Nasci no Egito",
+      "dicaDois": "Meu bisavô era Levi, filho de Jacó, e minha esposa se chamava Eliseba",
+      "dicaTres": "Servi por muito anos como porta voz",
+      "dicaQuatro": "O cargo que eu ocupei durante minha vida, hoje é “ocupado” por Jesus",
+      "dicaCinco": "Vi a morte de dois dos meus filhos",
+      "dicaSeis": "Em certa ocasião, pequei gravemente contra Jeová, mas não fui morto como outros tantos que estavam comigo",
+      "dicaSete": "Tive 4 filhos",
+      "dicaOito": "Já tive de falar com a pessoa mais poderosa da minha época",
+      "dicaNove": "Morri com 123 anos",
+      "dicaDez": "Sou homem",
+      "id": 16
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Josué",
+      "dicaUm": "Fui designando para ser o comandante na luta contra os Amalequitas no ano de 1513 a.C",
+      "dicaDois": "Provavelmente, eu era um dos 70 anciãos que tiveram o privilégio de observar a magnífica visão da glória de Jeová",
+      "dicaTres": "Eu já fiquei 40 dias e 40 noites no Monte Sinai",
+      "dicaQuatro": "Para impedir que os israelitas entrassem na tenda de reunião numa condição impura, eu ficava ali sempre que Moisés retornava ao acampamento israelita",
+      "dicaCinco": "Sem saber, já conversei com Jesus antes dele vir a Terra",
+      "dicaSeis": "Meu nome na verdade é Oseias, mas todos me chamam por outro nome",
+      "dicaSete": "Morri com 110 anos",
+      "dicaOito": "Já tive vários cargos: Comandante, espião, ajudante...",
+      "dicaNove": "Escrevi um livro da Bíblia que leva meu nome",
+      "dicaDez": "Fui fiel a Jeová a minha vida toda",
+      "id": 17
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Jesus",
+      "dicaUm": "Meus pais já se esquecerem de mim",
+      "dicaDois": "Tive o privilégio de ter grandes mulheres ao meu lado, que me apoiaram até a morte",
+      "dicaTres": "Quando eu era apenas uma criança, tentaram me matar",
+      "dicaQuatro": "Morri jovem, antes dos 40 anos",
+      "dicaCinco": "Infelizmente, muitas pessoas me confundem com meu pai",
+      "dicaSeis": "Meu melhores amigos me abandonaram quando estava prestes a morrer",
+      "dicaSete": "Sofri muito no final da minha vida",
+      "dicaOito": "Já deixei instrutores admirados por causa do meu conhecimento",
+      "dicaNove": "Jeová me deu poder para realizar várias curas",
+      "dicaDez": "Até hoje, sou bastante famoso",
+      "id": 18
     }
   ]
 }
