@@ -269,6 +269,36 @@
       "dicaNove": "Jeová me deu poder para realizar várias curas",
       "dicaDez": "Até hoje, sou bastante famoso",
       "id": 18
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Paulo",
+      "dicaUm": "Se fossem escrever um livro da minha história, com certeza tragédias e sofrimentos não seriam o que faltava",
+      "dicaDois": "Eu era baixinho",
+      "dicaTres": "Nasci na tribo de Benjamim",
+      "dicaQuatro": "Eu era calvo, quase careca",
+      "dicaCinco": "Lutei muito para adoração pura não ser contaminada",
+      "dicaSeis": "Meu nome significa “pequeno”",
+      "dicaSete": "Eu falava várias línguas",
+      "dicaOito": "Já disciplinei fortemente um dos apóstolos de Cristo",
+      "dicaNove": "Já viajei por vários lugares para pregar as boas novas",
+      "dicaDez": "Provavelmente, eu tinha um problema sério na vista",
+      "id": 19
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Abraão",
+      "dicaUm": "Nasci em 2018 a.C",
+      "dicaDois": "Já andei mais de 960 KM para obedecer uma ordem de Jeová",
+      "dicaTres": "Minha esposa era Estéril, mas, graças a um milagre, ela teve um filho",
+      "dicaQuatro": "Aos 99 anos, tive meu nome mudado por Jeová",
+      "dicaCinco": "Muitas profecias que Jeová fez para mim, só se cumpriram centenas ou até milhares de anos depois",
+      "dicaSeis": "Eu possuía muitos bens: rebanhos, manadas, ouro, prata, casas e muitos servos",
+      "dicaSete": "A primeira ocorrência da palavra “profeta” nas Escrituras Hebraicas refere-se a mim",
+      "dicaOito": "Sou o primeiro homem da Bíblia a ser chamado de “Hebreu”",
+      "dicaNove": "Já hospedei anjos",
+      "dicaDez": "Provavelmente, aprendi a verdade por meio de Sem",
+      "id": 20
     }
   ]
 }

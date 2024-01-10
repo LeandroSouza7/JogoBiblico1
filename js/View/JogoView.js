@@ -4,13 +4,14 @@ export class JogoView{
     constructor(){
         this.jogoController = new JogoController();
         this.$container = document.querySelector('.container');
-        this.dadosJogo();
         this.personagens = [];
-
         this.sequenciaAleatoria = [];
+        
+        this.dadosJogo();
     }
 
     dadosJogo(){
+        console.log("Dados jogo")
         this.jogoController.lista()
             .then(personagens => {
                 let qtdDePersonagens = personagens.length;
@@ -37,9 +38,7 @@ export class JogoView{
     }
 
     mostrarPersonagem(){
-        console.log(this.sequenciaAleatoria)
         let idPersonagemMostrado = this.sequenciaAleatoria.shift();
-        console.log(idPersonagemMostrado)
         let htmlDados = `
                 <div class="div_principal">
                 <div class="container caixaPerguntas">
@@ -154,11 +153,13 @@ export class JogoView{
            
             $msgVencedor.style.display = "none";
             $body.classList.remove('opacity');
-            this.mostrarPersonagem();
-        })   
+        }) 
+        
+        this.mostrarPersonagem();
     }
 
     tentarVerPersonagem(id){
+        console.log("tentar ver personagem")
         const $inputTentativa = document.querySelector('.nomePersonagemInput');
         $inputTentativa.addEventListener('keypress', (e)=>{
             if(e.key == "Enter"){
