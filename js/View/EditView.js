@@ -6,8 +6,6 @@ export class EditView{
 
         this.$resultados = document.querySelector('.resultados');
 
-        // this.$inputBusca.focus();
-
         this.personagensEncontrados = []
 
         this.carregarPersonagens();

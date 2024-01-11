@@ -11,7 +11,6 @@ export class JogoView{
     }
 
     dadosJogo(){
-        console.log("Dados jogo")
         this.jogoController.lista()
             .then(personagens => {
                 let qtdDePersonagens = personagens.length;
@@ -159,7 +158,6 @@ export class JogoView{
     }
 
     tentarVerPersonagem(id){
-        console.log("tentar ver personagem")
         const $inputTentativa = document.querySelector('.nomePersonagemInput');
         $inputTentativa.addEventListener('keypress', (e)=>{
             if(e.key == "Enter"){

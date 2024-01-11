@@ -28,8 +28,8 @@ export class InicioJogoView{
         });
 
         if(nomeDosParticipantes == ""){
-            throw new Error("Não dá");
-            // return alert("Adicione ao menos um participante");
+            alert("Adicione ao menos um participante");
+            throw new Error("Erro. Adicione particpantes");
         }
 
         sessionStorage.setItem('participantes', JSON.stringify(nomeDosParticipantes));
@@ -39,8 +39,8 @@ export class InicioJogoView{
         const $inputPlacar = document.querySelector('.inputPlacar').value;
 
         if(!$inputPlacar){
-            throw new Error("Não dá");
-            // alert("Defina um placar");
+            alert("Defina um placar");
+            throw new Error("Erro. Defina um placar");
         }
 
         sessionStorage.setItem('placar', JSON.stringify($inputPlacar));

@@ -10,7 +10,6 @@ export class ListView{
         this.pesquisarPersonagemById();
 
         this.personagensEncontrados = [];
-        // this.$btnPersonagemBuscado.addEventListener('click', this.pesquisarPersonagemByNome());
     }
 
     carregarPersonagens(){

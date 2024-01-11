@@ -299,6 +299,66 @@
       "dicaNove": "Já hospedei anjos",
       "dicaDez": "Provavelmente, aprendi a verdade por meio de Sem",
       "id": 20
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Sara",
+      "dicaUm": "Tive filhos quando eu já era idosa",
+      "dicaDois": "Para se cumprir a promessa que Jeová tinha feito a meu marido, já ofereci minha serva para ter filhos com ele",
+      "dicaTres": "Sou uma mulher",
+      "dicaQuatro": "Meu marido me chamava de “irmã”, e eu o chamava de \"senhor\"",
+      "dicaCinco": "Casei com meu meio irmão",
+      "dicaSeis": "Paulo, numa carta, já falou que eu representava a “Jerusalém de cima\"",
+      "dicaSete": "Morri com 127 anos",
+      "dicaOito": "Sou citada por Paulo com um exemplo de fé",
+      "dicaNove": "Mesma idosa, já tentaram me levar por causa da minha beleza",
+      "dicaDez": "Já ri de uma profecia de um anjo",
+      "id": 21
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Abigail",
+      "dicaUm": "Já salvei a vida do meu marido",
+      "dicaDois": "Eu era “sensata e bonita”",
+      "dicaTres": "Se não fosse por mim, Davi teria cometido um grande pecado",
+      "dicaQuatro": "Meu primeiro marido era um homem insensato e estúpido",
+      "dicaCinco": "Fui uma das esposas de Davi",
+      "dicaSeis": "Meu nome significa “[Meu] pai se fez alegre”",
+      "dicaSete": "Sou uma mulher",
+      "dicaOito": "Tive um filho",
+      "dicaNove": "Estive com Davi quando ele foi ungido",
+      "dicaDez": "Tive dois maridos",
+      "id": 22
+    },
+    {
+      "nivel": "Médio",
+      "personagem": "Nabal",
+      "dicaUm": "Poucas pessoas na Bíblia são descritos com tanto desprezo igual a mim",
+      "dicaDois": "Eu era descendente de Calebe",
+      "dicaTres": "Eu era rico",
+      "dicaQuatro": "Enquanto minha mulher estava salvando minha vida, eu estava me embebedando",
+      "dicaCinco": "Fui morto por Jeová",
+      "dicaSeis": "Agi de modo muito ingrato com um rei ",
+      "dicaSete": "Meu nome significava “Insensato; Estúpido”",
+      "dicaOito": "Eu era proprietário de ovelhas",
+      "dicaNove": "Eu morava em Judá",
+      "dicaDez": "Sou contemporâneo de Mical",
+      "id": 23
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Josias",
+      "dicaUm": "Me tornei rei quando eu era apenas uma criança",
+      "dicaDois": "Fui um rei que adorou a Jeová",
+      "dicaTres": "Já fiz duas campanhas para acabar com qualquer tipo de idolatria em Judá",
+      "dicaQuatro": "Eu que derrubei o altar construído em Betel para a adoração falsa",
+      "dicaCinco": "Fiz uma das maiores páscoas de todos os tempos",
+      "dicaSeis": "Infelizmente, meus filhos não tinham o mesmo zelo que eu",
+      "dicaSete": "Sofonias, Jeremias viveram junto comigo",
+      "dicaOito": "Eu tive pelo menos 2 esposas",
+      "dicaNove": "3 de meus filhos reinaram sobre Judá",
+      "dicaDez": "Morri cerca de 20 anos antes da destruição de Jerusalém pela Babilônia",
+      "id": 24
     }
   ]
 }
