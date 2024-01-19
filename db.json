@@ -584,6 +584,51 @@
       "dicaNove": "Sou homem",
       "dicaDez": "Não sou um bom exemplo para seguir ",
       "id": 39
+    },
+    {
+      "nivel": "Médio",
+      "personagem": "Enoque",
+      "dicaUm": "Profetizei que \"Jeová viria com suas santas miríades para executar julgamento contra todos\"",
+      "dicaDois": "Fui o sétimo homem na linhagem de Adão",
+      "dicaTres": "Fui mencionado na \"grande nuvem de testemunhas\"",
+      "dicaQuatro": "Muitos me perseguiram e tentaram me matar",
+      "dicaCinco": "Meu nome é igual a da primeira cidade mencionada na Bíblia",
+      "dicaSeis": "Sou homem",
+      "dicaSete": "Não morri de uma forma natural. A Bíblia diz que Jeová me \"tomou\"",
+      "dicaOito": "Morri novo, com 365 anos",
+      "dicaNove": "Minha vida é contado no livro de Gênesis e Judas",
+      "dicaDez": "Fui pai de Metusalém",
+      "id": 40
+    },
+    {
+      "nivel": "Difícil",
+      "personagem": "Jaaziel",
+      "dicaUm": "Eu era Levita",
+      "dicaDois": "Eu que disse essas famosas palavras: “Não tenham medo nem fiquem apavorado ...  pois a batalha não é sua, mas de Deus\"",
+      "dicaTres": "Eu era descendente de Asafe",
+      "dicaQuatro": "Eu era filho de Zacarias",
+      "dicaCinco": "Eu que disse: “ Vocês não terão que lutar nesse batalha. Tomem a sua posição, fiquem parados e vejam a salvação de Jeová”",
+      "dicaSeis": "Sou homem",
+      "dicaSete": "Vivi num momento em que estava tendo muito medo em Israel",
+      "dicaOito": "Presenciei quando Jeová armou uma emboscado e fez os homens que estavam invadindo Judá se matassem",
+      "dicaNove": "Proferi uma das mensagens mais encorajadoras registradas na Bíblia",
+      "dicaDez": "Vivi antes de Cristo",
+      "id": 41
+    },
+    {
+      "nivel": "Médio",
+      "personagem": "Caifás",
+      "dicaUm": "Fui designado por Pôncio Pilatos",
+      "dicaDois": "Eu era o Sumo Sacerdote durante todo o ministério de Jesus",
+      "dicaTres": "Estive em todos esses momentos: \"Para a estaca com ele\"; \"Não temos rei senão César\"; \"O rei dos Judeus\"; \"Ele blasfemou\"",
+      "dicaQuatro": "Fui genro de Anás",
+      "dicaCinco": "Maltratei muito Jesus e seus apóstolos",
+      "dicaSeis": "Somente após muito tempo, Vitelio me removeu do meu cargo",
+      "dicaSete": "Não fui um servo de Jeová",
+      "dicaOito": "Sou homem",
+      "dicaNove": "Eu era saduceu",
+      "dicaDez": "Sem querer, profetizei que Jesus morreria pela nação",
+      "id": 42
     }
   ]
 }
