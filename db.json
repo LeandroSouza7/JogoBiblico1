@@ -629,6 +629,51 @@
       "dicaNove": "Eu era saduceu",
       "dicaDez": "Sem querer, profetizei que Jesus morreria pela nação",
       "id": 42
+    },
+    {
+      "nivel": "Médio",
+      "personagem": "Tibério",
+      "dicaUm": "Durante meu reinado, eu endureci as leis contra qualquer palavra dirigida a mim, lei essa que os judeus se basearam para matar Jesus",
+      "dicaDois": "Fui o imperador durante todo o período do ministério de Jesus",
+      "dicaTres": "Já fui um “rei do norte”",
+      "dicaQuatro": "Eu era extremamente suspeitoso e hipócrita ao lidar com outros",
+      "dicaCinco": "Fui o segundo imperador de Roma",
+      "dicaSeis": "Não fui um servo de Jeová",
+      "dicaSete": "Tudo indica que era minha imagem na moeda que foi trazida até Jesus quando ele disse pra pagar a \"César o que é de César\"",
+      "dicaOito": "Algumas de minhas qualidades era não se considerar um deus, algo muito comum entre os imperadores da minha época",
+      "dicaNove": "Eu fui um imperador",
+      "dicaDez": "Matei milhares de pessoas durante meu reinado",
+      "id": 43
+    },
+    {
+      "nivel": "Fácil",
+      "personagem": "Golias",
+      "dicaUm": "Eu era um dos refains",
+      "dicaDois": "Durante muito tempo, ninguém teve coragem de lutar comigo",
+      "dicaTres": "Eu era um incrível soldado",
+      "dicaQuatro": "Selei minha ruína quando desafiei Jeová",
+      "dicaCinco": "Não fui um servo de Jeová",
+      "dicaSeis": "Só minha cota de malha, pesava 57kg",
+      "dicaSete": "Fui derrotado por uma funda de um jovem pastor",
+      "dicaOito": "Provavelmente, eu era um mercenário",
+      "dicaNove": "Minha cabeça foi decepada pela minha própria espada",
+      "dicaDez": "Eu era da cidade de Gate",
+      "id": 44
+    },
+    {
+      "nivel": "Difícil",
+      "personagem": "Hulda",
+      "dicaUm": "Fui esposa de Salum",
+      "dicaDois": "Sou uma mulher",
+      "dicaTres": "Quando Josias encontrou o livro da lei no templo, ele veio me consultar para saber qual era a mensagem de Jeová",
+      "dicaQuatro": "Eu era profetiza",
+      "dicaCinco": "Meu nome significa \"Duração da Vida; Sistemas de Coisas”",
+      "dicaSeis": "A Bíblia não fala muito sobre mim",
+      "dicaSete": "Eu profetizei que Josias seria ajuntado a seus antepassados e levado ao ser cemitério em paz",
+      "dicaOito": "Meu nome é a forma feminina do nome Helede",
+      "dicaNove": "Eu morava em Jerusalém",
+      "dicaDez": "Eu que transmiti a mensagem de Jeová dizendo que a nação de Israel sofreria as calamidades registradas no livro da lei",
+      "id": 45
     }
   ]
 }

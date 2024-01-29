@@ -142,8 +142,11 @@ export class JogoView{
             let $placar = sessionStorage.getItem('placar');
             $placar = JSON.parse($placar);
 
+
             $inputPlacar.forEach(placar => {
-                if($placar == placar.value || placar.value > $placar){
+                $placar = parseFloat($placar);
+                placar.value = parseFloat(placar.value);
+                if(placar.value >= $placar){
                     sessionStorage.setItem('vencedor', JSON.stringify(placar.parentNode.querySelector('p').textContent));
                     window.location.href = "vencedor.html";
                     return;

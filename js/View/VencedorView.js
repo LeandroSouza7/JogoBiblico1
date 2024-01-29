@@ -9,7 +9,6 @@ export class VencedorView{
 
         let $vencedor = sessionStorage.getItem('vencedor');
         $vencedor = JSON.parse($vencedor);
-        console.log($vencedor);
 
         let endGame = document.querySelector('.endGame');
         let winnerPlayer = document.querySelector('.endGame .winner');
