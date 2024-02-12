@@ -42,7 +42,17 @@ export class JogoView{
                 <div class="div_principal">
                 <div class="container caixaPerguntas">
                     <div class="dificuldade ${this.personagens[idPersonagemMostrado].nivel}">${this.personagens[idPersonagemMostrado].nivel}</div>
-                    <span class="CodigoDaPergunta h1 mr-3">${this.personagens[idPersonagemMostrado].id}</span><span class="h1 personagem">Personagem:</span><input type="text" class="nomePersonagemInput"><span class="nomePersonagem h2 p-2">${this.personagens[idPersonagemMostrado].personagem}</span>
+                    <div class="cabecalho-jogo">
+                        <div class="CodigoDaPergunta h1 mr-3">${this.personagens[idPersonagemMostrado].id}</div><div class="h1 personagem">Personagem:</div><input type="text" class="nomePersonagemInput"><div class="nomePersonagem h2 p-2">${this.personagens[idPersonagemMostrado].personagem}</div>
+                        <div class="cronometro">
+                            <span class="iconTempo">Clique</span>
+                            <span class="iniciar">Iniciar</span>
+                            <span class="pausar">Pausar</span>
+                            <span class="parar">Zerar</span>
+                            <span class="tempo">00:00</span>
+                        </div>
+                        
+                    </div>
                     <div class="dicasPersonagens">
                         <div class="metade1">
                             <div class="divPai">
